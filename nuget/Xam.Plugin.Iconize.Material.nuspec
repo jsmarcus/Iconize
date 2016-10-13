@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xam.Plugin.Iconize.Material</id>
+    <version>$version$</version>
+    <title>Iconize Plugin for Xamarin - Material design icons</title>
+    <authors>Jeremy Marcus</authors>
+    <owners>Jeremy Marcus</owners>
+    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easily add icon fonts to your Xamarin applications!</description>
+    <summary>Iconize Plugin for Xamarin - Material design icons</summary>
+    <copyright>Copyright © Jeremy Marcus</copyright>
+    <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
+    <dependencies>
+      <group>
+        <dependency id="Xam.Plugin.Iconize" version="$version$" />
+      </group>
+
+      <!--PCL-->
+      <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10">
+        <dependency id="Xam.FormsPlugin.Iconize" version="$version$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!--UWP-->
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.dll" target="lib\UAP10\Plugin.Iconize.Material.UWP.dll" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Material.UWP.pdb" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.pri" target="lib\UAP10\Plugin.Iconize.Material.UWP.pri" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.xml" target="lib\UAP10\Plugin.Iconize.Material.UWP.xml" />
+
+    <!--Xamarin.Android-->
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.Droid\bin\Release\Plugin.Iconize.Material.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Material.Droid.dll" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.Droid\bin\Release\Plugin.Iconize.Material.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Material.Droid.pdb" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.Droid\bin\Release\Plugin.Iconize.Material.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Material.Droid.xml" />
+
+    <!--Xamarin.iOS-->
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\iPhone\Release\Plugin.Iconize.Material.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.Material.iOS.dll" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\iPhone\Release\Plugin.Iconize.Material.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.Material.iOS.xml" />
+  </files>
+</package>

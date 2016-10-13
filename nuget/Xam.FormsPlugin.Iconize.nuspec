@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xam.FormsPlugin.Iconize</id>
+    <version>$version$</version>
+    <title>Iconize Controls Plugin for Xamarin.Forms</title>
+    <authors>Jeremy Marcus</authors>
+    <owners>Jeremy Marcus</owners>
+    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easily add icon fonts to your Xamarin.Forms applications!</description>
+    <summary>Iconize Controls Plugin for Xamarin.Forms</summary>
+    <copyright>Copyright © Jeremy Marcus</copyright>
+    <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
+    <dependencies>
+      <group>
+        <dependency id="Xam.Plugin.Iconize" version="$version$" />
+        <dependency id="Xamarin.Forms" version="[2, 3)" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!--PCL-->
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FormsPlugin.Iconize.dll" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FormsPlugin.Iconize.pdb" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.xml" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FormsPlugin.Iconize.xml" />
+    
+    <!--UWP-->
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.dll" target="lib\UAP10\FormsPlugin.Iconize.dll" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.pdb" target="lib\UAP10\FormsPlugin.Iconize.pdb" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.xml" target="lib\UAP10\FormsPlugin.Iconize.xml" />
+    <file src="src\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.dll" target="lib\UAP10\FormsPlugin.Iconize.UWP.dll" />
+    <file src="src\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.pdb" target="lib\UAP10\FormsPlugin.Iconize.UWP.pdb" />
+    <file src="src\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.pri" target="lib\UAP10\FormsPlugin.Iconize.UWP.pri" />
+    <file src="src\FormsPlugin.Iconize.UWP\bin\Release\FormsPlugin.Iconize.UWP.xml" target="lib\UAP10\FormsPlugin.Iconize.UWP.xml" />
+    
+    <!--Xamarin.Android-->
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.dll" target="lib\MonoAndroid10\FormsPlugin.Iconize.dll" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.pdb" target="lib\MonoAndroid10\FormsPlugin.Iconize.pdb" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.xml" target="lib\MonoAndroid10\FormsPlugin.Iconize.xml" />
+    <file src="src\FormsPlugin.Iconize.Droid\bin\Release\FormsPlugin.Iconize.Droid.dll" target="lib\MonoAndroid10\FormsPlugin.Iconize.Droid.dll" />
+    <file src="src\FormsPlugin.Iconize.Droid\bin\Release\FormsPlugin.Iconize.Droid.pdb" target="lib\MonoAndroid10\FormsPlugin.Iconize.Droid.pdb" />
+    <file src="src\FormsPlugin.Iconize.Droid\bin\Release\FormsPlugin.Iconize.Droid.xml" target="lib\MonoAndroid10\FormsPlugin.Iconize.Droid.xml" />
+    
+    <!--Xamarin.iOS-->
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.dll" target="lib\Xamarin.iOS10\FormsPlugin.Iconize.dll" />
+    <file src="src\FormsPlugin.Iconize\bin\Release\FormsPlugin.Iconize.xml" target="lib\Xamarin.iOS10\FormsPlugin.Iconize.xml" />
+    <file src="src\FormsPlugin.Iconize.iOS\bin\iPhone\Release\FormsPlugin.Iconize.iOS.dll" target="lib\Xamarin.iOS10\FormsPlugin.Iconize.iOS.dll" />
+    <file src="src\FormsPlugin.Iconize.iOS\bin\iPhone\Release\FormsPlugin.Iconize.iOS.xml" target="lib\Xamarin.iOS10\FormsPlugin.Iconize.iOS.xml" />
+  </files>
+</package>

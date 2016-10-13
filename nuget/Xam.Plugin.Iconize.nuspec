@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xam.Plugin.Iconize</id>
+    <version>$version$</version>
+    <title>Iconize Plugin for Xamarin and Windows</title>
+    <authors>Jeremy Marcus</authors>
+    <owners>Jeremy Marcus</owners>
+    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easily add icon fonts to your Xamarin or Windows applications!</description>
+    <summary>Iconize Plugin for Xamarin and Windows</summary>
+    <copyright>Copyright © Jeremy Marcus</copyright>
+    <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
+    <dependencies>
+      <!--Xamarin.Android-->
+      <group targetFramework="MonoAndroid10">
+        <dependency id="Xamarin.Android.Support.Animated.Vector.Drawable" version="23.3.0" />
+        <dependency id="Xamarin.Android.Support.v4" version="23.3.0" />
+        <dependency id="Xamarin.Android.Support.v7.AppCompat" version="23.3.0" />
+        <dependency id="Xamarin.Android.Support.Vector.Drawable" version="23.3.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!--PCL-->
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.dll" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.pdb" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.xml" />
+
+    <!--UWP-->
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\UAP10\Plugin.Iconize.dll" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\UAP10\Plugin.Iconize.pdb" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\UAP10\Plugin.Iconize.xml" />
+    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.dll" target="lib\UAP10\Plugin.Iconize.UWP.dll" />
+    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pdb" target="lib\UAP10\Plugin.Iconize.UWP.pdb" />
+    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pri" target="lib\UAP10\Plugin.Iconize.UWP.pri" />
+    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.xml" target="lib\UAP10\Plugin.Iconize.UWP.xml" />
+
+    <!--Xamarin.Android-->
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\MonoAndroid10\Plugin.Iconize.dll" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\MonoAndroid10\Plugin.Iconize.pdb" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\MonoAndroid10\Plugin.Iconize.xml" />
+    <file src="src\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Droid.dll" />
+    <file src="src\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Droid.pdb" />
+    <file src="src\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Droid.xml" />
+
+    <!--Xamarin.iOS-->
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.dll" />
+    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.xml" />
+    <file src="src\Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll" />
+    <file src="src\Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.xml" />
+  </files>
+</package>

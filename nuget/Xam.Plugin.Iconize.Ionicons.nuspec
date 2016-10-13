@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xam.Plugin.Iconize.Ionicons</id>
+    <version>$version$</version>
+    <title>Iconize Plugin for Xamarin - Ionicons</title>
+    <authors>Jeremy Marcus</authors>
+    <owners>Jeremy Marcus</owners>
+    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easily add icon fonts to your Xamarin applications!</description>
+    <summary>Iconize Plugin for Xamarin - Ionicons</summary>
+    <copyright>Copyright © Jeremy Marcus</copyright>
+    <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
+    <dependencies>
+      <group>
+        <dependency id="Xam.Plugin.Iconize" version="$version$" />
+      </group>
+
+      <!--PCL-->
+      <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10">
+        <dependency id="Xam.FormsPlugin.Iconize" version="$version$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!--UWP-->
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.dll" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.dll" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.pdb" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.pri" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.xml" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.xml" />
+    
+    <!--Xamarin.Android-->
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\bin\Release\Plugin.Iconize.Ionicons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Ionicons.Droid.dll" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\bin\Release\Plugin.Iconize.Ionicons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Ionicons.Droid.pdb" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.Droid\bin\Release\Plugin.Iconize.Ionicons.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Ionicons.Droid.xml" />
+    
+    <!--Xamarin.iOS-->
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\iPhone\Release\Plugin.Iconize.Ionicons.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.Ionicons.iOS.dll" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\iPhone\Release\Plugin.Iconize.Ionicons.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.Ionicons.iOS.xml" />
+  </files>
+</package>

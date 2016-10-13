@@ -1,0 +1,8 @@
+﻿{
+  "dependencies": {
+  },
+  "frameworks": {
+    "Xamarin.iOS,Version=v1.0": {}
+  },
+  "supports": {}
+}

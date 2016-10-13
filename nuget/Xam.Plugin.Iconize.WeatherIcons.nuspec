@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Xam.Plugin.Iconize.WeatherIcons</id>
+    <version>$version$</version>
+    <title>Iconize Plugin for Xamarin - Weather Icons</title>
+    <authors>Jeremy Marcus</authors>
+    <owners>Jeremy Marcus</owners>
+    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easily add icon fonts to your Xamarin applications!</description>
+    <summary>Iconize Plugin for Xamarin - Weather Icons</summary>
+    <copyright>Copyright © Jeremy Marcus</copyright>
+    <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
+    <dependencies>
+      <group>
+        <dependency id="Xam.Plugin.Iconize" version="$version$" />
+      </group>
+
+      <!--PCL-->
+      <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10">
+        <dependency id="Xam.FormsPlugin.Iconize" version="$version$" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!--UWP-->
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.dll" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.dll" />
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.pdb" />
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.pri" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.pri" />
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.xml" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.xml" />
+    
+    <!--Xamarin.Android-->
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\bin\Release\Plugin.Iconize.WeatherIcons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.WeatherIcons.Droid.dll" />
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\bin\Release\Plugin.Iconize.WeatherIcons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.WeatherIcons.Droid.pdb" />
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Droid\bin\Release\Plugin.Iconize.WeatherIcons.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.WeatherIcons.Droid.xml" />
+    
+    <!--Xamarin.iOS-->
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\bin\iPhone\Release\Plugin.Iconize.WeatherIcons.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.WeatherIcons.iOS.dll" />
+    <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\bin\iPhone\Release\Plugin.Iconize.WeatherIcons.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.WeatherIcons.iOS.xml" />
+  </files>
+</package>

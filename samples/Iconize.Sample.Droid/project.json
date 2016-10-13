@@ -1,0 +1,17 @@
+﻿{
+  "dependencies": {
+    "Xam.Plugin.Iconize.EntypoPlus": "1.0.10",
+    "Xam.Plugin.Iconize.FontAwesome": "1.0.10",
+    "Xam.Plugin.Iconize.Ionicons": "1.0.10",
+    "Xam.Plugin.Iconize.Material": "1.0.10",
+    "Xam.Plugin.Iconize.Meteocons": "1.0.10",
+    "Xam.Plugin.Iconize.SimpleLineIcons": "1.0.10",
+    "Xam.Plugin.Iconize.Typicons": "1.0.10",
+    "Xam.Plugin.Iconize.WeatherIcons": "1.0.10",
+    "Xamarin.Android.Support.Design": "23.3.0"
+  },
+  "frameworks": {
+    "MonoAndroid,Version=v7.0": {}
+  },
+  "supports": {}
+}
