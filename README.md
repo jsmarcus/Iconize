@@ -2,10 +2,13 @@
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
 Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms application!
 
-[![release version][build-status-img]][build-status-url]
+**NuGet**
+* Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Media.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
+* Install into your PCL project and Client projects.
 
-[build-status-img]: http://img.shields.io/appveyor/ci/JeremyMarcus/xamarin-plugins.svg?style=flat
-[build-status-url]: https://ci.appveyor.com/project/JeremyMarcus/xamarin-plugins
+**Build Status** 
+* [![Build status](https://ci.appveyor.com/api/projects/status/8ibyfk1rxn3mun3a?svg=true)](https://ci.appveyor.com/project/JeremyMarcus/iconize)
+* CI NuGet Feed: https://ci.appveyor.com/nuget/iconize
 
 ## Icon Fonts
 

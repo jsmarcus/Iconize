@@ -8,6 +8,7 @@ assembly_info:
 build_script:
 - cmd: >-
     powershell .\install-android-sdk.ps1
+
     powershell .\build.ps1 -Target Default -Verbosity diagnostic
 artifacts:
 - path: ./build/nuget/*.nupkg
