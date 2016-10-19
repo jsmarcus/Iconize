@@ -41,8 +41,11 @@ namespace FormsPlugin.Iconize.Droid
             {
                 foreach (var page in e.NewElement.Children)
                 {
-                    _icons.Add(page.Icon.File);
-                    page.Icon = null;
+                    if (page.Icon != null)
+                    {
+                        _icons.Add(page.Icon.File);
+                        page.Icon = null;
+                    }
                 }
             }
 
