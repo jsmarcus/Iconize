@@ -65,13 +65,18 @@ namespace FormsPlugin.Iconize.Droid
             {
                 var tab = tabLayout.GetTabAt(i);
 
-                var icon = Plugin.Iconize.Iconize.FindIconForKey(_icons[i]);
-                if (icon == null)
-                    continue;
+                if (_icons != null && i < _icons.Count)
+                {
+                    var iconKey = _icons[i];
 
-                var drawable = new IconDrawable(context, icon).Color(Color.White.ToAndroid()).SizeDp(20);
+                    var icon = Plugin.Iconize.Iconize.FindIconForKey(iconKey);
+                    if (icon == null)
+                        continue;
 
-                tab.SetIcon(drawable);
+                    var drawable = new IconDrawable(context, icon).Color(Color.White.ToAndroid()).SizeDp(20);
+
+                    tab.SetIcon(drawable);
+                }
             }
         }
     }
