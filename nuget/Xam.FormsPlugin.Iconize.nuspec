@@ -6,8 +6,8 @@
     <title>Iconize Controls Plugin for Xamarin.Forms</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
-    <licenseUrl>https://github.com/jsmarcus/Xamarin.Plugins/blob/master/Iconize/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize</projectUrl>
+    <licenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jsmarcus/Iconize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Easily add icon fonts to your Xamarin.Forms applications!</description>
     <summary>Iconize Controls Plugin for Xamarin.Forms</summary>
