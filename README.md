@@ -53,6 +53,7 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 * IconLabel (Label)
 * IconTabbedPage (TabbedPage)
 * IconToolbarItem (ToolbarItem)
+  * Requires IconNavigationPage
 
 **UWP (Coming Soon)**
 
@@ -80,7 +81,7 @@ All packages are provided via NuGet.
 
 ### Configure
 
-**Xamarin.Android**  
+**Xamarin.Android (AppCompat)**  
 Initialize any number of modules in Application.OnCreate() or Activity.OnCreate().
 ```csharp
 public override void OnCreate()
@@ -109,7 +110,7 @@ protected override void OnCreate(Bundle bundle)
 ```
 
 
-**Xamarin.iOS**  
+**Xamarin.iOS (Unified)**  
 Initialize any number of modules in AppDelegate.FinishedLaunching().
 ```csharp
 public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
@@ -137,7 +138,7 @@ Add the UIAppFonts key to Info.plist.
 **Xamarin.Forms**  
 Follow the instructions for the specific platforms above and add the following:
 
-Android:
+Android (AppCompat):
 ```csharp
 Xamarin.Forms.Forms.Init(this, savedInstanceState);
 ...
@@ -146,7 +147,7 @@ FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tab
 LoadApplication(new App());
 ```
 
-iOS:
+iOS (Unified):
 ```csharp
 Xamarin.Forms.Forms.Init();
 ...
@@ -160,9 +161,10 @@ LoadApplication(new App());
 * Jeremy Marcus [@jsmarcus](https://github.com/jsmarcus)
 * Riccardo Marraghini [@marra85](https://github.com/marra85)
 * Kevin Petit [@kvpt](https://github.com/kvpt)
+* Aaron [@veeprox](https://github.com/veeprox)
 
 ## License
-This work is licensed under a [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+This work is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 **Entypo+**  
 Entypo+ is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](http://creativecommons.org/licenses/by-sa/4.0/)
