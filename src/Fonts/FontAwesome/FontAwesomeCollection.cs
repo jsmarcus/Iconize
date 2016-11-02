@@ -10,9 +10,7 @@ namespace Plugin.Iconize.Fonts
         /// <summary>
         /// Gets the icons.
         /// </summary>
-        /// <value>
-        /// The icons.
-        /// </value>
+        /// <value>The icons.</value>
         public static IList<IIcon> Icons { get; } = new List<IIcon>();
 
         /// <summary>
@@ -21,6 +19,10 @@ namespace Plugin.Iconize.Fonts
         static FontAwesomeCollection()
         {
             Icons.Add("fa-500px", '\uf26e');
+            Icons.Add("fa-address-book", '\uf2b9');
+            Icons.Add("fa-address-book-o", '\uf2ba');
+            Icons.Add("fa-address-card", '\uf2bb');
+            Icons.Add("fa-address-card-o", '\uf2bc');
             Icons.Add("fa-adjust", '\uf042');
             Icons.Add("fa-adn", '\uf170');
             Icons.Add("fa-align-center", '\uf037');
@@ -69,11 +71,15 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-backward", '\uf04a');
             Icons.Add("fa-balance-scale", '\uf24e');
             Icons.Add("fa-ban", '\uf05e');
+            Icons.Add("fa-bandcamp", '\uf2d5');
             Icons.Add("fa-bank", '\uf19c');
             Icons.Add("fa-bar-chart", '\uf080');
             Icons.Add("fa-bar-chart-o", '\uf080');
             Icons.Add("fa-barcode", '\uf02a');
             Icons.Add("fa-bars", '\uf0c9');
+            Icons.Add("fa-bath", '\uf2cd');
+            Icons.Add("fa-bathtub", '\uf2cd');
+            Icons.Add("fa-battery", '\uf240');
             Icons.Add("fa-battery-0", '\uf244');
             Icons.Add("fa-battery-1", '\uf243');
             Icons.Add("fa-battery-2", '\uf242');
@@ -223,19 +229,25 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-dot-circle-o", '\uf192');
             Icons.Add("fa-download", '\uf019');
             Icons.Add("fa-dribbble", '\uf17d');
+            Icons.Add("fa-drivers-license", '\uf2c2');
+            Icons.Add("fa-drivers-license-o", '\uf2c3');
             Icons.Add("fa-dropbox", '\uf16b');
             Icons.Add("fa-drupal", '\uf1a9');
             Icons.Add("fa-edge", '\uf282');
             Icons.Add("fa-edit", '\uf044');
+            Icons.Add("fa-eercast", '\uf2da');
             Icons.Add("fa-eject", '\uf052');
             Icons.Add("fa-ellipsis-h", '\uf141');
             Icons.Add("fa-ellipsis-v", '\uf142');
             Icons.Add("fa-empire", '\uf1d1');
             Icons.Add("fa-envelope", '\uf0e0');
             Icons.Add("fa-envelope-o", '\uf003');
+            Icons.Add("fa-envelope-open", '\uf2b6');
+            Icons.Add("fa-envelope-open-o", '\uf2b7');
             Icons.Add("fa-envelope-square", '\uf199');
             Icons.Add("fa-envira", '\uf299');
             Icons.Add("fa-eraser", '\uf12d');
+            Icons.Add("fa-etsy", '\uf2d7');
             Icons.Add("fa-eur", '\uf153');
             Icons.Add("fa-euro", '\uf153');
             Icons.Add("fa-exchange", '\uf0ec');
@@ -303,6 +315,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-forumbee", '\uf211');
             Icons.Add("fa-forward", '\uf04e');
             Icons.Add("fa-foursquare", '\uf180');
+            Icons.Add("fa-free-code-camp", '\uf2c5');
             Icons.Add("fa-frown-o", '\uf119');
             Icons.Add("fa-futbol-o", '\uf1e3');
             Icons.Add("fa-gamepad", '\uf11b');
@@ -335,6 +348,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-google-wallet", '\uf1ee');
             Icons.Add("fa-graduation-cap", '\uf19d');
             Icons.Add("fa-gratipay", '\uf184');
+            Icons.Add("fa-grav", '\uf2d6');
             Icons.Add("fa-group", '\uf0c0');
             Icons.Add("fa-h-square", '\uf0fd');
             Icons.Add("fa-hacker-news", '\uf1d4');
@@ -351,6 +365,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-hand-scissors-o", '\uf257');
             Icons.Add("fa-hand-spock-o", '\uf259');
             Icons.Add("fa-hand-stop-o", '\uf256');
+            Icons.Add("fa-handshake-o", '\uf2b5');
             Icons.Add("fa-hard-of-hearing", '\uf2a4');
             Icons.Add("fa-hashtag", '\uf292');
             Icons.Add("fa-hdd-o", '\uf0a0');
@@ -374,8 +389,12 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-houzz", '\uf27c');
             Icons.Add("fa-html5", '\uf13b');
             Icons.Add("fa-i-cursor", '\uf246');
+            Icons.Add("fa-id-badge", '\uf2c1');
+            Icons.Add("fa-id-card", '\uf2c2');
+            Icons.Add("fa-id-card-o", '\uf2c3');
             Icons.Add("fa-ils", '\uf20b');
             Icons.Add("fa-image", '\uf03e');
+            Icons.Add("fa-imdb", '\uf2d8');
             Icons.Add("fa-inbox", '\uf01c');
             Icons.Add("fa-indent", '\uf03c');
             Icons.Add("fa-industry", '\uf275');
@@ -413,6 +432,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-link", '\uf0c1');
             Icons.Add("fa-linkedin", '\uf0e1');
             Icons.Add("fa-linkedin-square", '\uf08c');
+            Icons.Add("fa-linode", '\uf2b8');
             Icons.Add("fa-linux", '\uf17c');
             Icons.Add("fa-list", '\uf03a');
             Icons.Add("fa-list-alt", '\uf022');
@@ -445,8 +465,10 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-meanpath", '\uf20c');
             Icons.Add("fa-medium", '\uf23a');
             Icons.Add("fa-medkit", '\uf0fa');
+            Icons.Add("fa-meetup", '\uf2e0');
             Icons.Add("fa-meh-o", '\uf11a');
             Icons.Add("fa-mercury", '\uf223');
+            Icons.Add("fa-microchip", '\uf2db');
             Icons.Add("fa-microphone", '\uf130');
             Icons.Add("fa-microphone-slash", '\uf131');
             Icons.Add("fa-minus", '\uf068');
@@ -511,6 +533,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-plus-circle", '\uf055');
             Icons.Add("fa-plus-square", '\uf0fe');
             Icons.Add("fa-plus-square-o", '\uf196');
+            Icons.Add("fa-podcast", '\uf2ce');
             Icons.Add("fa-power-off", '\uf011');
             Icons.Add("fa-print", '\uf02f');
             Icons.Add("fa-product-hunt", '\uf288');
@@ -520,10 +543,12 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-question", '\uf128');
             Icons.Add("fa-question-circle", '\uf059');
             Icons.Add("fa-question-circle-o", '\uf29c');
+            Icons.Add("fa-quora", '\uf2c4');
             Icons.Add("fa-quote-left", '\uf10d');
             Icons.Add("fa-quote-right", '\uf10e');
             Icons.Add("fa-ra", '\uf1d0');
             Icons.Add("fa-random", '\uf074');
+            Icons.Add("fa-ravelry", '\uf2d9');
             Icons.Add("fa-rebel", '\uf1d0');
             Icons.Add("fa-recycle", '\uf1b8');
             Icons.Add("fa-reddit", '\uf1a1');
@@ -550,6 +575,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-rub", '\uf158');
             Icons.Add("fa-ruble", '\uf158');
             Icons.Add("fa-rupee", '\uf156');
+            Icons.Add("fa-s15", '\uf2cd');
             Icons.Add("fa-safari", '\uf267');
             Icons.Add("fa-save", '\uf0c7');
             Icons.Add("fa-scissors", '\uf0c4');
@@ -574,6 +600,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-shopping-bag", '\uf290');
             Icons.Add("fa-shopping-basket", '\uf291');
             Icons.Add("fa-shopping-cart", '\uf07a');
+            Icons.Add("fa-shower", '\uf2cc');
             Icons.Add("fa-sign-in", '\uf090');
             Icons.Add("fa-sign-language", '\uf2a7');
             Icons.Add("fa-sign-out", '\uf08b');
@@ -590,6 +617,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-snapchat", '\uf2ab');
             Icons.Add("fa-snapchat-ghost", '\uf2ac');
             Icons.Add("fa-snapchat-square", '\uf2ad');
+            Icons.Add("fa-snowflake-o", '\uf2dc');
             Icons.Add("fa-soccer-ball-o", '\uf1e3');
             Icons.Add("fa-sort", '\uf0dc');
             Icons.Add("fa-sort-alpha-asc", '\uf15d');
@@ -635,6 +663,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-subway", '\uf239');
             Icons.Add("fa-suitcase", '\uf0f2');
             Icons.Add("fa-sun-o", '\uf185');
+            Icons.Add("fa-superpowers", '\uf2dd');
             Icons.Add("fa-superscript", '\uf12b');
             Icons.Add("fa-support", '\uf1cd');
             Icons.Add("fa-table", '\uf0ce');
@@ -644,6 +673,7 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-tags", '\uf02c');
             Icons.Add("fa-tasks", '\uf0ae');
             Icons.Add("fa-taxi", '\uf1ba');
+            Icons.Add("fa-telegram", '\uf2c6');
             Icons.Add("fa-television", '\uf26c');
             Icons.Add("fa-tencent-weibo", '\uf1d5');
             Icons.Add("fa-terminal", '\uf120');
@@ -653,6 +683,17 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-th-large", '\uf009');
             Icons.Add("fa-th-list", '\uf00b');
             Icons.Add("fa-themeisle", '\uf2b2');
+            Icons.Add("fa-thermometer", '\uf2c7');
+            Icons.Add("fa-thermometer-0", '\uf2cb');
+            Icons.Add("fa-thermometer-1", '\uf2ca');
+            Icons.Add("fa-thermometer-2", '\uf2c9');
+            Icons.Add("fa-thermometer-3", '\uf2c8');
+            Icons.Add("fa-thermometer-4", '\uf2c7');
+            Icons.Add("fa-thermometer-empty", '\uf2cb');
+            Icons.Add("fa-thermometer-full", '\uf2c7');
+            Icons.Add("fa-thermometer-half", '\uf2c9');
+            Icons.Add("fa-thermometer-quarter", '\uf2ca');
+            Icons.Add("fa-thermometer-three-quarters", '\uf2c8');
             Icons.Add("fa-thumb-tack", '\uf08d');
             Icons.Add("fa-thumbs-down", '\uf165');
             Icons.Add("fa-thumbs-o-down", '\uf088');
@@ -662,6 +703,8 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-times", '\uf00d');
             Icons.Add("fa-times-circle", '\uf057');
             Icons.Add("fa-times-circle-o", '\uf05c');
+            Icons.Add("fa-times-rectangle", '\uf2d3');
+            Icons.Add("fa-times-rectangle-o", '\uf2d4');
             Icons.Add("fa-tint", '\uf043');
             Icons.Add("fa-toggle-down", '\uf150');
             Icons.Add("fa-toggle-left", '\uf191');
@@ -702,11 +745,16 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-usb", '\uf287');
             Icons.Add("fa-usd", '\uf155');
             Icons.Add("fa-user", '\uf007');
+            Icons.Add("fa-user-circle", '\uf2bd');
+            Icons.Add("fa-user-circle-o", '\uf2be');
             Icons.Add("fa-user-md", '\uf0f0');
+            Icons.Add("fa-user-o", '\uf2c0');
             Icons.Add("fa-user-plus", '\uf234');
             Icons.Add("fa-user-secret", '\uf21b');
             Icons.Add("fa-user-times", '\uf235');
             Icons.Add("fa-users", '\uf0c0');
+            Icons.Add("fa-vcard", '\uf2bb');
+            Icons.Add("fa-vcard-o", '\uf2bc');
             Icons.Add("fa-venus", '\uf221');
             Icons.Add("fa-venus-double", '\uf226');
             Icons.Add("fa-venus-mars", '\uf228');
@@ -731,10 +779,16 @@ namespace Plugin.Iconize.Fonts
             Icons.Add("fa-wheelchair-alt", '\uf29b');
             Icons.Add("fa-wifi", '\uf1eb');
             Icons.Add("fa-wikipedia-w", '\uf266');
+            Icons.Add("fa-window-close", '\uf2d3');
+            Icons.Add("fa-window-close-o", '\uf2d4');
+            Icons.Add("fa-window-maximize", '\uf2d0');
+            Icons.Add("fa-window-minimize", '\uf2d1');
+            Icons.Add("fa-window-restore", '\uf2d2');
             Icons.Add("fa-windows", '\uf17a');
             Icons.Add("fa-won", '\uf159');
             Icons.Add("fa-wordpress", '\uf19a');
             Icons.Add("fa-wpbeginner", '\uf297');
+            Icons.Add("fa-wpexplorer", '\uf2de');
             Icons.Add("fa-wpforms", '\uf298');
             Icons.Add("fa-wrench", '\uf0ad');
             Icons.Add("fa-xing", '\uf168');

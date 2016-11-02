@@ -1,3 +1,3 @@
 http://fontawesome.io/
 
-Version: 4.6.3
+Version: 4.7.0
