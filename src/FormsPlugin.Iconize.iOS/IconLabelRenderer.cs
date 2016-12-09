@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(IconLabel), typeof(IconLabelRenderer))]
+
 namespace FormsPlugin.Iconize.iOS
 {
     /// <summary>
@@ -18,7 +19,9 @@ namespace FormsPlugin.Iconize.iOS
         /// <summary>
         /// Raises the <see cref="E:ElementChanged" /> event.
         /// </summary>
-        /// <param name="e">The <see cref="ElementChangedEventArgs{Label}" /> instance containing the event data.</param>
+        /// <param name="e">
+        /// The <see cref="ElementChangedEventArgs{Label}" /> instance containing the event data.
+        /// </param>
         protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
         {
             base.OnElementChanged(e);
@@ -33,7 +36,9 @@ namespace FormsPlugin.Iconize.iOS
         /// Called when [element property changed].
         /// </summary>
         /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="PropertyChangedEventArgs" /> instance containing the event data.</param>
+        /// <param name="e">
+        /// The <see cref="PropertyChangedEventArgs" /> instance containing the event data.
+        /// </param>
         protected override void OnElementPropertyChanged(Object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
@@ -59,8 +64,12 @@ namespace FormsPlugin.Iconize.iOS
             var icon = Plugin.Iconize.Iconize.FindIconForKey(Element.Text);
             if (icon != null)
             {
-                Control.Text = $"{icon.Character}";
-                Control.Font = Plugin.Iconize.Iconize.FindModuleOf(icon).ToUIFont((nfloat)Element.FontSize);
+                var font = Plugin.Iconize.Iconize.FindModuleOf(icon)?.ToUIFont((nfloat)Element.FontSize);
+                if (font != null)
+                {
+                    Control.Text = $"{icon.Character}";
+                    Control.Font = font;
+                }
             }
         }
     }
