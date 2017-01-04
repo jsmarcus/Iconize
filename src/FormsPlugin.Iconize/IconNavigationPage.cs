@@ -14,9 +14,9 @@ namespace FormsPlugin.Iconize
         /// </summary>
         /// <param name="root">The root page.</param>
         public IconNavigationPage(Page root)
-            : this()
+            : base(root)
         {
-            this.PushPage(root);
+            InitListeners();
         }
         
         /// <summary>
@@ -24,11 +24,15 @@ namespace FormsPlugin.Iconize
         /// </summary>
         public IconNavigationPage()
         {
+            InitListeners();
+        }
+        
+        private void InitListeners()
+        {
             Popped += OnNavigation;
             PoppedToRoot += OnNavigation;
             Pushed += OnNavigation;
         }
-
 
         /// <summary>
         /// Called when [navigation].
