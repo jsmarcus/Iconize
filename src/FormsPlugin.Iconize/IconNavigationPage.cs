@@ -14,12 +14,21 @@ namespace FormsPlugin.Iconize
         /// </summary>
         /// <param name="root">The root page.</param>
         public IconNavigationPage(Page root)
-            : base(root)
+            : this()
+        {
+            this.PushPage(root);
+        }
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IconNavigationPage" /> class.
+        /// </summary>
+        public IconNavigationPage()
         {
             Popped += OnNavigation;
             PoppedToRoot += OnNavigation;
             Pushed += OnNavigation;
         }
+
 
         /// <summary>
         /// Called when [navigation].
