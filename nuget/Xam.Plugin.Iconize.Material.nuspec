@@ -26,6 +26,7 @@
   </metadata>
   <files>
     <!--UWP-->
+	<file src="src\Fonts\Material\iconize-material.ttf" target="lib\UAP10\Plugin.Iconize.Material.UWP\Assets\Fonts\iconize-material.ttf" />
     <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.dll" target="lib\UAP10\Plugin.Iconize.Material.UWP.dll" />
     <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Material.UWP.pdb" />
     <file src="src\Fonts\Material\Plugin.Iconize.Material.UWP\bin\Release\Plugin.Iconize.Material.UWP.pri" target="lib\UAP10\Plugin.Iconize.Material.UWP.pri" />

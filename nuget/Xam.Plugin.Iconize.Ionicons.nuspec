@@ -26,6 +26,7 @@
   </metadata>
   <files>
     <!--UWP-->
+	<file src="src\Fonts\Ionicons\iconize-ionicons.ttf" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP\Assets\Fonts\iconize-ionicons.ttf" />
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.dll" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.dll" />
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.pdb" />
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\Release\Plugin.Iconize.Ionicons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Ionicons.UWP.pri" />
