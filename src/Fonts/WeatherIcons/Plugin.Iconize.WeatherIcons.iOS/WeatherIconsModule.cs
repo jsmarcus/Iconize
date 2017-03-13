@@ -10,7 +10,7 @@
         /// Initializes a new instance of the <see cref="WeatherIconsModule" /> class.
         /// </summary>
         public WeatherIconsModule()
-            : base("Weather Icons", "Weather Icons", "iconize-weathericons.ttf", WeatherIconsCollection.Icons)
+            : base("Weather Icons", "WeatherIcons-Regular", "iconize-weathericons.ttf", WeatherIconsCollection.Icons)
         {
             // Intentionally left blank
         }
