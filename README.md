@@ -162,6 +162,8 @@ LoadApplication(new App());
 * Riccardo Marraghini [@marra85](https://github.com/marra85)
 * Kevin Petit [@kvpt](https://github.com/kvpt)
 * Aaron [@veeprox](https://github.com/veeprox)
+* Matthias [@bruzkovsky](https://github.com/bruzkovsky)
+* Philipp Sumi [@hardcodet](https://github.com/hardcodet)
 
 ## License
 This work is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).

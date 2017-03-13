@@ -16,6 +16,19 @@ namespace FormsPlugin.Iconize
         public IconNavigationPage(Page root)
             : base(root)
         {
+            InitListeners();
+        }
+        
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IconNavigationPage" /> class.
+        /// </summary>
+        public IconNavigationPage()
+        {
+            InitListeners();
+        }
+        
+        private void InitListeners()
+        {
             Popped += OnNavigation;
             PoppedToRoot += OnNavigation;
             Pushed += OnNavigation;

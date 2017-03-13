@@ -26,6 +26,7 @@
   </metadata>
   <files>
     <!--UWP-->
+	<file src="src\Fonts\WeatherIcons\iconize-weathericons.ttf" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP\Assets\Fonts\iconize-weathericons.ttf" />
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.dll" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.dll" />
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.pdb" />
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\Release\Plugin.Iconize.WeatherIcons.UWP.pri" target="lib\UAP10\Plugin.Iconize.WeatherIcons.UWP.pri" />
