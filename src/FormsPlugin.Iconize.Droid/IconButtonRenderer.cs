@@ -48,6 +48,8 @@ namespace FormsPlugin.Iconize.Droid
                 return;
 
             Control.SetAllCaps(false);
+            Control.SetBackground(null);
+            Control.StateListAnimator = null;
             UpdateText();
         }
 
