@@ -34,17 +34,7 @@ var nuspec = new List<FilePath> {
 Task("Restore-NuGet-Packages")
     .Does(() =>
 {
-	if(IsRunningOnWindows())
-    {
-		NuGetRestore(solution, new NuGetRestoreSettings
-		{
-			ToolPath = "./tools/nuget3.exe"
-		});
-	}
-    else
-    {
-		NuGetRestore(solution);
-	}
+	NuGetRestore(solution);
 });
 
 Task("Build")
@@ -78,8 +68,7 @@ Task("NuGet")
 		Version = version,
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./build/nuget/",
-		BasePath = "./",
-		ToolPath = "./tools/nuget3.exe"
+		BasePath = "./"
 	});	
 });
 
