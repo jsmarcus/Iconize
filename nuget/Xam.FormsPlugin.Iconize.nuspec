@@ -16,7 +16,7 @@
     <dependencies>
       <group>
         <dependency id="Xam.Plugin.Iconize" version="$version$" />
-        <dependency id="Xamarin.Forms" version="[2, 3)" />
+        <dependency id="Xamarin.Forms" version="[2.3.3.193, 3)" />
       </group>
     </dependencies>
   </metadata>
