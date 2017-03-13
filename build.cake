@@ -36,14 +36,14 @@ Task("Restore-NuGet-Packages")
 {
 	if(IsRunningOnWindows())
     {
-		NuGetRestore(sln.Key, new NuGetRestoreSettings
+		NuGetRestore(solution, new NuGetRestoreSettings
 		{
 			ToolPath = "./tools/nuget3.exe"
 		});
 	}
     else
     {
-		NuGetRestore(sln.Key);
+		NuGetRestore(solution);
 	}
 });
 
