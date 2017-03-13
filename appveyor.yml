@@ -1,5 +1,4 @@
 version: 1.5.0.{build}-beta
-image: Visual Studio 2017
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'

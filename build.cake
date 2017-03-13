@@ -34,7 +34,17 @@ var nuspec = new List<FilePath> {
 Task("Restore-NuGet-Packages")
     .Does(() =>
 {
-    NuGetRestore(solution);
+	if(IsRunningOnWindows())
+    {
+		NuGetRestore(sln.Key, new NuGetRestoreSettings
+		{
+			ToolPath = "./tools/nuget3.exe"
+		});
+	}
+    else
+    {
+		NuGetRestore(sln.Key);
+	}
 });
 
 Task("Build")
@@ -44,13 +54,15 @@ Task("Build")
     if(IsRunningOnWindows())
     {
 		// Use MSBuild
-		MSBuild(solution, settings =>
-			settings.SetConfiguration(configuration));
+		MSBuild(solution, settings => {
+			settings.SetConfiguration(configuration);
+			settings.MSBuildPlatform = Cake.Common.Tools.MSBuild.MSBuildPlatform.x86;
+		});
     }
     else
     {
-		// Use XBuild
-		XBuild(solution, settings =>
+		// Use DotNetBuild
+		DotNetBuild(solution, settings =>
 			settings.SetConfiguration(configuration));
     }
 });
@@ -67,6 +79,7 @@ Task("NuGet")
 		Verbosity = NuGetVerbosity.Detailed,
 		OutputDirectory = "./build/nuget/",
 		BasePath = "./",
+		ToolPath = "./tools/nuget3.exe"
 	});	
 });
 
