@@ -52,9 +52,9 @@
     <file src="src\Fonts\Material\Plugin.Iconize.Material.Android\bin\$configuration$\Plugin.Iconize.Material.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Material.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Material.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Material.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\$configuration$\Plugin.Iconize.Material.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\$configuration$\Plugin.Iconize.Material.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Material\Plugin.Iconize.Material.iOS\bin\$configuration$\Plugin.Iconize.Material.*xml" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Material\iconize-material.ttf" target="lib\Xamarin.iOS10" />
     
     <!--UWP-->

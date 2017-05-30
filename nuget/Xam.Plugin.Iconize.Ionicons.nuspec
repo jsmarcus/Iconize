@@ -52,9 +52,9 @@
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.Android\bin\$configuration$\Plugin.Iconize.Ionicons.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Ionicons.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Ionicons.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Ionicons.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\$configuration$\Plugin.Iconize.Ionicons.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\$configuration$\Plugin.Iconize.Ionicons.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\$configuration$\Plugin.Iconize.Ionicons.*xml" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Ionicons\iconize-ionicons.ttf" target="lib\Xamarin.iOS10" />
     
     <!--UWP-->

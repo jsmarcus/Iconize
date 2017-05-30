@@ -52,9 +52,9 @@
     <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Android\bin\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Meteocons.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\$configuration$\Plugin.Iconize.Meteocons.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Meteocons\iconize-meteocons.ttf" target="lib\Xamarin.iOS10" />
     
     <!--UWP-->

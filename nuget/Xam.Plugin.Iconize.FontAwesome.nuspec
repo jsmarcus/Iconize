@@ -52,9 +52,9 @@
     <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\iPhone\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\iPhone\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\iPhone\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\FontAwesome\iconize-fontawesome.ttf" target="lib\Xamarin.iOS10" />
     
     <!--UWP-->

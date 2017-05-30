@@ -52,9 +52,9 @@
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\iPhone\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\iPhone\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\iPhone\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="lib\Xamarin.iOS10" />
     
     <!--UWP-->

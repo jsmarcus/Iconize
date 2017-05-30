@@ -7,8 +7,7 @@ assembly_info:
   assembly_file_version: '{version}'
   assembly_informational_version: '{version}'
 build_script:
-- cmd: >-
-    powershell .\bootbuild.ps1
+- ps: .\bootbuild.ps1
 artifacts:
 - path: ./build/nuget/*.nupkg
   name: NuGet

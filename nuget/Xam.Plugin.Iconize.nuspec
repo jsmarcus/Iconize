@@ -57,9 +57,9 @@
     <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Plugin.Iconize.iOS\bin\iPhone\$configuration$\Plugin.Iconize.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Plugin.Iconize.iOS\bin\iPhone\$configuration$\Plugin.Iconize.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Plugin.Iconize.iOS\bin\iPhone\$configuration$\Plugin.Iconize.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.*xml" target="lib\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.dll" target="lib\uap10.0" />

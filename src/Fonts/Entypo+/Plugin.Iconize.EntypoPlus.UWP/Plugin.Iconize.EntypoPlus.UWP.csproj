@@ -108,12 +108,7 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="..\iconize-entypoplus.ttf">
-      <Link>iconize-entypoplus.ttf</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Plugin.Iconize.EntypoPlus.UWP.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -123,7 +118,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="..\iconize-entypoplus.ttf">
+      <Link>iconize-entypoplus.ttf</Link>
+    </Content>
   </ItemGroup>
   <Import Project="..\Plugin.Iconize.EntypoPlus.Shared\Plugin.Iconize.EntypoPlus.Shared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
