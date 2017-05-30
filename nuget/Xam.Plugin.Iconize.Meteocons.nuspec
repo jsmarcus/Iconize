@@ -3,42 +3,65 @@
   <metadata>
     <id>Xam.Plugin.Iconize.Meteocons</id>
     <version>$version$</version>
-    <title>Iconize Plugin for Xamarin - Meteocons</title>
+    <title>Iconize Plugin for Xamarin.Forms - Meteocons</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
     <licenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/jsmarcus/Iconize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Easily add icon fonts to your Xamarin applications!</description>
-    <summary>Iconize Plugin for Xamarin - Meteocons</summary>
-    <copyright>Copyright © Jeremy Marcus</copyright>
+    <description>Easily add icon fonts to your Xamarin.Forms applications!</description>
+    <summary>Iconize Plugin for Xamarin.Forms - Meteocons</summary>
+    <copyright>Copyright © 2017</copyright>
     <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
     <dependencies>
       <group>
         <dependency id="Xam.Plugin.Iconize" version="$version$" />
       </group>
-
-      <!--PCL-->
-      <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10">
-        <dependency id="Xam.FormsPlugin.Iconize" version="$version$" />
-      </group>
     </dependencies>
+    <references>
+      <!--netstandard-->
+      <group targetFramework="netstandard1.0">
+        <reference file="Plugin.Iconize.Meteocons.dll" />
+      </group>
+
+      <!--Android-->
+      <group targetFramework="MonoAndroid10">
+        <reference file="Plugin.Iconize.Meteocons.dll" />
+      </group>
+
+      <!--iOS-->
+      <group targetFramework="Xamarin.iOS10">
+        <reference file="Plugin.Iconize.Meteocons.dll" />
+      </group>
+
+      <!--UWP-->
+      <group targetFramework="uap10.0">
+        <reference file="Plugin.Iconize.Meteocons.dll" />
+      </group>
+    </references>
   </metadata>
   <files>
+    <!--netstandard-->
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons\bin\$configuration$\netstandard1.0\Plugin.Iconize.Meteocons.dll" target="lib\netstandard1.0" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons\bin\$configuration$\netstandard1.0\Plugin.Iconize.Meteocons.*pdb" target="lib\netstandard1.0" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons\bin\$configuration$\netstandard1.0\Plugin.Iconize.Meteocons.*xml" target="lib\netstandard1.0" />
+
+    <!--Android-->
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Android\bin\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Android\bin\$configuration$\Plugin.Iconize.Meteocons.*pdb" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Android\bin\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\MonoAndroid10" />
+
+    <!--iOS-->
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Meteocons.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Meteocons\iconize-meteocons.ttf" target="lib\Xamarin.iOS10" />
+    
     <!--UWP-->
-	<file src="src\Fonts\Meteocons\iconize-meteocons.ttf" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP\Assets\Fonts\iconize-meteocons.ttf" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.dll" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.dll" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.pdb" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.pri" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\Release\Plugin.Iconize.Meteocons.UWP.xml" target="lib\UAP10\Plugin.Iconize.Meteocons.UWP.xml" />
-    
-    <!--Xamarin.Android-->
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\bin\Release\Plugin.Iconize.Meteocons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Meteocons.Droid.dll" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\bin\Release\Plugin.Iconize.Meteocons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Meteocons.Droid.pdb" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Droid\bin\Release\Plugin.Iconize.Meteocons.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Meteocons.Droid.xml" />
-    
-    <!--Xamarin.iOS-->
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\Release\Plugin.Iconize.Meteocons.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.Meteocons.iOS.dll" />
-    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\iPhone\Release\Plugin.Iconize.Meteocons.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.Meteocons.iOS.xml" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\uap10.0" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\$configuration$\Plugin.Iconize.Meteocons.*pdb" target="lib\uap10.0" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\$configuration$\Plugin.Iconize.Meteocons.*pri" target="lib\uap10.0" />
+    <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\uap10.0" />
+    <file src="src\Fonts\Meteocons\iconize-meteocons.ttf" target="lib\uap10.0\Plugin.Iconize.Meteocons" />
   </files>
 </package>

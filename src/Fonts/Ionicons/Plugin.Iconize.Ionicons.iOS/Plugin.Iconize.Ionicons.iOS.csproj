@@ -10,9 +10,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.Ionicons.iOS</AssemblyName>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyName>Plugin.Iconize.Ionicons</AssemblyName>
+    <CopyNuGetImplementations>true</CopyNuGetImplementations>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,20 +34,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Ionicons.iOS.xml</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Ionicons.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\IoniconsCollection.cs">
-      <Link>IoniconsCollection.cs</Link>
-    </Compile>
-    <Compile Include="IoniconsModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\iconize-ionicons.ttf">
-      <Link>Resources\iconize-ionicons.ttf</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -62,13 +52,7 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="project.json" />
-  </ItemGroup>
+  <Import Project="..\Plugin.Iconize.Ionicons.Shared\Plugin.Iconize.Ionicons.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

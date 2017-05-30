@@ -10,9 +10,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.Material.iOS</AssemblyName>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyName>Plugin.Iconize.Material</AssemblyName>
+    <CopyNuGetImplementations>true</CopyNuGetImplementations>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,16 +34,12 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Material.iOS.xml</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Material.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AppStore|AnyCPU'">
     <OutputPath>bin\AppStore\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\MaterialCollection.cs">
-      <Link>MaterialCollection.cs</Link>
-    </Compile>
-    <Compile Include="MaterialModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,19 +55,7 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\iconize-material.ttf">
-      <Link>Resources\iconize-material.ttf</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="project.json" />
-  </ItemGroup>
+  <Import Project="..\Plugin.Iconize.Material.Shared\Plugin.Iconize.Material.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

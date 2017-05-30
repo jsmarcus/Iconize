@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>98603844-d31a-40a2-8ff1-2d56eabde3e5</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Plugin.Iconize</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconCarouselPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconNavigationPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\IconToolbarItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Icon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Iconize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IconizeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IconModule.cs" />
+  </ItemGroup>
+</Project>

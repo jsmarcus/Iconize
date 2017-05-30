@@ -10,9 +10,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.Typicons.iOS</AssemblyName>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyName>Plugin.Iconize.Typicons</AssemblyName>
+    <CopyNuGetImplementations>true</CopyNuGetImplementations>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,14 +34,10 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Typicons.iOS.xml</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.Typicons.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\TypiconsCollection.cs">
-      <Link>TypiconsCollection.cs</Link>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypiconsModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Plugin.Iconize.iOS\Plugin.Iconize.iOS.csproj">
@@ -50,10 +46,6 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -61,14 +53,6 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="..\iconize-typicons.ttf">
-      <Link>Resources\iconize-typicons.ttf</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </BundleResource>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="project.json" />
-  </ItemGroup>
+  <Import Project="..\Plugin.Iconize.Typicons.Shared\Plugin.Iconize.Typicons.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

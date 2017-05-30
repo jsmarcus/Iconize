@@ -1,4 +1,5 @@
-version: 1.5.0.{build}-beta
+version: 2.0.0.{build}-beta
+image: Visual Studio 2017
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'
@@ -7,9 +8,7 @@ assembly_info:
   assembly_informational_version: '{version}'
 build_script:
 - cmd: >-
-    powershell .\install-android-sdk.ps1
-
-    powershell .\build.ps1 -Target Default -Verbosity diagnostic
+    powershell .\bootbuild.ps1
 artifacts:
 - path: ./build/nuget/*.nupkg
   name: NuGet

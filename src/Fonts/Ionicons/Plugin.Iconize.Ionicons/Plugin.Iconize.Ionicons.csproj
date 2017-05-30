@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Plugin.Iconize\Plugin.Iconize.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Plugin.Iconize.Ionicons.Shared\Plugin.Iconize.Ionicons.Shared.projitems" Label="Shared" />
+
+</Project>

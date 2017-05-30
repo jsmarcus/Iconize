@@ -8,11 +8,12 @@
     <ProjectGuid>{9720EF44-ABA5-422D-A9BF-30CE32D32B4E}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>Plugin.Iconize.iOS</RootNamespace>
+    <RootNamespace>Plugin.Iconize</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.iOS</AssemblyName>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyName>Plugin.Iconize</AssemblyName>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <CopyNuGetImplementations>true</CopyNuGetImplementations>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,21 +35,16 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.iOS.xml</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Controls\IconButton.cs" />
-    <Compile Include="Controls\IconLabel.cs" />
-    <Compile Include="CustomAttributedString.cs" />
-    <Compile Include="IconizeExtensions.cs" />
-    <Compile Include="ParsingUtil.cs" />
+    <Compile Include="Renderers\IconButtonRenderer.cs" />
+    <Compile Include="Renderers\IconImageRenderer.cs" />
+    <Compile Include="Renderers\IconLabelRenderer.cs" />
+    <Compile Include="Renderers\IconNavigationRenderer.cs" />
+    <Compile Include="Renderers\IconTabbedPageRenderer.cs" />
+    <Compile Include="PlatformExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,7 +53,10 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="project.json" />
+    <PackageReference Include="Xamarin.Forms">
+      <Version>2.3.5.239-pre3</Version>
+    </PackageReference>
   </ItemGroup>
+  <Import Project="..\Plugin.Iconize.Shared\Plugin.Iconize.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

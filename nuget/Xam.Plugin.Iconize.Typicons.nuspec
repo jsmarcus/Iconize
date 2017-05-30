@@ -3,42 +3,65 @@
   <metadata>
     <id>Xam.Plugin.Iconize.Typicons</id>
     <version>$version$</version>
-    <title>Iconize Plugin for Xamarin - Typicons</title>
+    <title>Iconize Plugin for Xamarin.Forms - Typicons</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
     <licenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/jsmarcus/Iconize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Easily add icon fonts to your Xamarin applications!</description>
-    <summary>Iconize Plugin for Xamarin - Typicons</summary>
-    <copyright>Copyright © Jeremy Marcus</copyright>
+    <description>Easily add icon fonts to your Xamarin.Forms applications!</description>
+    <summary>Iconize Plugin for Xamarin.Forms - Typicons</summary>
+    <copyright>Copyright © 2017</copyright>
     <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
     <dependencies>
       <group>
         <dependency id="Xam.Plugin.Iconize" version="$version$" />
       </group>
-
-      <!--PCL-->
-      <group targetFramework="portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10">
-        <dependency id="Xam.FormsPlugin.Iconize" version="$version$" />
-      </group>
     </dependencies>
+    <references>
+      <!--netstandard-->
+      <group targetFramework="netstandard1.0">
+        <reference file="Plugin.Iconize.Typicons.dll" />
+      </group>
+
+      <!--Android-->
+      <group targetFramework="MonoAndroid10">
+        <reference file="Plugin.Iconize.Typicons.dll" />
+      </group>
+
+      <!--iOS-->
+      <group targetFramework="Xamarin.iOS10">
+        <reference file="Plugin.Iconize.Typicons.dll" />
+      </group>
+
+      <!--UWP-->
+      <group targetFramework="uap10.0">
+        <reference file="Plugin.Iconize.Typicons.dll" />
+      </group>
+    </references>
   </metadata>
   <files>
+    <!--netstandard-->
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons\bin\$configuration$\netstandard1.0\Plugin.Iconize.Typicons.dll" target="lib\netstandard1.0" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons\bin\$configuration$\netstandard1.0\Plugin.Iconize.Typicons.*pdb" target="lib\netstandard1.0" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons\bin\$configuration$\netstandard1.0\Plugin.Iconize.Typicons.*xml" target="lib\netstandard1.0" />
+
+    <!--Android-->
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.Android\bin\$configuration$\Plugin.Iconize.Typicons.dll" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.Android\bin\$configuration$\Plugin.Iconize.Typicons.*pdb" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.Android\bin\$configuration$\Plugin.Iconize.Typicons.*xml" target="lib\MonoAndroid10" />
+
+    <!--iOS-->
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Typicons.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Typicons.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\iPhone\$configuration$\Plugin.Iconize.Typicons.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Typicons\iconize-typicons.ttf" target="lib\Xamarin.iOS10" />
+    
     <!--UWP-->
-	<file src="src\Fonts\Typicons\iconize-typicons.ttf" target="lib\UAP10\Plugin.Iconize.Typicons.UWP\Assets\Fonts\iconize-typicons.ttf" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.dll" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.dll" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.pdb" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.pdb" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.pri" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.pri" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\Release\Plugin.Iconize.Typicons.UWP.xml" target="lib\UAP10\Plugin.Iconize.Typicons.UWP.xml" />
-    
-    <!--Xamarin.Android-->
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.Droid\bin\Release\Plugin.Iconize.Typicons.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Typicons.Droid.dll" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.Droid\bin\Release\Plugin.Iconize.Typicons.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Typicons.Droid.pdb" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.Droid\bin\Release\Plugin.Iconize.Typicons.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Typicons.Droid.xml" />
-    
-    <!--Xamarin.iOS-->
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\iPhone\Release\Plugin.Iconize.Typicons.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.Typicons.iOS.dll" />
-    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\iPhone\Release\Plugin.Iconize.Typicons.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.Typicons.iOS.xml" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\$configuration$\Plugin.Iconize.Typicons.dll" target="lib\uap10.0" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\$configuration$\Plugin.Iconize.Typicons.*pdb" target="lib\uap10.0" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\$configuration$\Plugin.Iconize.Typicons.*pri" target="lib\uap10.0" />
+    <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\$configuration$\Plugin.Iconize.Typicons.*xml" target="lib\uap10.0" />
+    <file src="src\Fonts\Typicons\iconize-typicons.ttf" target="lib\uap10.0\Plugin.Iconize.Typicons" />
   </files>
 </package>

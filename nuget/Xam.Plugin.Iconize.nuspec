@@ -3,45 +3,68 @@
   <metadata>
     <id>Xam.Plugin.Iconize</id>
     <version>$version$</version>
-    <title>Iconize Plugin for Xamarin and Windows</title>
+    <title>Iconize Plugin for Xamarin.Forms</title>
     <authors>Jeremy Marcus</authors>
     <owners>Jeremy Marcus</owners>
     <licenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/jsmarcus/Iconize</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Easily add icon fonts to your Xamarin or Windows applications!</description>
-    <summary>Iconize Plugin for Xamarin and Windows</summary>
-    <copyright>Copyright © Jeremy Marcus</copyright>
+    <description>Easily add icon fonts to your Xamarin.Forms applications!</description>
+    <summary>Iconize Plugin for Xamarin.Forms</summary>
+    <copyright>Copyright © 2017</copyright>
     <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
-    <dependencies></dependencies>
+    <dependencies>
+      <group>
+        <dependency id="Xamarin.Forms" version="[2.3.5, 3)" />
+      </group>
+
+      <group targetFramework="uap10.0">
+        <dependency id="SkiaSharp" version="[1.58, 2)" />
+        <dependency id="Xamarin.Forms" version="[2.3.5, 3)" />
+      </group>
+    </dependencies>
+    <references>
+      <!--netstandard-->
+      <group targetFramework="netstandard1.0">
+        <reference file="Plugin.Iconize.dll" />
+      </group>
+
+      <!--Android-->
+      <group targetFramework="MonoAndroid10">
+        <reference file="Plugin.Iconize.dll" />
+      </group>
+
+      <!--iOS-->
+      <group targetFramework="Xamarin.iOS10">
+        <reference file="Plugin.Iconize.dll" />
+      </group>
+
+      <!--UWP-->
+      <group targetFramework="uap10.0">
+        <reference file="Plugin.Iconize.dll" />
+      </group>
+    </references>
   </metadata>
   <files>
-    <!--PCL-->
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.dll" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.pdb" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Iconize.xml" />
+    <!--netstandard-->
+    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard1.0\Plugin.Iconize.dll" target="lib\netstandard1.0" />
+    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard1.0\Plugin.Iconize.*pdb" target="lib\netstandard1.0" />
+    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard1.0\Plugin.Iconize.*xml" target="lib\netstandard1.0" />
+
+    <!--Android-->
+    <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.dll" target="lib\MonoAndroid10" />
+    <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.*pdb" target="lib\MonoAndroid10" />
+    <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.*xml" target="lib\MonoAndroid10" />
+
+    <!--iOS-->
+    <file src="src\Plugin.Iconize.iOS\bin\iPhone\$configuration$\Plugin.Iconize.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Plugin.Iconize.iOS\bin\iPhone\$configuration$\Plugin.Iconize.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Plugin.Iconize.iOS\bin\iPhone\$configuration$\Plugin.Iconize.*xml" target="lib\Xamarin.iOS10" />
 
     <!--UWP-->
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\UAP10\Plugin.Iconize.dll" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\UAP10\Plugin.Iconize.pdb" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\UAP10\Plugin.Iconize.xml" />
-    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.dll" target="lib\UAP10\Plugin.Iconize.UWP.dll" />
-    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pdb" target="lib\UAP10\Plugin.Iconize.UWP.pdb" />
-    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.pri" target="lib\UAP10\Plugin.Iconize.UWP.pri" />
-    <file src="src\Plugin.Iconize.UWP\bin\Release\Plugin.Iconize.UWP.xml" target="lib\UAP10\Plugin.Iconize.UWP.xml" />
-
-    <!--Xamarin.Android-->
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\MonoAndroid10\Plugin.Iconize.dll" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.pdb" target="lib\MonoAndroid10\Plugin.Iconize.pdb" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\MonoAndroid10\Plugin.Iconize.xml" />
-    <file src="src\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.dll" target="lib\MonoAndroid10\Plugin.Iconize.Droid.dll" />
-    <file src="src\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.pdb" target="lib\MonoAndroid10\Plugin.Iconize.Droid.pdb" />
-    <file src="src\Plugin.Iconize.Droid\bin\Release\Plugin.Iconize.Droid.xml" target="lib\MonoAndroid10\Plugin.Iconize.Droid.xml" />
-
-    <!--Xamarin.iOS-->
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.dll" />
-    <file src="src\Plugin.Iconize\bin\Release\Plugin.Iconize.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.xml" />
-    <file src="src\Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.dll" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.dll" />
-    <file src="src\Plugin.Iconize.iOS\bin\iPhone\Release\Plugin.Iconize.iOS.xml" target="lib\Xamarin.iOS10\Plugin.Iconize.iOS.xml" />
+    <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.dll" target="lib\uap10.0" />
+    <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.*pdb" target="lib\uap10.0" />
+    <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.*pri" target="lib\uap10.0" />
+    <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.*xml" target="lib\uap10.0" />
   </files>
 </package>

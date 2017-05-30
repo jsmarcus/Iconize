@@ -1,9 +1,0 @@
-﻿{
-  "dependencies": {
-    "Xamarin.Android.Support.v7.AppCompat": "25.1.1"
-  },
-  "frameworks": {
-    "MonoAndroid,Version=v7.1": {}
-  },
-  "supports": {}
-}

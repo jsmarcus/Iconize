@@ -10,9 +10,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.EntypoPlus.iOS</AssemblyName>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <AssemblyName>Plugin.Iconize.EntypoPlus</AssemblyName>
+    <CopyNuGetImplementations>true</CopyNuGetImplementations>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,25 +34,14 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.EntypoPlus.iOS.xml</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\Plugin.Iconize.EntypoPlus.xml</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="..\EntypoPlusCollection.cs">
-      <Link>EntypoPlusCollection.cs</Link>
-    </Compile>
-    <Compile Include="EntypoPlusModule.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Plugin.Iconize.iOS\Plugin.Iconize.iOS.csproj">
       <Project>{9720ef44-aba5-422d-a9bf-30ce32d32b4e}</Project>
       <Name>Plugin.Iconize.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
-      <Name>Plugin.Iconize</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -61,14 +50,10 @@
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <BundleResource Include="..\iconize-entypoplus.ttf">
-      <Link>Resources\iconize-entypoplus.ttf</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </BundleResource>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="project.json" />
-  </ItemGroup>
+  <Import Project="..\Plugin.Iconize.EntypoPlus.Shared\Plugin.Iconize.EntypoPlus.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,10 +1,9 @@
-# Iconize Plugin for Xamarin
+# Iconize Plugin for Xamarin Forms
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
-Use icon fonts in your Xamarin.Android, Xamarin.iOS, or Xamarin.Forms application!
+Use icon fonts in your Xamarin.Forms application!
 
 **NuGet**
 * Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Media.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
-* Install into your PCL project and Client projects.
 
 **Build Status** 
 * [![Build status](https://ci.appveyor.com/api/projects/status/8ibyfk1rxn3mun3a?svg=true)](https://ci.appveyor.com/project/JeremyMarcus/iconize)
@@ -33,19 +32,6 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 
 ## Controls
 
-**Xamarin.Android (AppCompat)**
-
-* IconButton (AppCompatButton)
-* IconDrawable (Drawable)
-* IconTextView (TextView)
-* IconToggleButton (ToggleButton)
-
-**Xamarin.iOS (Unified)**
-
-* IconButton (UIButton)
-* IconLabel (UILabel)
-* UIImage (extension)
-
 **Xamarin.Forms**
 
 * IconButton (Button)
@@ -55,12 +41,6 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 * IconToolbarItem (ToolbarItem)
   * Requires IconNavigationPage
 
-**UWP (Coming Soon)**
-
-* IconButton (Button)
-* IconLabel (TextBlock)
-* Bitmap (extension)
-
 
 ## Setup
 
@@ -69,8 +49,8 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 **Nuget**  
 All packages are provided via NuGet.
 
-* [Xam.Plugin.Iconize](https://www.nuget.org/packages/Xam.Plugin.Iconize) - Required by all projects
-* [Xam.FormsPlugin.Iconize](https://www.nuget.org/packages/Xam.FormsPlugin.Iconize) - Required by Xamarin.Forms projects
+* [Xam.Plugin.Iconize](https://www.nuget.org/packages/Xam.Plugin.Iconize)
+* [Xam.Plugin.Iconize.EntypoPlus](https://www.nuget.org/packages/Xam.Plugin.Iconize.EntypoPlus)
 * [Xam.Plugin.Iconize.FontAwesome](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesome)
 * [Xam.Plugin.Iconize.Ionicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Ionicons)
 * [Xam.Plugin.Iconize.Material](https://www.nuget.org/packages/Xam.Plugin.Iconize.Material)
@@ -81,80 +61,54 @@ All packages are provided via NuGet.
 
 ### Configure
 
-**Xamarin.Android (AppCompat)**  
-Initialize any number of modules in Application.OnCreate() or Activity.OnCreate().
+**PCL Project**
+Initialize any number of modules in App.cs constructor.
 ```csharp
-public override void OnCreate()
+public App()
 {
-    base.OnCreate();
-
-    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+    ...
+    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.EntypoPlusModule())
+                          .With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.IoniconsModule())
                           .With(new Plugin.Iconize.Fonts.MaterialModule())
                           .With(new Plugin.Iconize.Fonts.MeteoconsModule())
-                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
+                          .With(new Plugin.Iconize.Fonts.SimpleLineIconsModule())
+                          .With(new Plugin.Iconize.Fonts.TypiconsModule())
+                          .With(new Plugin.Iconize.Fonts.WeatherIconsModule());
     ...
 }
 ```
-**OR**
-```csharp
-protected override void OnCreate(Bundle bundle)
-{
-    base.OnCreate(bundle);
 
-    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
-                          .With(new Plugin.Iconize.Fonts.MaterialModule())
-                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
-                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
+**Xamarin.Android (AppCompat)**  
+Initialize the IconControls.
+```csharp
+protected override void OnCreate(Bundle savedInstanceState)
+{
+    Xamarin.Forms.Forms.Init(this, savedInstanceState);
     ...
+    Plugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
+    ...
+    LoadApplication(new App());
 }
 ```
 
 
 **Xamarin.iOS (Unified)**  
-Initialize any number of modules in AppDelegate.FinishedLaunching().
-```csharp
-public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
-{
-    Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule())
-                          .With(new Plugin.Iconize.Fonts.MaterialModule())
-                          .With(new Plugin.Iconize.Fonts.MeteoconsModule())
-                          .With(new Plugin.Iconize.Fonts.TypiconsModule());
-
-    ...
-}
-```
-
-Add the UIAppFonts key to Info.plist.
+Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
 ```xml
 <key>UIAppFonts</key>
 <array>
+    <string>iconize-entypoplus.ttf</string>
     <string>iconize-fontawesome.ttf</string>
+    <string>iconize-ionicons.ttf</string>
     <string>iconize-material.ttf</string>
     <string>iconize-meteocons.ttf</string>
+    <string>iconize-simplelineicons.ttf</string>
     <string>iconize-typicons.ttf</string>
+    <string>iconize-weathericons.ttf</string>
 </array>
 ```
 
-**Xamarin.Forms**  
-Follow the instructions for the specific platforms above and add the following:
-
-Android (AppCompat):
-```csharp
-Xamarin.Forms.Forms.Init(this, savedInstanceState);
-...
-FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
-...
-LoadApplication(new App());
-```
-
-iOS (Unified):
-```csharp
-Xamarin.Forms.Forms.Init();
-...
-FormsPlugin.Iconize.iOS.IconControls.Init();
-...
-LoadApplication(new App());
-```
 
 ## Contributions
 
@@ -162,8 +116,10 @@ LoadApplication(new App());
 * Riccardo Marraghini [@marra85](https://github.com/marra85)
 * Kevin Petit [@kvpt](https://github.com/kvpt)
 * Aaron [@veeprox](https://github.com/veeprox)
-* Matthias [@bruzkovsky](https://github.com/bruzkovsky)
+* Matthias Bruzek [@bruzkovsky](https://github.com/bruzkovsky)
 * Philipp Sumi [@hardcodet](https://github.com/hardcodet)
+* [@andooown](https://github.com/andooown)
+* Julien Binet [@lanarchyste](https://github.com/lanarchyste)
 
 ## License
 This work is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
