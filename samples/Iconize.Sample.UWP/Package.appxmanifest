@@ -7,14 +7,14 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="9bcc68e0-ca7e-4fba-9920-0200f46acb99"
+    Name="e3de2234-1d6a-440e-98b5-c589b70202bf"
     Publisher="CN=Jeremy"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="9bcc68e0-ca7e-4fba-9920-0200f46acb99" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <mp:PhoneIdentity PhoneProductId="e3de2234-1d6a-440e-98b5-c589b70202bf" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Iconize.Sample.Windows</DisplayName>
+    <DisplayName>Iconize.Sample.UWP</DisplayName>
     <PublisherDisplayName>Jeremy</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="Iconize.Sample.Windows.App">
+      EntryPoint="Iconize.Sample.UWP.App">
       <uap:VisualElements
-        DisplayName="Iconize.Sample.Windows"
+        DisplayName="Iconize.Sample.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Iconize.Sample.Windows"
+        Description="Iconize.Sample.UWP"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

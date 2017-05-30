@@ -3,14 +3,15 @@ using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following set of attributes.
 // Change these attribute values to modify the information associated with an assembly.
-[assembly: AssemblyTitle("Iconize.Sample.UWP")]
+[assembly: AssemblyTitle("Iconize.Sample.Android")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Iconize.Sample.UWP")]
+[assembly: AssemblyProduct("Iconize.Sample.Android")]
 [assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
+[assembly: ComVisible(false)]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -20,4 +21,3 @@ using System.Runtime.InteropServices;
 // as shown below: [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.0.0")]
 [assembly: AssemblyFileVersion("2.0.0")]
-[assembly: ComVisible(false)]

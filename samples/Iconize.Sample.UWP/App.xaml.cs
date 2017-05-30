@@ -5,7 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace Iconize.Sample.Windows
+namespace Iconize.Sample.UWP
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -26,8 +26,8 @@ namespace Iconize.Sample.Windows
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
-        /// <param name="args">Details about the launch request and process.</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs args)
+        /// <param name="e">Details about the launch request and process.</param>
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 
 #if DEBUG
@@ -37,9 +37,7 @@ namespace Iconize.Sample.Windows
             }
 #endif
 
-            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.MaterialModule());
-
-            var rootFrame = Window.Current.Content as Frame;
+            Frame rootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -50,7 +48,9 @@ namespace Iconize.Sample.Windows
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
+                Xamarin.Forms.Forms.Init(e);
+
+                if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
                 }
@@ -64,7 +64,7 @@ namespace Iconize.Sample.Windows
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(MainPage), args.Arguments);
+                rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
