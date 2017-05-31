@@ -2,7 +2,7 @@
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
 Use icon fonts in your Xamarin.Forms application!
 
-**NuGet**
+**NuGet** 
 * Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Media.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
 
 **Build Status** 
@@ -32,8 +32,7 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 
 ## Controls
 
-**Xamarin.Forms**
-
+**Xamarin.Forms** 
 * IconButton (Button)
 * IconImage (Image)
 * IconLabel (Label)
@@ -61,7 +60,7 @@ All packages are provided via NuGet.
 
 ### Configure
 
-**PCL Project**
+**PCL Project**  
 Initialize any number of modules in App.cs constructor.
 ```csharp
 public App()
@@ -92,7 +91,6 @@ protected override void OnCreate(Bundle savedInstanceState)
 }
 ```
 
-
 **Xamarin.iOS (Unified)**  
 Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
 ```xml
@@ -108,7 +106,6 @@ Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
     <string>iconize-weathericons.ttf</string>
 </array>
 ```
-
 
 ## Contributions
 
