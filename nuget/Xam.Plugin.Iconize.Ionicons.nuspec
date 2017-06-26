@@ -41,7 +41,7 @@
     </references>
     <contentFiles>
       <!--iOS-->
-      <files include="any/xamarinios/iconize-ionicons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+      <files include="any/Xamarin.iOS10/iconize-ionicons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
@@ -59,7 +59,7 @@
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\$configuration$\Plugin.Iconize.Ionicons.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\$configuration$\Plugin.Iconize.Ionicons.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\bin\$configuration$\Plugin.Iconize.Ionicons.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Ionicons\iconize-ionicons.ttf" target="Content" />
+    <file src="src\Fonts\Ionicons\iconize-ionicons.ttf" target="contentFiles\any\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Fonts\Ionicons\Plugin.Iconize.Ionicons.UWP\bin\$configuration$\Plugin.Iconize.Ionicons.dll" target="lib\uap10.0" />

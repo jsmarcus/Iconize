@@ -41,7 +41,7 @@
     </references>
     <contentFiles>
       <!--iOS-->
-      <files include="any/xamarinios/iconize-simplelineicons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+      <files include="any/Xamarin.iOS10/iconize-simplelineicons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
@@ -59,7 +59,7 @@
     <file src="src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.iOS\bin\$configuration$\Plugin.Iconize.SimpleLineIcons.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.iOS\bin\$configuration$\Plugin.Iconize.SimpleLineIcons.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.iOS\bin\$configuration$\Plugin.Iconize.SimpleLineIcons.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\SimpleLineIcons\iconize-simplelineicons.ttf" target="Content" />
+    <file src="src\Fonts\SimpleLineIcons\iconize-simplelineicons.ttf" target="contentFiles\any\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.UWP\bin\$configuration$\Plugin.Iconize.SimpleLineIcons.dll" target="lib\uap10.0" />

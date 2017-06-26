@@ -41,7 +41,7 @@
     </references>
     <contentFiles>
       <!--iOS-->
-      <files include="any/xamarinios/iconize-typicons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+      <files include="any/Xamarin.iOS10/iconize-typicons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
@@ -59,7 +59,7 @@
     <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\$configuration$\Plugin.Iconize.Typicons.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\$configuration$\Plugin.Iconize.Typicons.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\bin\$configuration$\Plugin.Iconize.Typicons.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Typicons\iconize-typicons.ttf" target="Content" />
+    <file src="src\Fonts\Typicons\iconize-typicons.ttf" target="contentFiles\any\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Fonts\Typicons\Plugin.Iconize.Typicons.UWP\bin\$configuration$\Plugin.Iconize.Typicons.dll" target="lib\uap10.0" />

@@ -41,7 +41,7 @@
     </references>
     <contentFiles>
       <!--iOS-->
-      <files include="any/xamarinios/iconize-meteocons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+      <files include="any/Xamarin.iOS10/iconize-meteocons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
@@ -59,7 +59,7 @@
     <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\$configuration$\Plugin.Iconize.Meteocons.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\bin\$configuration$\Plugin.Iconize.Meteocons.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Meteocons\iconize-meteocons.ttf" target="Content" />
+    <file src="src\Fonts\Meteocons\iconize-meteocons.ttf" target="contentFiles\any\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Fonts\Meteocons\Plugin.Iconize.Meteocons.UWP\bin\$configuration$\Plugin.Iconize.Meteocons.dll" target="lib\uap10.0" />

@@ -41,7 +41,7 @@
     </references>
     <contentFiles>
       <!--iOS-->
-      <files include="any/xamarinios/iconize-entypoplus.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+      <files include="any/Xamarin.iOS/iconize-entypoplus.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
@@ -59,7 +59,7 @@
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="Content" />
+    <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="contentFiles\any\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\uap10.0" />
