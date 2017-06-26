@@ -55,7 +55,7 @@
     <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\FontAwesome\iconize-fontawesome.ttf" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\iconize-fontawesome.ttf" target="Content" />
     
     <!--UWP-->
     <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\uap10.0" />
@@ -64,4 +64,8 @@
     <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\uap10.0" />
     <file src="src\Fonts\FontAwesome\iconize-fontawesome.ttf" target="lib\uap10.0\Plugin.Iconize.FontAwesome" />
   </files>
+  <contentFiles>
+    <!--iOS-->
+    <files include="any/xamarinios/iconize-fontawesome.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+  </contentFiles>
 </package>

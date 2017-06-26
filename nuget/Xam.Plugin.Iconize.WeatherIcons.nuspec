@@ -55,7 +55,7 @@
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\bin\$configuration$\Plugin.Iconize.WeatherIcons.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\bin\$configuration$\Plugin.Iconize.WeatherIcons.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\bin\$configuration$\Plugin.Iconize.WeatherIcons.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\WeatherIcons\iconize-weathericons.ttf" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\WeatherIcons\iconize-weathericons.ttf" target="Content" />
     
     <!--UWP-->
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\$configuration$\Plugin.Iconize.WeatherIcons.dll" target="lib\uap10.0" />
@@ -64,4 +64,8 @@
     <file src="src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.UWP\bin\$configuration$\Plugin.Iconize.WeatherIcons.*xml" target="lib\uap10.0" />
     <file src="src\Fonts\WeatherIcons\iconize-weathericons.ttf" target="lib\uap10.0\Plugin.Iconize.WeatherIcons" />
   </files>
+  <contentFiles>
+    <!--iOS-->
+    <files include="any/xamarinios/iconize-weathericons.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+  </contentFiles>
 </package>

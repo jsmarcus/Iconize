@@ -55,7 +55,7 @@
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="Content" />
     
     <!--UWP-->
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\uap10.0" />
@@ -64,4 +64,8 @@
     <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\uap10.0" />
     <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="lib\uap10.0\Plugin.Iconize.EntypoPlus" />
   </files>
+  <contentFiles>
+    <!--iOS-->
+    <files include="any/xamarinios/iconize-entypoplus.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+  </contentFiles>
 </package>
