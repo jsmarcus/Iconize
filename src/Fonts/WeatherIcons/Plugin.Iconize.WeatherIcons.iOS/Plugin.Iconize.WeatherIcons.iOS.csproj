@@ -52,6 +52,9 @@
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconize-weathericons.ttf" />
+  </ItemGroup>
   <Import Project="..\Plugin.Iconize.WeatherIcons.Shared\Plugin.Iconize.WeatherIcons.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

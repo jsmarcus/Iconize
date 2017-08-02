@@ -52,6 +52,9 @@
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconize-simplelineicons.ttf" />
+  </ItemGroup>
   <Import Project="..\Plugin.Iconize.SimpleLineIcons.Shared\Plugin.Iconize.SimpleLineIcons.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
