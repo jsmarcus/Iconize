@@ -3,7 +3,11 @@ using System.ComponentModel;
 using Plugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+#if USE_FASTRENDERERS
 using LabelRenderer = Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer;
+#else
+using LabelRenderer = Xamarin.Forms.Platform.Android.LabelRenderer;
+#endif
 
 [assembly: ExportRenderer(typeof(IconLabel), typeof(IconLabelRenderer))]
 namespace Plugin.Iconize
@@ -11,7 +15,11 @@ namespace Plugin.Iconize
     /// <summary>
     /// Defines the <see cref="IconLabelRenderer" /> renderer.
     /// </summary>
+#if USE_FASTRENDERERS
     /// <seealso cref="Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer" />
+#else
+    /// <seealso cref="Xamarin.Forms.Platform.Android.LabelRenderer" />
+#endif
     public class IconLabelRenderer : LabelRenderer
     {
         #region Properties
@@ -32,8 +40,11 @@ namespace Plugin.Iconize
         protected override void OnAttachedToWindow()
         {
             base.OnAttachedToWindow();
-
+#if USE_FASTRENDERERS
             TextChanged += OnTextChanged;
+#else
+            Control.TextChanged += OnTextChanged;
+#endif
         }
 
         /// <summary>
@@ -41,8 +52,11 @@ namespace Plugin.Iconize
         /// </summary>
         protected override void OnDetachedFromWindow()
         {
+#if USE_FASTRENDERERS
             TextChanged -= OnTextChanged;
-
+#else
+            Control.TextChanged -= OnTextChanged;
+#endif
             base.OnDetachedFromWindow();
         }
 
@@ -96,16 +110,28 @@ namespace Plugin.Iconize
         /// </summary>
         private void UpdateText()
         {
+#if USE_FASTRENDERERS
             TextChanged -= OnTextChanged;
+#else
+            Control.TextChanged -= OnTextChanged;
+#endif
 
             var icon = Iconize.FindIconForKey(Label.Text);
             if (icon != null)
             {
+#if USE_FASTRENDERERS
                 Text = $"{icon.Character}";
                 Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+#else
+                Control.Text = $"{icon.Character}";
+                Control.Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+#endif
             }
-
+#if USE_FASTRENDERERS
             TextChanged += OnTextChanged;
+#else
+            Control.TextChanged += OnTextChanged;
+#endif
         }
     }
 }
