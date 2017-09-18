@@ -23,7 +23,7 @@ namespace Plugin.Iconize
 #endif
     public class IconImageRenderer : ImageRenderer
     {
-#region Properties
+        #region Properties
 
         /// <summary>
         /// Gets the image.
@@ -33,7 +33,7 @@ namespace Plugin.Iconize
         /// </value>
         private IconImage Image { get; set; }
 
-#endregion Properties
+        #endregion Properties
 
         /// <summary>
         /// Raises the <see cref="E:ElementChanged" /> event.
