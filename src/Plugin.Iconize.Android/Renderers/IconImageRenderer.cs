@@ -3,7 +3,12 @@ using System.ComponentModel;
 using Plugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+#if USE_FASTRENDERERS
 using ImageRenderer = Xamarin.Forms.Platform.Android.FastRenderers.ImageRenderer;
+#else
+using ScaleType = Android.Widget.ImageView.ScaleType;
+using ImageRenderer = Xamarin.Forms.Platform.Android.ImageRenderer;
+#endif
 
 [assembly: ExportRenderer(typeof(IconImage), typeof(IconImageRenderer))]
 namespace Plugin.Iconize
@@ -14,7 +19,7 @@ namespace Plugin.Iconize
     /// <seealso cref="Xamarin.Forms.Platform.Android.FastRenderers.ImageRenderer" />
     public class IconImageRenderer : ImageRenderer
     {
-        #region Properties
+#region Properties
 
         /// <summary>
         /// Gets the image.
@@ -24,7 +29,7 @@ namespace Plugin.Iconize
         /// </value>
         private IconImage Image { get; set; }
 
-        #endregion Properties
+#endregion Properties
 
         /// <summary>
         /// Raises the <see cref="E:ElementChanged" /> event.
@@ -72,7 +77,11 @@ namespace Plugin.Iconize
             var icon = Iconize.FindIconForKey(Image.Icon);
             if (icon == null)
             {
+#if USE_FASTRENDERERS
                 SetImageResource(Android.Resource.Color.Transparent);
+#else
+                Control.SetImageResource(Android.Resource.Color.Transparent);
+#endif
                 return;
             }
 
@@ -80,8 +89,13 @@ namespace Plugin.Iconize
 
             var drawable = new IconDrawable(Context, icon).Color(Image.IconColor.ToAndroid())
                                                           .SizeDp((Int32)iconSize);
+#if USE_FASTRENDERERS
             SetScaleType(Image.IconSize > 0 ? ScaleType.Center : ScaleType.FitCenter);
             SetImageDrawable(drawable);
+#else
+            Control.SetScaleType(Image.IconSize > 0 ? ScaleType.Center : ScaleType.FitCenter);
+            Control.SetImageDrawable(drawable);
+#endif
         }
     }
 }
