@@ -16,7 +16,11 @@ namespace Plugin.Iconize
     /// <summary>
     /// Defines the <see cref="IconImageRenderer" /> renderer.
     /// </summary>
+#if USE_FASTRENDERERS
     /// <seealso cref="Xamarin.Forms.Platform.Android.FastRenderers.ImageRenderer" />
+#else
+    /// <seealso cref="Xamarin.Forms.Platform.Android.ImageRenderer" />
+#endif
     public class IconImageRenderer : ImageRenderer
     {
 #region Properties
