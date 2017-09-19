@@ -22,7 +22,7 @@ namespace Plugin.Iconize
 #endif
     public class IconButtonRenderer : ButtonRenderer
     {
-#region Properties
+        #region Properties
 
         /// <summary>
         /// Gets the button.
@@ -32,7 +32,7 @@ namespace Plugin.Iconize
         /// </value>
         private IconButton Button => Element as IconButton;
 
-#endregion Properties
+        #endregion Properties
 
         /// <summary>
         /// Called when [attached to window].
@@ -139,9 +139,9 @@ namespace Plugin.Iconize
             }
 
 #if USE_FASTRENDERERS
-            TextChanged -= OnTextChanged;
+            TextChanged += OnTextChanged;
 #else
-            Control.TextChanged -= OnTextChanged;
+            Control.TextChanged += OnTextChanged;
 #endif
         }
     }
