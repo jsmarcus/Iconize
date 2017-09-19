@@ -96,7 +96,7 @@ namespace Plugin.Iconize
         public static IIcon FindIconForKey(String iconKey)
         {
             if (String.IsNullOrWhiteSpace(iconKey))
-                throw new ArgumentNullException(nameof(iconKey));
+                return null;
 
             return Modules.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey);
         }
