@@ -4,15 +4,22 @@ using Android.OS;
 using Plugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+#if USE_FASTRENDERERS
 using ButtonRenderer = Xamarin.Forms.Platform.Android.FastRenderers.ButtonRenderer;
-
+#else
+using ButtonRenderer = Xamarin.Forms.Platform.Android.AppCompat.ButtonRenderer;
+#endif
 [assembly: ExportRenderer(typeof(IconButton), typeof(IconButtonRenderer))]
 namespace Plugin.Iconize
 {
     /// <summary>
     /// Defines the <see cref="IconButtonRenderer" /> renderer.
     /// </summary>
+#if USE_FASTRENDERERS
     /// <seealso cref="Xamarin.Forms.Platform.Android.FastRenderers.ButtonRenderer" />
+#else
+    /// <seealso cref="Xamarin.Forms.Platform.Android.AppCompat.ButtonRenderer" />
+#endif
     public class IconButtonRenderer : ButtonRenderer
     {
         #region Properties
@@ -33,8 +40,11 @@ namespace Plugin.Iconize
         protected override void OnAttachedToWindow()
         {
             base.OnAttachedToWindow();
-
+#if USE_FASTRENDERERS
             TextChanged += OnTextChanged;
+#else
+            Control.TextChanged += OnTextChanged;
+#endif
         }
 
         /// <summary>
@@ -42,8 +52,11 @@ namespace Plugin.Iconize
         /// </summary>
         protected override void OnDetachedFromWindow()
         {
+#if USE_FASTRENDERERS
             TextChanged -= OnTextChanged;
-
+#else
+            Control.TextChanged -= OnTextChanged;
+#endif
             base.OnDetachedFromWindow();
         }
 
@@ -58,7 +71,11 @@ namespace Plugin.Iconize
             if (Button == null)
                 return;
 
+#if USE_FASTRENDERERS
             SetAllCaps(false);
+#else
+            Control.SetAllCaps(false);
+#endif
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop)
             {
                 this.SetBackground(null);
@@ -103,16 +120,29 @@ namespace Plugin.Iconize
         /// </summary>
         private void UpdateText()
         {
+#if USE_FASTRENDERERS
             TextChanged -= OnTextChanged;
+#else
+            Control.TextChanged -= OnTextChanged;
+#endif
 
             var icon = Iconize.FindIconForKey(Button.Text);
             if (icon != null)
             {
+#if USE_FASTRENDERERS
                 Text = $"{icon.Character}";
                 Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+#else
+                Control.Text = $"{icon.Character}";
+                Control.Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+#endif
             }
 
+#if USE_FASTRENDERERS
             TextChanged += OnTextChanged;
+#else
+            Control.TextChanged += OnTextChanged;
+#endif
         }
     }
 }

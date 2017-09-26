@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.3.5.253-pre5" />
+    <PackageReference Include="Xamarin.Forms" Version="2.4.0.269-pre2" />
   </ItemGroup>
 
   <Import Project="..\Plugin.Iconize.Shared\Plugin.Iconize.Shared.projitems" Label="Shared" />
