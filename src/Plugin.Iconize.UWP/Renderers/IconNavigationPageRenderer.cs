@@ -63,6 +63,21 @@ namespace Plugin.Iconize
         /// <param name="sender">The sender.</param>
         private async void OnUpdateToolbarItems(Object sender)
         {
+            // a workaround for MasterDetailPage
+            if (Element.Parent is MasterDetailPage)
+            {
+                var platform = Element.Platform;
+                FieldInfo fInfo = typeof(Platform).GetField("_container", BindingFlags.NonPublic | BindingFlags.Instance);
+                Canvas canvas = fInfo.GetValue(platform) as Canvas;
+                if (canvas?.Children?[0] is MasterDetailControl masterDetailControl)
+                {
+                    var mInfo = typeof(MasterDetailControl).GetTypeInfo().GetDeclaredMethod("Xamarin.Forms.Platform.UWP.IToolbarProvider.GetCommandBarAsync");
+                    var commandBar = await (mInfo.Invoke(masterDetailControl, new Object[] { }) as Task<CommandBar>);
+                    commandBar.UpdateToolbarItems();
+                    return;
+                }
+            }
+
             var method = typeof(NavigationPageRenderer).GetTypeInfo().GetDeclaredMethod("Xamarin.Forms.Platform.UWP.IToolbarProvider.GetCommandBarAsync");
             var bar = await (method.Invoke(this, new Object[] { }) as Task<CommandBar>);
             bar.UpdateToolbarItems();
