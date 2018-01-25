@@ -59,6 +59,22 @@ namespace Plugin.Iconize
 
         /// <summary>
         /// Called when [update toolbar items].
+        private async void UpdateToolbarItems()
+        {
+            var platform = Element.Platform;
+            FieldInfo fInfo = typeof(Platform).GetField("_container", BindingFlags.NonPublic | BindingFlags.Instance);
+            Canvas canvas = fInfo.GetValue(platform) as Canvas;
+            if (canvas?.Children?[0] is MasterDetailControl masterDetailControl)
+            {
+                var mInfo = typeof(MasterDetailControl).GetTypeInfo().GetDeclaredMethod("Xamarin.Forms.Platform.UWP.IToolbarProvider.GetCommandBarAsync");
+                var commandBar = await (mInfo.Invoke(masterDetailControl, new Object[] { }) as Task<CommandBar>);
+                commandBar.UpdateToolbarItems();
+
+            }
+        }
+
+        /// <summary>
+        /// Called when [update toolbar items].
         /// </summary>
         /// <param name="sender">The sender.</param>
         private async void OnUpdateToolbarItems(Object sender)
@@ -66,16 +82,12 @@ namespace Plugin.Iconize
             // a workaround for MasterDetailPage
             if (Element.Parent is MasterDetailPage)
             {
-                var platform = Element.Platform;
-                FieldInfo fInfo = typeof(Platform).GetField("_container", BindingFlags.NonPublic | BindingFlags.Instance);
-                Canvas canvas = fInfo.GetValue(platform) as Canvas;
-                if (canvas?.Children?[0] is MasterDetailControl masterDetailControl)
+                var ms = Element.Parent as MasterDetailPage;
+                ms.IsPresentedChanged += (s, e) =>
                 {
-                    var mInfo = typeof(MasterDetailControl).GetTypeInfo().GetDeclaredMethod("Xamarin.Forms.Platform.UWP.IToolbarProvider.GetCommandBarAsync");
-                    var commandBar = await (mInfo.Invoke(masterDetailControl, new Object[] { }) as Task<CommandBar>);
-                    commandBar.UpdateToolbarItems();
-                    return;
-                }
+                    UpdateToolbarItems();
+                };
+                UpdateToolbarItems();
             }
 
             var method = typeof(NavigationPageRenderer).GetTypeInfo().GetDeclaredMethod("Xamarin.Forms.Platform.UWP.IToolbarProvider.GetCommandBarAsync");
