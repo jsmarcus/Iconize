@@ -107,6 +107,15 @@ Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
 </array>
 ```
 
+**Xamarin.Forms with Caliburn Micro**  
+Add the following to App.cs
+```csharp
+protected override NavigationPage CreateApplicationPage()
+{
+    return new IconNavigationPage();
+}
+```
+
 ## Contributions
 
 * Jeremy Marcus [@jsmarcus](https://github.com/jsmarcus)
