@@ -18,6 +18,15 @@ namespace Plugin.Iconize
     {
         private readonly List<String> _icons = new List<String>();
 
+	    /// <summary>
+	    /// 
+	    /// </summary>
+	    /// <param name="context"></param>
+	    public IconTabbedPageRenderer(Context context):base(context)
+	    {
+	    }
+
+		
         /// <summary>
         /// Called when [attached to window].
         /// </summary>

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
@@ -9,6 +9,5 @@
     <ProjectReference Include="..\..\..\Plugin.Iconize\Plugin.Iconize.csproj" />
   </ItemGroup>
 
-  <Import Project="..\Plugin.Iconize.EntypoPlus.Shared\Plugin.Iconize.EntypoPlus.Shared.projitems" Label="Shared" />
 
 </Project>

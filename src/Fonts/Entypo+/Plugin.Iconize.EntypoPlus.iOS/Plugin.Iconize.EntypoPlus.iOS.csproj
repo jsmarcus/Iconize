@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.EntypoPlus</AssemblyName>
+    <AssemblyName>Plugin.Iconize.EntypoPlus.iOS</AssemblyName>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -24,7 +24,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
-    <DocumentationFile>bin\Debug\Plugin.Iconize.EntypoPlus.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Plugin.Iconize.EntypoPlus.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -33,7 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Plugin.Iconize.EntypoPlus.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Iconize.EntypoPlus.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Plugin.Iconize.iOS\Plugin.Iconize.iOS.csproj">
@@ -41,6 +41,10 @@
       <Name>Plugin.Iconize.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj">
+      <Project>{264109c5-8773-4bfa-9cf6-420d89dd3f61}</Project>
+      <Name>Plugin.Iconize.EntypoPlus</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +59,5 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.EntypoPlus.Shared\Plugin.Iconize.EntypoPlus.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

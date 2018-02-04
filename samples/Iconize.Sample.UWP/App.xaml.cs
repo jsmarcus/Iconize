@@ -10,7 +10,7 @@ namespace Iconize.Sample.UWP
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
-    sealed partial class App : Application
+    sealed partial class App 
     {
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -45,8 +45,8 @@ namespace Iconize.Sample.UWP
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-
-                rootFrame.NavigationFailed += OnNavigationFailed;
+	
+				rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Xamarin.Forms.Forms.Init(e);
 

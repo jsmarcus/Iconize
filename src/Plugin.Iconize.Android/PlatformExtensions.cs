@@ -75,10 +75,8 @@ namespace Plugin.Iconize
         {
             if (String.IsNullOrWhiteSpace(toolbarItem.Icon))
                 return null;
-
-            var iconItem = toolbarItem as IconToolbarItem;
-            if (iconItem == null)
-                return context.Resources.GetDrawable(toolbarItem.Icon);
+			if (!(toolbarItem is IconToolbarItem iconItem))
+                return context.GetDrawable(toolbarItem.Icon);
 
             var drawable = new IconDrawable(context, iconItem.Icon);
             if (drawable == null)

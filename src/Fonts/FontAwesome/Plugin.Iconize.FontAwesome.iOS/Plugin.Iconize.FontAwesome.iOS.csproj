@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.FontAwesome</AssemblyName>
+    <AssemblyName>Plugin.Iconize.FontAwesome.iOS</AssemblyName>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -24,7 +24,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
-    <DocumentationFile>bin\Debug\Plugin.Iconize.FontAwesome.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Plugin.Iconize.FontAwesome.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -33,7 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Plugin.Iconize.FontAwesome.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Iconize.FontAwesome.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,8 +53,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\iconize-fontawesome.ttf" />
+    <BundleResource Include="Resources\iconize-fontawesome-regular.otf" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.FontAwesome.Shared\Plugin.Iconize.FontAwesome.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <BundleResource Include="Resources\iconize-fontawesome-solid.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconize-fontawesome-brands.otf" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using Android.Content;
 using Plugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -22,15 +23,25 @@ namespace Plugin.Iconize
 #endif
     public class IconLabelRenderer : LabelRenderer
     {
-        #region Properties
 
-        /// <summary>
-        /// Gets the label.
-        /// </summary>
-        /// <value>
-        /// The label.
-        /// </value>
-        private IconLabel Label => Element as IconLabel;
+	    /// <summary>
+	    /// 
+	    /// </summary>
+	    /// <param name="context"></param>
+	    public IconLabelRenderer(Context context) : base(context)
+	    {
+		    
+	    }
+
+		#region Properties
+
+		/// <summary>
+		/// Gets the label.
+		/// </summary>
+		/// <value>
+		/// The label.
+		/// </value>
+		private IconLabel Label => Element as IconLabel;
 
         #endregion Properties
 

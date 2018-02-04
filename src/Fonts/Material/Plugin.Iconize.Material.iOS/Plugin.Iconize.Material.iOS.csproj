@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.Material</AssemblyName>
+    <AssemblyName>Plugin.Iconize.Material.iOS</AssemblyName>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -24,7 +24,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
-    <DocumentationFile>bin\Debug\Plugin.Iconize.Material.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Plugin.Iconize.Material.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -33,7 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Plugin.Iconize.Material.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Iconize.Material.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +55,5 @@
   <ItemGroup>
     <BundleResource Include="Resouces\iconize-material.ttf" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.Material.Shared\Plugin.Iconize.Material.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

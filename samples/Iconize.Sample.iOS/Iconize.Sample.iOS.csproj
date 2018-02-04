@@ -26,6 +26,7 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -87,6 +88,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -121,6 +125,96 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\Plugin.Iconize.EntypoPlus.iOS.csproj">
+      <Project>{eca521f1-372c-4841-9b7e-86f1d612938e}</Project>
+      <Name>Plugin.Iconize.EntypoPlus.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj">
+      <Project>{25bea73c-7936-45dd-9978-a3f2f4d3418b}</Project>
+      <Name>Plugin.Iconize.EntypoPlus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\Plugin.Iconize.FontAwesome.iOS.csproj">
+      <Project>{8956329e-2087-41c7-9273-76900b0a217a}</Project>
+      <Name>Plugin.Iconize.FontAwesome.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj">
+      <Project>{f9449ea4-29cc-4355-a732-52414ae68de2}</Project>
+      <Name>Plugin.Iconize.FontAwesome</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Ionicons\Plugin.Iconize.Ionicons.iOS\Plugin.Iconize.Ionicons.iOS.csproj">
+      <Project>{9c1ad7ca-b144-4513-b8ab-ab9ef991e122}</Project>
+      <Name>Plugin.Iconize.Ionicons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Ionicons\Plugin.Iconize.Ionicons\Plugin.Iconize.Ionicons.csproj">
+      <Project>{d0212abb-4e2c-4dd4-98d8-28c697840db4}</Project>
+      <Name>Plugin.Iconize.Ionicons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Material\Plugin.Iconize.Material.iOS\Plugin.Iconize.Material.iOS.csproj">
+      <Project>{17f95d3f-8e66-4e15-ab16-9a537901321d}</Project>
+      <Name>Plugin.Iconize.Material.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Material\Plugin.Iconize.Material\Plugin.Iconize.Material.csproj">
+      <Project>{7fcf7a27-0250-4fec-bb62-119ec1327ec0}</Project>
+      <Name>Plugin.Iconize.Material</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Meteocons\Plugin.Iconize.Meteocons.iOS\Plugin.Iconize.Meteocons.iOS.csproj">
+      <Project>{dc12f793-3335-4054-874b-b52b8ae693b6}</Project>
+      <Name>Plugin.Iconize.Meteocons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Meteocons\Plugin.Iconize.Meteocons\Plugin.Iconize.Meteocons.csproj">
+      <Project>{35ab5e4c-a0ca-492f-bc05-21463a4bc68d}</Project>
+      <Name>Plugin.Iconize.Meteocons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.iOS\Plugin.Iconize.SimpleLineIcons.iOS.csproj">
+      <Project>{dc4b2b3e-2bd9-4750-95e1-faf485d5c394}</Project>
+      <Name>Plugin.Iconize.SimpleLineIcons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.csproj">
+      <Project>{090df062-a94e-417c-a9d3-91b5d9d41e84}</Project>
+      <Name>Plugin.Iconize.SimpleLineIcons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Typicons\Plugin.Iconize.Typicons.iOS\Plugin.Iconize.Typicons.iOS.csproj">
+      <Project>{9be2c151-3510-4b48-89d3-3a7cadd8b804}</Project>
+      <Name>Plugin.Iconize.Typicons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\Typicons\Plugin.Iconize.Typicons\Plugin.Iconize.Typicons.csproj">
+      <Project>{3ddfed7c-2fea-486b-b9aa-f05833def842}</Project>
+      <Name>Plugin.Iconize.Typicons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.iOS\Plugin.Iconize.WeatherIcons.iOS.csproj">
+      <Project>{444c4ea5-608f-4c9e-82d3-6750c846f0e7}</Project>
+      <Name>Plugin.Iconize.WeatherIcons.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons\Plugin.Iconize.WeatherIcons.csproj">
+      <Project>{1c36d7cf-59d1-4ad6-b031-a819b43dbc7b}</Project>
+      <Name>Plugin.Iconize.WeatherIcons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize.iOS\Plugin.Iconize.iOS.csproj">
+      <Project>{9720ef44-aba5-422d-a9bf-30ce32d32b4e}</Project>
+      <Name>Plugin.Iconize.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{058418a2-c758-462f-9707-1a7d95d3f00e}</Project>
+      <Name>Plugin.Iconize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Iconize.Sample\Iconize.Sample.csproj">
       <Project>{37b28d65-4d60-4aa7-abf3-6b644c6fad0e}</Project>
       <Name>Iconize.Sample</Name>

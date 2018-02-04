@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize.SimpleLineIcons</AssemblyName>
+    <AssemblyName>Plugin.Iconize.SimpleLineIcons.iOS</AssemblyName>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -24,7 +24,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
-    <DocumentationFile>bin\Debug\Plugin.Iconize.SimpleLineIcons.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Plugin.Iconize.SimpleLineIcons.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -33,7 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Plugin.Iconize.SimpleLineIcons.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Iconize.SimpleLineIcons.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,6 +55,5 @@
   <ItemGroup>
     <BundleResource Include="Resources\iconize-simplelineicons.ttf" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.SimpleLineIcons.Shared\Plugin.Iconize.SimpleLineIcons.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

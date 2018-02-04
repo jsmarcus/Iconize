@@ -10,12 +10,12 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Plugin.Iconize</RootNamespace>
-    <AssemblyName>Plugin.Iconize</AssemblyName>
+    <AssemblyName>Plugin.Iconize.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Renderers\IconButtonRenderer.cs" />
-    <Compile Include="Iconize.cs" />
     <Compile Include="IconDrawable.cs" />
     <Compile Include="Renderers\IconImageRenderer.cs" />
     <Compile Include="Renderers\IconLabelRenderer.cs" />
@@ -61,10 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.4.0.269-pre2</Version>
+      <Version>2.5.0.122203</Version>
     </PackageReference>
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.Shared\Plugin.Iconize.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
+      <Name>Plugin.Iconize</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,11 +8,11 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
-    <AssemblyName>Plugin.Iconize.EntypoPlus</AssemblyName>
+    <AssemblyName>Plugin.Iconize.EntypoPlus.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,13 +50,16 @@
       <Project>{70ead9be-c324-4954-b3cc-8ccb81a636e6}</Project>
       <Name>Plugin.Iconize.UWP</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj">
+      <Project>{264109c5-8773-4bfa-9cf6-420d89dd3f61}</Project>
+      <Name>Plugin.Iconize.EntypoPlus</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\iconize-entypoplus.ttf">
       <Link>iconize-entypoplus.ttf</Link>
     </Content>
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.EntypoPlus.Shared\Plugin.Iconize.EntypoPlus.Shared.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

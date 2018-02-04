@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Plugin.Iconize</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Plugin.Iconize</AssemblyName>
+    <AssemblyName>Plugin.Iconize.iOS</AssemblyName>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -25,7 +25,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchDebug>true</MtouchDebug>
-    <DocumentationFile>bin\Debug\Plugin.Iconize.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Plugin.Iconize.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -34,7 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <DocumentationFile>bin\Release\Plugin.Iconize.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Iconize.iOS.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Renderers\IconButtonRenderer.cs" />
@@ -53,9 +53,14 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.4.0.269-pre2</Version>
+      <Version>2.5.0.122203</Version>
     </PackageReference>
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.Shared\Plugin.Iconize.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <ProjectReference Include="..\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{b0387056-24f4-4421-8b49-b78a2cedc19e}</Project>
+      <Name>Plugin.Iconize</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
