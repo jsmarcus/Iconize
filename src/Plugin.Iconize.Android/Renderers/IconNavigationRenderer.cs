@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using Android.Content;
 using Android.Content.Res;
 using Plugin.Iconize;
@@ -32,8 +33,18 @@ namespace Plugin.Iconize
         protected override void OnAttachedToWindow()
         {
             MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
-            OnUpdateToolbarItems(this);
 
+	        var toolbarItems = Element.GetToolbarItems();
+	        if (toolbarItems != null)
+	        {
+		        foreach (ToolbarItem item in toolbarItems)
+		        {
+			        item.PropertyChanged -= HandleToolbarItemPropertyChanged;
+			        item.PropertyChanged += HandleToolbarItemPropertyChanged;
+		        }
+	        }
+
+	        OnUpdateToolbarItems(this);
             base.OnAttachedToWindow();
         }
 
@@ -77,8 +88,15 @@ namespace Plugin.Iconize
         protected override void OnDetachedFromWindow()
         {
             base.OnDetachedFromWindow();
-
-            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
+	        var toolbarItems = Element.GetToolbarItems();
+	        if (toolbarItems != null)
+	        {
+		        foreach (ToolbarItem item in toolbarItems)
+		        {
+			        item.PropertyChanged -= HandleToolbarItemPropertyChanged;
+		        }
+	        }
+	        MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
         }
 
         /// <summary>
@@ -87,7 +105,20 @@ namespace Plugin.Iconize
         /// <param name="sender">The sender.</param>
         private void OnUpdateToolbarItems(Object sender)
         {
-            Element?.UpdateToolbarItems(this);
+			Element?.UpdateToolbarItems(this);
         }
-    }
+
+	    void HandleToolbarItemPropertyChanged(object sender, PropertyChangedEventArgs e)
+	    {
+		    if (e.PropertyName == MenuItem.IsEnabledProperty.PropertyName ||
+		        e.PropertyName == MenuItem.TextProperty.PropertyName || e.PropertyName == MenuItem.IconProperty.PropertyName)
+		    {
+				Device.StartTimer(TimeSpan.FromMilliseconds(100), ()=>
+				{
+					OnUpdateToolbarItems(this);
+					return false;
+				});
+		    }
+	    }
+	}
 }
