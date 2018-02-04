@@ -10,6 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)FontAwesomeCollection.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)FontAwesomeModule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FontAwesomeBrandsModule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FontAwesomeSolidModule.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FontAwesomeRegularModule.cs" />
   </ItemGroup>
 </Project>

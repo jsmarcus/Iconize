@@ -17,7 +17,7 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
@@ -74,12 +74,31 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\values\style.xml" />
     <AndroidResource Include="Resources\values-v21\style.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\Plugin.Iconize.FontAwesome.Android.csproj">
+      <Project>{c610737e-e8b6-4cf4-834c-a5ebcf6f2219}</Project>
+      <Name>Plugin.Iconize.FontAwesome.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj">
+      <Project>{f9449ea4-29cc-4355-a732-52414ae68de2}</Project>
+      <Name>Plugin.Iconize.FontAwesome</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize.Android\Plugin.Iconize.Android.csproj">
+      <Project>{318a7d0f-5e8f-4cfe-be13-7dca1235e0ae}</Project>
+      <Name>Plugin.Iconize.Android</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{058418a2-c758-462f-9707-1a7d95d3f00e}</Project>
+      <Name>Plugin.Iconize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Iconize.Sample\Iconize.Sample.csproj">
       <Project>{37b28d65-4d60-4aa7-abf3-6b644c6fad0e}</Project>
       <Name>Iconize.Sample</Name>

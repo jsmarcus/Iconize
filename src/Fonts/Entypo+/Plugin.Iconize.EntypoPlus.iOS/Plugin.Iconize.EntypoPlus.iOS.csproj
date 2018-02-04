@@ -42,6 +42,10 @@
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>
+    <ProjectReference Include="..\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj">
+      <Project>{264109c5-8773-4bfa-9cf6-420d89dd3f61}</Project>
+      <Name>Plugin.Iconize.EntypoPlus</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,6 +59,5 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.EntypoPlus.Shared\Plugin.Iconize.EntypoPlus.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

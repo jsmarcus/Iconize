@@ -26,6 +26,7 @@
     <MtouchArch>i386, x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -87,6 +88,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -121,6 +125,26 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\Plugin.Iconize.FontAwesome.iOS.csproj">
+      <Project>{8956329e-2087-41c7-9273-76900b0a217a}</Project>
+      <Name>Plugin.Iconize.FontAwesome.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj">
+      <Project>{f9449ea4-29cc-4355-a732-52414ae68de2}</Project>
+      <Name>Plugin.Iconize.FontAwesome</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize.iOS\Plugin.Iconize.iOS.csproj">
+      <Project>{9720ef44-aba5-422d-a9bf-30ce32d32b4e}</Project>
+      <Name>Plugin.Iconize.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{058418a2-c758-462f-9707-1a7d95d3f00e}</Project>
+      <Name>Plugin.Iconize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Iconize.Sample\Iconize.Sample.csproj">
       <Project>{37b28d65-4d60-4aa7-abf3-6b644c6fad0e}</Project>
       <Name>Iconize.Sample</Name>

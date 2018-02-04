@@ -1,24 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="**\*.xaml.cs" DependentUpon="%(Filename)" />
-    <EmbeddedResource Include="**\*.xaml" SubType="Designer" Generator="MSBuild:UpdateDesignTimeXaml" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xam.Plugin.Iconize.EntypoPlus" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.FontAwesome" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.Ionicons" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.Material" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.Meteocons" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.SimpleLineIcons" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.Typicons" Version="2.0.0-beta" />
-    <PackageReference Include="Xam.Plugin.Iconize.WeatherIcons" Version="2.0.0-beta" />
-    <PackageReference Include="Xamarin.Forms" Version="2.3.5.239-pre3" />
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 
 </Project>

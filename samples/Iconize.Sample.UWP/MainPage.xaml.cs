@@ -14,7 +14,7 @@ namespace Iconize.Sample.UWP
         {
             this.InitializeComponent();
                         
-            LoadApplication(new Sample.App());
+            LoadApplication(new Sample.Application());
         }
     }
 }

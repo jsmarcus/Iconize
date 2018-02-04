@@ -55,6 +55,5 @@
   <ItemGroup>
     <BundleResource Include="Resouces\iconize-material.ttf" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.Material.Shared\Plugin.Iconize.Material.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

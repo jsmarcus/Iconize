@@ -1,31 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
-             x:Class="Iconize.Sample.Page1"
-             Title="{Binding FontFamily}">
-
-    <ContentPage.ToolbarItems>
-        <iconize:IconToolbarItem Command="{Binding ModalTestCommand}" Icon="fa-500px" />
-        <iconize:IconToolbarItem Command="{Binding VisibleTestCommand}" Icon="fa-500px" IconColor="Red" />
-        <iconize:IconToolbarItem Command="{Binding VisibleTestCommand}" Icon="fa-500px" IsVisible="{Binding VisibleTest}" />
-        <iconize:IconToolbarItem Clicked="ClickTest" Icon="fa-500px" IconColor="Green" IsVisible="{Binding VisibleTest}" />
-    </ContentPage.ToolbarItems>
-
-    <ListView CachingStrategy="RecycleElement" ItemsSource="{Binding Characters}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Horizontal">
-                        <iconize:IconImage HeightRequest="20" Icon="{Binding Key}" IconColor="Blue" WidthRequest="20" />
-                        <iconize:IconImage HeightRequest="20" Icon="{Binding Key}" BackgroundColor="Blue" IconColor="Yellow" WidthRequest="20" IconSize="10" />
-                        <iconize:IconButton FontSize="20" Text="{Binding Key}" TextColor="Red" WidthRequest="48" />
-                        <iconize:IconLabel FontSize="20" Text="{Binding Key}" TextColor="Green" VerticalTextAlignment="Center" />
-                        <Label Text="{Binding Key}" VerticalTextAlignment="Center" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-
+             xmlns:iconize1="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+             x:Class="Iconize.Sample.Page1" 
+			 Title="{Binding FontFamily}">
+	<ContentPage.ToolbarItems>
+		<iconize1:IconToolbarItem Command="{Binding ModalTestCommand}" Icon="fas-address-book" />
+		<iconize1:IconToolbarItem Command="{Binding VisibleTestCommand}" Icon="fas-address-book" IconColor="Red" />
+		<iconize1:IconToolbarItem Command="{Binding VisibleTestCommand}" Icon="fas-address-book" IsVisible="{Binding VisibleTest}" />
+		<iconize1:IconToolbarItem Clicked="ClickTest" Icon="fas-address-book" IconColor="Green" IsVisible="{Binding VisibleTest}" />
+	</ContentPage.ToolbarItems>
+	<ListView CachingStrategy="RecycleElement" ItemsSource="{Binding Characters}">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Orientation="Horizontal">
+						<iconize1:IconImage HeightRequest="20" Icon="{Binding Key}" IconColor="Blue" WidthRequest="20" />
+						<iconize1:IconImage HeightRequest="20" Icon="{Binding Key}" BackgroundColor="Blue" IconColor="Yellow" WidthRequest="20" IconSize="10" />
+						<iconize1:IconButton FontSize="20" Text="{Binding Key}" TextColor="Red" WidthRequest="48" />
+						<iconize1:IconLabel FontSize="20" Text="{Binding Key}" TextColor="Green" VerticalTextAlignment="Center" />
+						<Label Text="{Binding Key}" VerticalTextAlignment="Center" />
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
 </ContentPage>

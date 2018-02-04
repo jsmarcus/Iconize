@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using Android.Content;
 using Android.OS;
 using Plugin.Iconize;
 using Xamarin.Forms;
@@ -22,15 +23,25 @@ namespace Plugin.Iconize
 #endif
     public class IconButtonRenderer : ButtonRenderer
     {
-        #region Properties
 
-        /// <summary>
-        /// Gets the button.
-        /// </summary>
-        /// <value>
-        /// The button.
-        /// </value>
-        private IconButton Button => Element as IconButton;
+	    /// <summary>
+	    /// 
+	    /// </summary>
+	    /// <param name="context"></param>
+	    public IconButtonRenderer(Context context) : base(context)
+	    {
+		    
+	    }
+
+		#region Properties
+
+		/// <summary>
+		/// Gets the button.
+		/// </summary>
+		/// <value>
+		/// The button.
+		/// </value>
+		private IconButton Button => Element as IconButton;
 
         #endregion Properties
 
@@ -98,6 +109,7 @@ namespace Plugin.Iconize
 
             switch (e.PropertyName)
             {
+				case nameof(IconButton.Text):
                 case nameof(IconButton.FontSize):
                 case nameof(IconButton.TextColor):
                     UpdateText();

@@ -11,8 +11,8 @@
     <AssemblyName>Iconize.Sample.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
@@ -101,6 +101,15 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="..\..\src\Fonts\FontAwesome\iconize-fontawesome-brands.otf">
+      <Link>Assets\Fonts\iconize-fontawesome-brands.otf</Link>
+    </Content>
+    <Content Include="..\..\src\Fonts\FontAwesome\iconize-fontawesome-regular.otf">
+      <Link>Assets\Fonts\iconize-fontawesome-regular.otf</Link>
+    </Content>
+    <Content Include="..\..\src\Fonts\FontAwesome\iconize-fontawesome-solid.otf">
+      <Link>Assets\Fonts\iconize-fontawesome-solid.otf</Link>
+    </Content>
     <None Include="Iconize.Sample.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +157,22 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\Plugin.Iconize.FontAwesome.UWP.csproj">
+      <Project>{04d50fb0-129d-4c72-bffd-3d826ac956fc}</Project>
+      <Name>Plugin.Iconize.FontAwesome.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj">
+      <Project>{f9449ea4-29cc-4355-a732-52414ae68de2}</Project>
+      <Name>Plugin.Iconize.FontAwesome</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize.UWP\Plugin.Iconize.UWP.csproj">
+      <Project>{70ead9be-c324-4954-b3cc-8ccb81a636e6}</Project>
+      <Name>Plugin.Iconize.UWP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\Plugin.Iconize\Plugin.Iconize.csproj">
+      <Project>{058418a2-c758-462f-9707-1a7d95d3f00e}</Project>
+      <Name>Plugin.Iconize</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Iconize.Sample\Iconize.Sample.csproj">
       <Project>{28a53533-c5e4-42a6-a247-63ad5de50778}</Project>
       <Name>Iconize.Sample</Name>
@@ -155,10 +180,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>5.3.3</Version>
+      <Version>6.0.6</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp">
-      <Version>1.58.0</Version>
+      <Version>1.59.3</Version>
     </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

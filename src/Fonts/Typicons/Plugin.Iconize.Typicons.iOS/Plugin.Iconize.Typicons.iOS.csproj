@@ -55,6 +55,5 @@
   <ItemGroup>
     <BundleResource Include="Resources\iconize-typicons.ttf" />
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.Typicons.Shared\Plugin.Iconize.Typicons.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

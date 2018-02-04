@@ -1,4 +1,5 @@
 using System;
+using Android.Content;
 using Android.Content.Res;
 using Plugin.Iconize;
 using Xamarin.Forms;
@@ -13,6 +14,16 @@ namespace Plugin.Iconize
     /// <seealso cref="Xamarin.Forms.Platform.Android.AppCompat.NavigationPageRenderer" />
     public class IconNavigationRenderer : NavigationPageRenderer
     {
+
+	    /// <summary>
+	    /// 
+	    /// </summary>
+	    /// <param name="context"></param>
+	    public IconNavigationRenderer(Context context):base(context)
+	    {
+		    
+	    }
+
         private Orientation _orientation = Orientation.Portrait;
 
         /// <summary>

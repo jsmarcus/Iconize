@@ -1,5 +1,6 @@
 ﻿
 using Foundation;
+using Plugin.Iconize;
 using UIKit;
 
 namespace Iconize.Sample.iOS
@@ -21,7 +22,8 @@ namespace Iconize.Sample.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            LoadApplication(new App());
+	        IconImageRenderer bb = new IconImageRenderer();
+            LoadApplication(new Iconize.Sample.Application());
 
             return base.FinishedLaunching(uiApplication, launchOptions);
         }

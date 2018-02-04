@@ -6,6 +6,7 @@ using Android.Support.V4.Content;
 using Android.Text;
 using Android.Util;
 using R = Android.Resource;
+using Plugin.Iconize;
 
 namespace Plugin.Iconize
 {
@@ -143,6 +144,7 @@ namespace Plugin.Iconize
         /// <exception cref="ArgumentException">If the key doesn't match any icon.</exception>
         public IconDrawable(Context context, String iconKey)
         {
+			
             var icon = Iconize.FindIconForKey(iconKey);
 
             if (icon == null)
