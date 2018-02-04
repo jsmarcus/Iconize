@@ -85,7 +85,7 @@ protected override void OnCreate(Bundle savedInstanceState)
 {
     Xamarin.Forms.Forms.Init(this, savedInstanceState);
     ...
-    Plugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
+    FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabMode);
     ...
     LoadApplication(new App());
 }
