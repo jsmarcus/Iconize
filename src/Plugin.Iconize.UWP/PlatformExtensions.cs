@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using SkiaSharp;
 using Windows.ApplicationModel;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
@@ -20,17 +21,22 @@ namespace Plugin.Iconize
     {
         private static IDictionary<Type, FontFamily> FontCache { get; } = new Dictionary<Type, FontFamily>();
 
-        /// <summary>
-        /// To the font family.
-        /// </summary>
-        /// <param name="module">The module.</param>
-        /// <returns></returns>
-        public static FontFamily ToFontFamily(this IIconModule module)
+		/// <summary>
+		/// Fixes issue with assembly name
+		/// </summary>
+	    private const string AssemblyNamePostFix = ".UWP";
+
+		/// <summary>
+		/// To the font family.
+		/// </summary>
+		/// <param name="module">The module.</param>
+		/// <returns></returns>
+		public static FontFamily ToFontFamily(this IIconModule module)
         {
             var moduleType = module.GetType();
             if (FontCache.ContainsKey(moduleType) == false)
             {
-                FontCache.Add(moduleType, new FontFamily($"ms-appx:///{moduleType.GetTypeInfo().Assembly.GetName().Name}/{module.FontPath}#{module.FontFamily}"));
+				FontCache.Add(moduleType, new FontFamily($"ms-appx:///{moduleType.GetTypeInfo().Assembly.GetName().Name}{AssemblyNamePostFix}/{module.FontPath}#{module.FontFamily.Replace(" Regular","")}"));
             }
             return FontCache[moduleType];
         }
@@ -46,12 +52,11 @@ namespace Plugin.Iconize
         {
             var character = $"{icon.Character}";
             var module = Iconize.FindModuleOf(icon);
-
             using (var surface = SKSurface.Create(size, size, SKImageInfo.PlatformColorType, SKAlphaType.Premul))
             {
                 using (var paint = new SKPaint())
                 {
-                    using (var typeface = SKTypeface.FromFile(Path.Combine(Package.Current.InstalledLocation.Path, module.GetType().GetTypeInfo().Assembly.GetName().Name, module.FontPath)))
+					using (var typeface = SKTypeface.FromFile(Path.Combine(Package.Current.InstalledLocation.Path, $"{module.GetType().GetTypeInfo().Assembly.GetName().Name}{AssemblyNamePostFix}", module.FontPath)))
                     {
                         paint.Color = color.ToSKColor();
                         paint.IsAntialias = true;

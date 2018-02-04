@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
-    <AssemblyName>Plugin.Iconize.SimpleLineIcons</AssemblyName>
+    <AssemblyName>Plugin.Iconize.SimpleLineIcons.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>

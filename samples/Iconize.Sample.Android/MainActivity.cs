@@ -14,43 +14,11 @@ namespace Iconize.Sample.Droid
             base.OnCreate(savedInstanceState);
 			
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
 			ToolbarResource = Resource.Layout.toolbar;
 	        TabLayoutResource = Resource.Layout.tabs;
 			Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.tabs);
-	        ListAssetFiles("");
             LoadApplication(new Application());
         }
-
-
-	   
-	    private bool ListAssetFiles(String path)
-	    {
-
-		    String[] list;
-		    try
-		    {
-			    list = Assets.List(path);
-			    if (list.Length > 0)
-			    {
-				    // This is a folder
-				    foreach (string file in list)
-				    {
-					    if (!ListAssetFiles(path + "/" + file))
-						    return false;
-					    else
-					    {
-						    // This is a file
-						    // TODO: add file name to an array list
-					    }
-				    }
-			    }
-		    }
-		    catch (Exception e)
-		    {
-			    return false;
-		    }
-
-		    return true;
-	    }
 	}
 }

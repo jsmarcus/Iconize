@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using Windows.UI.Xaml.Media;
 using Plugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;

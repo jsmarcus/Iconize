@@ -14,7 +14,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj" />
     <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj" />
+    <ProjectReference Include="..\..\src\Fonts\Ionicons\Plugin.Iconize.Ionicons\Plugin.Iconize.Ionicons.csproj" />
+    <ProjectReference Include="..\..\src\Fonts\Material\Plugin.Iconize.Material\Plugin.Iconize.Material.csproj" />
+    <ProjectReference Include="..\..\src\Fonts\Meteocons\Plugin.Iconize.Meteocons\Plugin.Iconize.Meteocons.csproj" />
+    <ProjectReference Include="..\..\src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.csproj" />
+    <ProjectReference Include="..\..\src\Fonts\Typicons\Plugin.Iconize.Typicons\Plugin.Iconize.Typicons.csproj" />
+    <ProjectReference Include="..\..\src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons\Plugin.Iconize.WeatherIcons.csproj" />
   </ItemGroup>
 
   <ItemGroup>
