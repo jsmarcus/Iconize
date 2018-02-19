@@ -51,13 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.0.6</Version>
+      <Version>6.0.7</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp">
       <Version>1.59.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>2.5.0.122203</Version>
+      <Version>2.5.0.280555</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
