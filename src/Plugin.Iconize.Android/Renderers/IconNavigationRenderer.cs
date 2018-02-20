@@ -4,6 +4,7 @@ using Android.Content;
 using Android.Content.Res;
 using Plugin.Iconize;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(IconNavigationPage), typeof(IconNavigationRenderer))]
@@ -25,7 +26,20 @@ namespace Plugin.Iconize
 		    
 	    }
 
-        private Orientation _orientation = Orientation.Portrait;
+
+	    protected override void OnElementChanged(ElementChangedEventArgs<NavigationPage> e)
+	    {
+		    base.OnElementChanged(e);
+			HandleProperties();
+		}
+
+	    protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+	    {
+		    base.OnElementPropertyChanged(sender, e);
+			HandleProperties();
+		}
+
+	    private Orientation _orientation = Orientation.Portrait;
 
         /// <summary>
         /// Called when [attached to window].
@@ -33,18 +47,8 @@ namespace Plugin.Iconize
         protected override void OnAttachedToWindow()
         {
             MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
-
-	        var toolbarItems = Element.GetToolbarItems();
-	        if (toolbarItems != null)
-	        {
-		        foreach (ToolbarItem item in toolbarItems)
-		        {
-			        item.PropertyChanged -= HandleToolbarItemPropertyChanged;
-			        item.PropertyChanged += HandleToolbarItemPropertyChanged;
-		        }
-	        }
-
-	        OnUpdateToolbarItems(this);
+	     
+			HandleProperties();
             base.OnAttachedToWindow();
         }
 
@@ -98,6 +102,20 @@ namespace Plugin.Iconize
 	        }
 	        MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
         }
+
+	    private void HandleProperties()
+	    {
+			var toolbarItems = Element.GetToolbarItems();
+		    if (toolbarItems != null)
+		    {
+			    foreach (ToolbarItem item in toolbarItems)
+			    {
+				    item.PropertyChanged -= HandleToolbarItemPropertyChanged;
+				    item.PropertyChanged += HandleToolbarItemPropertyChanged;
+			    }
+		    }
+		    OnUpdateToolbarItems(this);
+		}
 
         /// <summary>
         /// Called when [update toolbar items].
