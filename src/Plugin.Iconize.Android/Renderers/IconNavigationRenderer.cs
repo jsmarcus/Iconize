@@ -1,8 +1,10 @@
 using System;
+using System.ComponentModel;
 using Android.Content;
 using Android.Content.Res;
 using Plugin.Iconize;
 using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(IconNavigationPage), typeof(IconNavigationRenderer))]
@@ -24,7 +26,20 @@ namespace Plugin.Iconize
 		    
 	    }
 
-        private Orientation _orientation = Orientation.Portrait;
+
+	    protected override void OnElementChanged(ElementChangedEventArgs<NavigationPage> e)
+	    {
+		    base.OnElementChanged(e);
+			HandleProperties();
+		}
+
+	    protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+	    {
+		    base.OnElementPropertyChanged(sender, e);
+			HandleProperties();
+		}
+
+	    private Orientation _orientation = Orientation.Portrait;
 
         /// <summary>
         /// Called when [attached to window].
@@ -32,8 +47,8 @@ namespace Plugin.Iconize
         protected override void OnAttachedToWindow()
         {
             MessagingCenter.Subscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage, OnUpdateToolbarItems);
-            OnUpdateToolbarItems(this);
-
+	     
+			HandleProperties();
             base.OnAttachedToWindow();
         }
 
@@ -77,9 +92,30 @@ namespace Plugin.Iconize
         protected override void OnDetachedFromWindow()
         {
             base.OnDetachedFromWindow();
-
-            MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
+	        var toolbarItems = Element.GetToolbarItems();
+	        if (toolbarItems != null)
+	        {
+		        foreach (ToolbarItem item in toolbarItems)
+		        {
+			        item.PropertyChanged -= HandleToolbarItemPropertyChanged;
+		        }
+	        }
+	        MessagingCenter.Unsubscribe<Object>(this, IconToolbarItem.UpdateToolbarItemsMessage);
         }
+
+	    private void HandleProperties()
+	    {
+			var toolbarItems = Element.GetToolbarItems();
+		    if (toolbarItems != null)
+		    {
+			    foreach (ToolbarItem item in toolbarItems)
+			    {
+				    item.PropertyChanged -= HandleToolbarItemPropertyChanged;
+				    item.PropertyChanged += HandleToolbarItemPropertyChanged;
+			    }
+		    }
+		    OnUpdateToolbarItems(this);
+		}
 
         /// <summary>
         /// Called when [update toolbar items].
@@ -87,7 +123,20 @@ namespace Plugin.Iconize
         /// <param name="sender">The sender.</param>
         private void OnUpdateToolbarItems(Object sender)
         {
-            Element?.UpdateToolbarItems(this);
+			Element?.UpdateToolbarItems(this);
         }
-    }
+
+	    void HandleToolbarItemPropertyChanged(object sender, PropertyChangedEventArgs e)
+	    {
+		    if (e.PropertyName == MenuItem.IsEnabledProperty.PropertyName ||
+		        e.PropertyName == MenuItem.TextProperty.PropertyName || e.PropertyName == MenuItem.IconProperty.PropertyName)
+		    {
+				Device.StartTimer(TimeSpan.FromMilliseconds(100), ()=>
+				{
+					OnUpdateToolbarItems(this);
+					return false;
+				});
+		    }
+	    }
+	}
 }

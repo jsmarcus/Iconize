@@ -2,6 +2,8 @@
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
 Use icon fonts in your Xamarin.Forms application!
 
+### Updated to NetStandard 2.0, FontAwesome 5
+
 **NuGet** 
 * Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Iconize.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
 
