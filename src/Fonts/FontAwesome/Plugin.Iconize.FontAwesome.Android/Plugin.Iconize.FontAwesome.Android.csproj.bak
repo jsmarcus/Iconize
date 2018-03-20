@@ -10,12 +10,12 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Plugin.Iconize.Fonts</RootNamespace>
-    <AssemblyName>Plugin.Iconize.FontAwesome</AssemblyName>
+    <AssemblyName>Plugin.Iconize.FontAwesome.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -55,11 +55,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\iconize-fontawesome.ttf">
-      <Link>Assets\iconize-fontawesome.ttf</Link>
+    <AndroidAsset Include="..\iconize-fontawesome-regular.otf">
+      <Link>Assets\iconize-fontawesome-regular.otf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </AndroidAsset>
   </ItemGroup>
-  <Import Project="..\Plugin.Iconize.FontAwesome.Shared\Plugin.Iconize.FontAwesome.Shared.projitems" Label="Shared" />
+  <ItemGroup>
+    <AndroidAsset Include="..\iconize-fontawesome-solid.otf">
+      <Link>Assets\iconize-fontawesome-solid.otf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\iconize-fontawesome-brands.otf">
+      <Link>Assets\iconize-fontawesome-brands.otf</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
