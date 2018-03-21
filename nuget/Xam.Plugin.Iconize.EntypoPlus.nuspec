@@ -1,83 +1,83 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
-  <metadata>
-    <id>Xam.Plugin.Iconize.EntypoPlus</id>
-    <version>$version$</version>
-    <title>Iconize Plugin for Xamarin.Forms - Entypo+</title>
-    <authors>Jeremy Marcus</authors>
-    <owners>Jeremy Marcus</owners>
-    <licenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/jsmarcus/Iconize</projectUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Easily add icon fonts to your Xamarin.Forms applications!</description>
-    <summary>Iconize Plugin for Xamarin.Forms - Entypo+</summary>
-    <copyright>Copyright © 2017</copyright>
-    <tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
-    <dependencies>
-      <group>
-        <dependency id="Xam.Plugin.Iconize" version="$version$" />
-      </group>
-    </dependencies>
-    <references>
-      <!--netstandard-->
-      <group targetFramework="netstandard2.0">
-        <reference file="Plugin.Iconize.EntypoPlus.dll" />
-      </group>
+	<metadata>
+		<id>Xam.Plugin.Iconize.EntypoPlus</id>
+		<version>$version$</version>
+		<title>Iconize Plugin for Xamarin.Forms - Entypo+</title>
+		<authors>Jeremy Marcus</authors>
+		<owners>Jeremy Marcus</owners>
+		<licenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/jsmarcus/Iconize</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Easily add icon fonts to your Xamarin.Forms applications!</description>
+		<summary>Iconize Plugin for Xamarin.Forms - Entypo+</summary>
+		<copyright>Copyright © 2017</copyright>
+		<tags>xamarin, pcl, plugin, xamarin.forms, android, ios, windows</tags>
+		<dependencies>
+			<group>
+				<dependency id="Xam.Plugin.Iconize" version="$version$" />
+			</group>
+		</dependencies>
+		<references>
+			<!--netstandard-->
+			<group targetFramework="netstandard2.0">
+				<reference file="Plugin.Iconize.EntypoPlus.dll" />
+			</group>
 
-      <!--Android-->
-      <group targetFramework="MonoAndroid10">
-        <reference file="Plugin.Iconize.EntypoPlus.dll" />
-	      <reference file="Plugin.Iconize.EntypoPlus.Android.dll" />
-      </group>
+			<!--Android-->
+			<group targetFramework="MonoAndroid10">
+				<reference file="Plugin.Iconize.EntypoPlus.dll" />
+				<reference file="Plugin.Iconize.EntypoPlus.Android.dll" />
+			</group>
 
-      <!--iOS-->
-      <group targetFramework="Xamarin.iOS10">
-        <reference file="Plugin.Iconize.EntypoPlus.dll" />
-	      <reference file="Plugin.Iconize.EntypoPlus.iOS.dll" />
-      </group>
+			<!--iOS-->
+			<group targetFramework="Xamarin.iOS10">
+				<reference file="Plugin.Iconize.EntypoPlus.dll" />
+				<reference file="Plugin.Iconize.EntypoPlus.iOS.dll" />
+			</group>
 
-      <!--UWP-->
-      <group targetFramework="uap10.0">
-        <reference file="Plugin.Iconize.EntypoPlus.dll" />
-	      <reference file="Plugin.Iconize.EntypoPlus.UWP.dll" />
-      </group>
-    </references>
-    <contentFiles>
-      <!--iOS-->
-      <files include="any/Xamarin.iOS/iconize-entypoplus.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
-    </contentFiles>
-  </metadata>
-  <files>
-    <!--netstandard-->
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\netstandard2.0\Plugin.Iconize.EntypoPlus.dll" target="lib\netstandard2.0" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\netstandard2.0\Plugin.Iconize.EntypoPlus.*pdb" target="lib\netstandard2.0" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\netstandard2.0\Plugin.Iconize.EntypoPlus.*xml" target="lib\netstandard2.0" />
+			<!--UWP-->
+			<group targetFramework="uap10.0">
+				<reference file="Plugin.Iconize.EntypoPlus.dll" />
+				<reference file="Plugin.Iconize.EntypoPlus.UWP.dll" />
+			</group>
+		</references>
+		<contentFiles>
+			<!--iOS-->
+			<files include="any/Xamarin.iOS/iconize-entypoplus.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+		</contentFiles>
+	</metadata>
+	<files>
+		<!--netstandard-->
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\netstandard2.0\Plugin.Iconize.EntypoPlus.dll" target="lib\netstandard2.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\netstandard2.0\Plugin.Iconize.EntypoPlus.*pdb" target="lib\netstandard2.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\netstandard2.0\Plugin.Iconize.EntypoPlus.*xml" target="lib\netstandard2.0" />
 
-    <!--Android-->
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\MonoAndroid10" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\MonoAndroid10" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\MonoAndroid10" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.Android.dll" target="lib\MonoAndroid10" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.Android.*pdb" target="lib\MonoAndroid10" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.Android.*xml" target="lib\MonoAndroid10" />
+		<!--Android-->
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\MonoAndroid10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\MonoAndroid10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\MonoAndroid10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.Android.dll" target="lib\MonoAndroid10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.Android.*pdb" target="lib\MonoAndroid10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\bin\$configuration$\Plugin.Iconize.EntypoPlus.Android.*xml" target="lib\MonoAndroid10" />
 
-    <!--iOS-->
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\Xamarin.iOS10" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.iOS.dll" target="lib\Xamarin.iOS10" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.iOS.*pdb" target="lib\Xamarin.iOS10" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.iOS.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="contentFiles\any\Xamarin.iOS10" />
+		<!--iOS-->
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\Xamarin.iOS10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\Xamarin.iOS10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\Xamarin.iOS10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.iOS.dll" target="lib\Xamarin.iOS10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.iOS.*pdb" target="lib\Xamarin.iOS10" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.iOS\bin\$configuration$\Plugin.Iconize.EntypoPlus.iOS.*xml" target="lib\Xamarin.iOS10" />
+		<file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="contentFiles\any\Xamarin.iOS10" />
 
-    <!--UWP-->
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\uap10.0" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\uap10.0" />
-    <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\uap10.0" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.dll" target="lib\uap10.0" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.*pdb" target="lib\uap10.0" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.*pri" target="lib\uap10.0" />
-	  <file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.*xml" target="lib\uap10.0" />
-    <file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="lib\uap10.0\Plugin.Iconize.EntypoPlus" />
-  </files>
+		<!--UWP-->
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.dll" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*pdb" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\bin\$configuration$\Plugin.Iconize.EntypoPlus.*xml" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.dll" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.*pdb" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.*pri" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.UWP\bin\$configuration$\Plugin.Iconize.EntypoPlus.UWP.*xml" target="lib\uap10.0" />
+		<file src="src\Fonts\Entypo+\iconize-entypoplus.ttf" target="lib\uap10.0\Plugin.Iconize.EntypoPlus" />
+	</files>
 </package>
