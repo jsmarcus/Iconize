@@ -35,7 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Plugin.Iconize.FontAwesome.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Plugin.Iconize.FontAwesome.Android.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
