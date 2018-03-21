@@ -25,46 +25,59 @@
     </dependencies>
     <references>
       <!--netstandard-->
-      <group targetFramework="netstandard1.0">
+      <group targetFramework="netstandard2.0">
         <reference file="Plugin.Iconize.dll" />
       </group>
 
       <!--Android-->
       <group targetFramework="MonoAndroid10">
         <reference file="Plugin.Iconize.dll" />
+	      <reference file="Plugin.Iconize.Android.dll" />
       </group>
 
       <!--iOS-->
       <group targetFramework="Xamarin.iOS10">
         <reference file="Plugin.Iconize.dll" />
+	      <reference file="Plugin.Iconize.iOS.dll" />
       </group>
 
       <!--UWP-->
       <group targetFramework="uap10.0">
         <reference file="Plugin.Iconize.dll" />
+	      <reference file="Plugin.Iconize.UWP.dll" />
       </group>
     </references>
   </metadata>
   <files>
     <!--netstandard-->
-    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard1.0\Plugin.Iconize.dll" target="lib\netstandard1.0" />
-    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard1.0\Plugin.Iconize.*pdb" target="lib\netstandard1.0" />
-    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard1.0\Plugin.Iconize.*xml" target="lib\netstandard1.0" />
+    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard2.0\Plugin.Iconize.dll" target="lib\netstandard2.0" />
+    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard2.0\Plugin.Iconize.*pdb" target="lib\netstandard2.0" />
+    <file src="src\Plugin.Iconize\bin\$configuration$\netstandard2.0\Plugin.Iconize.*xml" target="lib\netstandard2.0" />
 
     <!--Android-->
     <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.dll" target="lib\MonoAndroid10" />
     <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.*pdb" target="lib\MonoAndroid10" />
     <file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.*xml" target="lib\MonoAndroid10" />
+		<file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.Android.dll" target="lib\MonoAndroid10" />
+		<file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.Android.*pdb" target="lib\MonoAndroid10" />
+		<file src="src\Plugin.Iconize.Android\bin\$configuration$\Plugin.Iconize.Android.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
     <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.dll" target="lib\Xamarin.iOS10" />
     <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.*pdb" target="lib\Xamarin.iOS10" />
     <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.*xml" target="lib\Xamarin.iOS10" />
+	  <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.iOS.dll" target="lib\Xamarin.iOS10" />
+	  <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.iOS.*pdb" target="lib\Xamarin.iOS10" />
+	  <file src="src\Plugin.Iconize.iOS\bin\$configuration$\Plugin.Iconize.iOS.*xml" target="lib\Xamarin.iOS10" />
 
     <!--UWP-->
     <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.dll" target="lib\uap10.0" />
     <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.*pdb" target="lib\uap10.0" />
     <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.*pri" target="lib\uap10.0" />
     <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.*xml" target="lib\uap10.0" />
+	  <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.UWP.dll" target="lib\uap10.0" />
+	  <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.UWP.*pdb" target="lib\uap10.0" />
+	  <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.UWP.*pri" target="lib\uap10.0" />
+	  <file src="src\Plugin.Iconize.UWP\bin\$configuration$\Plugin.Iconize.UWP.*xml" target="lib\uap10.0" />
   </files>
 </package>

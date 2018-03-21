@@ -20,52 +20,70 @@
     </dependencies>
     <references>
       <!--netstandard-->
-      <group targetFramework="netstandard1.0">
+      <group targetFramework="netstandard2.0">
         <reference file="Plugin.Iconize.FontAwesome.dll" />
       </group>
 
       <!--Android-->
       <group targetFramework="MonoAndroid10">
         <reference file="Plugin.Iconize.FontAwesome.dll" />
+	      <reference file="Plugin.Iconize.FontAwesome.Android.dll" />
       </group>
 
       <!--iOS-->
       <group targetFramework="Xamarin.iOS10">
         <reference file="Plugin.Iconize.FontAwesome.dll" />
+	      <reference file="Plugin.Iconize.FontAwesome.iOS.dll" />
       </group>
 
       <!--UWP-->
       <group targetFramework="uap10.0">
         <reference file="Plugin.Iconize.FontAwesome.dll" />
+	      <reference file="Plugin.Iconize.FontAwesome.UWP.dll" />
       </group>
     </references>
     <contentFiles>
       <!--iOS-->
-      <files include="any/Xamarin.iOS10/iconize-fontawesome.ttf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+			<files include="any/Xamarin.iOS10/iconize-fontawesome-brands.otf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+	    <files include="any/Xamarin.iOS10/iconize-fontawesome-regular.otf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
+	    <files include="any/Xamarin.iOS10/iconize-fontawesome-solid.otf" buildAction="BundleResource" copyToOutput="true" flatten="true" />
     </contentFiles>
   </metadata>
   <files>
     <!--netstandard-->
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\netstandard1.0\Plugin.Iconize.FontAwesome.dll" target="lib\netstandard1.0" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\netstandard1.0\Plugin.Iconize.FontAwesome.*pdb" target="lib\netstandard1.0" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\netstandard1.0\Plugin.Iconize.FontAwesome.*xml" target="lib\netstandard1.0" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\netstandard2.0\Plugin.Iconize.FontAwesome.dll" target="lib\netstandard2.0" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\netstandard2.0\Plugin.Iconize.FontAwesome.*pdb" target="lib\netstandard2.0" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\netstandard2.0\Plugin.Iconize.FontAwesome.*xml" target="lib\netstandard2.0" />
 
     <!--Android-->
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\MonoAndroid10" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\MonoAndroid10" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\MonoAndroid10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\MonoAndroid10" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.Android.dll" target="lib\MonoAndroid10" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.Android.*pdb" target="lib\MonoAndroid10" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\bin\$configuration$\Plugin.Iconize.FontAwesome.Android.*xml" target="lib\MonoAndroid10" />
 
     <!--iOS-->
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\Xamarin.iOS10" />
-    <file src="src\Fonts\FontAwesome\iconize-fontawesome.ttf" target="contentFiles\any\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\Xamarin.iOS10" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.iOS.dll" target="lib\Xamarin.iOS10" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.iOS.*pdb" target="lib\Xamarin.iOS10" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.iOS\bin\$configuration$\Plugin.Iconize.FontAwesome.iOS.*xml" target="lib\Xamarin.iOS10" />
+    <file src="src\Fonts\FontAwesome\iconize-fontawesome-brands.otf" target="contentFiles\any\Xamarin.iOS10" />
+	  <file src="src\Fonts\FontAwesome\iconize-fontawesome-regular.otf" target="contentFiles\any\Xamarin.iOS10" />
+	  <file src="src\Fonts\FontAwesome\iconize-fontawesome-solid.otf" target="contentFiles\any\Xamarin.iOS10" />
 
     <!--UWP-->
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\uap10.0" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\uap10.0" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.*pri" target="lib\uap10.0" />
-    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\uap10.0" />
-    <file src="src\Fonts\FontAwesome\iconize-fontawesome.ttf" target="lib\uap10.0\Plugin.Iconize.FontAwesome" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.dll" target="lib\uap10.0" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.*pdb" target="lib\uap10.0" />
+    <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\bin\$configuration$\Plugin.Iconize.FontAwesome.*xml" target="lib\uap10.0" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.UWP.dll" target="lib\uap10.0" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.UWP.*pdb" target="lib\uap10.0" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.UWP.*pri" target="lib\uap10.0" />
+	  <file src="src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.UWP\bin\$configuration$\Plugin.Iconize.FontAwesome.UWP.*xml" target="lib\uap10.0" />
+    <file src="src\Fonts\FontAwesome\iconize-fontawesome-brands.otf" target="lib\uap10.0\Plugin.Iconize.FontAwesome" />
+	  <file src="src\Fonts\FontAwesome\iconize-fontawesome-regular.otf" target="lib\uap10.0\Plugin.Iconize.FontAwesome" />
+	  <file src="src\Fonts\FontAwesome\iconize-fontawesome-solid.otf" target="lib\uap10.0\Plugin.Iconize.FontAwesome" />
   </files>
 </package>
