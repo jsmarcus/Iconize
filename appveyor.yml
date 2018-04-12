@@ -1,13 +1,13 @@
-version: 2.0.0.{build}-beta
+version: 3.0.0.{build}
 image: Visual Studio 2017
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
-build_script:
-- ps: .\bootbuild.ps1
+nuget:
+  project_feed: true
+build:
+  publish_nuget: true
+  publish_nuget_symbols: true
+  include_nuget_references: true
+  parallel: true
+  verbosity: minimal
 artifacts:
-- path: ./build/nuget/*.nupkg
+- path: ./artifacts/*.nupkg
   name: NuGet
