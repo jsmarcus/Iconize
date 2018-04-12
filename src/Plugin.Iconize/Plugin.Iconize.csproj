@@ -1,17 +1,30 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DebugType>pdbonly</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.280555" />
+    <Compile Remove="**/Platform/**/*.cs" />
+    <None Include="**/Platform/**/*.cs" />
   </ItemGroup>
 
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <None Remove="**/Platform/Android/**/*.cs" />
+    <Compile Include="**/Platform/Android/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <None Remove="**/Platform/iOS/**/*.cs" />
+    <Compile Include="**/Platform/iOS/**/*.cs" />
+  </ItemGroup>
+  
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+    <None Remove="**/Platform/macOS/**/*.cs" />
+    <Compile Include="**/Platform/macOS/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <None Remove="**/Platform/UWP/**/*.cs" />
+    <Compile Include="**/Platform/UWP/**/*.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+  
 </Project>

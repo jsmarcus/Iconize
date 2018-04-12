@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+
+  <ItemGroup>
+    <None Remove="@(FontFiles)" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Folder Include="Assets\" />
+    <AndroidAsset Include="@(FontFiles)" Link="Assets\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+    <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <Content Include="@(FontFiles)" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+
+</Project>

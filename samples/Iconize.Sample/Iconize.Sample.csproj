@@ -1,34 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
-    <DebugType>pdbonly</DebugType>
-    <DebugSymbols>true</DebugSymbols>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
+    <PackageReference Include="Xam.Plugin.Iconize.EntypoPlus" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.FontAwesome" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.Ionicons" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.Material" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.Meteocons" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.SimpleLineIcons" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.Typicons" Version="3.0.0-alpha" />
+    <PackageReference Include="Xam.Plugin.Iconize.WeatherIcons" Version="3.0.0-alpha" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\Ionicons\Plugin.Iconize.Ionicons\Plugin.Iconize.Ionicons.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\Material\Plugin.Iconize.Material\Plugin.Iconize.Material.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\Meteocons\Plugin.Iconize.Meteocons\Plugin.Iconize.Meteocons.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\Typicons\Plugin.Iconize.Typicons\Plugin.Iconize.Typicons.csproj" />
-    <ProjectReference Include="..\..\src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons\Plugin.Iconize.WeatherIcons.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Page1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿
+using System.Linq;
 using Foundation;
-using Plugin.Iconize;
 using UIKit;
 
 namespace Iconize.Sample.iOS
@@ -22,8 +22,16 @@ namespace Iconize.Sample.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-	        IconImageRenderer bb = new IconImageRenderer();
-            LoadApplication(new Iconize.Sample.Application());
+            foreach (var familyName in UIFont.FamilyNames.OrderBy(x => x))
+            {
+                System.Console.WriteLine($"Family: {familyName}");
+                foreach (var name in UIFont.FontNamesForFamilyName(familyName).OrderBy(y => y))
+                {
+                    System.Console.WriteLine(name);
+                }
+            }
+
+            LoadApplication(new App());
 
             return base.FinishedLaunching(uiApplication, launchOptions);
         }

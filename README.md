@@ -13,14 +13,23 @@ Use icon fonts in your Xamarin.Forms application!
 
 ## Icon Fonts
 
-* [Entypo+](http://entypo.com/) - pictograms by Daniel Bruce
+* [Entypo+](http://entypo.com/)
+  * pictograms by Daniel Bruce
+  * Version: 5/3, 2015
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+  * Version: 5.0.9
 * [Ionicons](http://ionicons.com/)
+  * Version: 2.0.1
 * [Material design icons](http://google.github.io/material-design-icons/)
+  * Version: 3.0.1
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
+  * Version: 1.0
 * [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
+  * Version: 2.4.1
 * [Typicons](https://github.com/stephenhutchings/typicons.font)
+  * Version: 2.0.7
 * [Weather Icons](http://weathericons.io)
+  * Version: 2.0.10
 
 **Font Requests**  
 If you have an icon font or series of svg pictograms you'd like included, just submit an issue or pull request and we'll work to add it.
