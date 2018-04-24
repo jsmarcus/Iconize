@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.6
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iconize.Sample", "Iconize.Sample\Iconize.Sample.csproj", "{37B28D65-4D60-4AA7-ABF3-6B644C6FAD0E}"
 EndProject
@@ -230,5 +230,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A917DBE3-DE8B-443E-96ED-797AA506E3D4}
 	EndGlobalSection
 EndGlobal

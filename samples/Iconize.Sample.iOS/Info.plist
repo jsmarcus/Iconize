@@ -21,7 +21,7 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>6.0</string>
+	<string>7.0</string>
 	<key>CFBundleDisplayName</key>
 	<string>Iconize Sample</string>
 	<key>CFBundleVersion</key>
@@ -46,7 +46,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconize-entypoplus.ttf</string>
-		<string>iconize-fontawesome.ttf</string>
+    <string>iconize-fontawesome-regular.otf</string>
+    <string>iconize-fontawesome-solid.otf</string>
+    <string>iconize-fontawesome-brands.otf</string>
 		<string>iconize-ionicons.ttf</string>
 		<string>iconize-material.ttf</string>
 		<string>iconize-meteocons.ttf</string>

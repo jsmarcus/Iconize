@@ -2,8 +2,10 @@
 A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
 Use icon fonts in your Xamarin.Forms application!
 
+### Updated to NetStandard 2.0, FontAwesome 5
+
 **NuGet** 
-* Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Media.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
+* Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Iconize.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
 
 **Build Status** 
 * [![Build status](https://ci.appveyor.com/api/projects/status/8ibyfk1rxn3mun3a?svg=true)](https://ci.appveyor.com/project/JeremyMarcus/iconize)
@@ -11,14 +13,23 @@ Use icon fonts in your Xamarin.Forms application!
 
 ## Icon Fonts
 
-* [Entypo+](http://entypo.com/) - pictograms by Daniel Bruce
+* [Entypo+](http://entypo.com/)
+  * pictograms by Daniel Bruce
+  * Version: 5/3, 2015
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+  * Version: 5.0.9
 * [Ionicons](http://ionicons.com/)
+  * Version: 2.0.1
 * [Material design icons](http://google.github.io/material-design-icons/)
+  * Version: 3.0.1
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
+  * Version: 1.0
 * [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
+  * Version: 2.4.1
 * [Typicons](https://github.com/stephenhutchings/typicons.font)
+  * Version: 2.0.7
 * [Weather Icons](http://weathericons.io)
+  * Version: 2.0.10
 
 **Font Requests**  
 If you have an icon font or series of svg pictograms you'd like included, just submit an issue or pull request and we'll work to add it.
@@ -105,6 +116,15 @@ Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
     <string>iconize-typicons.ttf</string>
     <string>iconize-weathericons.ttf</string>
 </array>
+```
+
+**Xamarin.Forms with Caliburn Micro**  
+Add the following to App.cs
+```csharp
+protected override NavigationPage CreateApplicationPage()
+{
+    return new IconNavigationPage();
+}
 ```
 
 ## Contributions

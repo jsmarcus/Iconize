@@ -1,14 +1,30 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard1.0</TargetFramework>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-  </PropertyGroup>
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.4.0.269-pre2" />
+    <Compile Remove="**/Platform/**/*.cs" />
+    <None Include="**/Platform/**/*.cs" />
   </ItemGroup>
 
-  <Import Project="..\Plugin.Iconize.Shared\Plugin.Iconize.Shared.projitems" Label="Shared" />
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <None Remove="**/Platform/Android/**/*.cs" />
+    <Compile Include="**/Platform/Android/**/*.cs" />
+  </ItemGroup>
 
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <None Remove="**/Platform/iOS/**/*.cs" />
+    <Compile Include="**/Platform/iOS/**/*.cs" />
+  </ItemGroup>
+  
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
+    <None Remove="**/Platform/macOS/**/*.cs" />
+    <Compile Include="**/Platform/macOS/**/*.cs" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <None Remove="**/Platform/UWP/**/*.cs" />
+    <Compile Include="**/Platform/UWP/**/*.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+  
 </Project>

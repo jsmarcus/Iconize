@@ -1,0 +1,31 @@
+<Project>  
+  <PropertyGroup>
+    <Copyright>Copyright (c) Jeremy Marcus</Copyright>
+    <PackageLicenseUrl>https://github.com/jsmarcus/Iconize/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jsmarcus/Iconize</PackageProjectUrl>
+    <Authors>Jeremy Marcus</Authors>
+    <Owners>Jeremy Marcus</Owners>
+    <PackageTags>xamarin;android;ios;mac;forms;monodroid;monotouch;xamarin.android;xamarin.ios;xamarin.forms;xamarin.mac;uwp</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+	<PackageDescription>Easily add icon fonts to your Xamarin.Forms applications!</PackageDescription>
+    <RepositoryUrl>https://github.com/jsmarcus/Iconize</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageId>Xam.$(MSBuildProjectName)</PackageId>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Version>3.0.0</Version>
+	
+    <LangVersion>latest</LangVersion>
+	<NoWarn>$(NoWarn);1587;1591;1701;1702;1705;VSX1000;NU1603</NoWarn>
+    <GenerateDocumentationFile Condition=" '$(Configuration)' == 'Release' ">true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' and '$(IsTestProject)' == 'false' and '$(IsSampleProject)' == 'false'">true</GeneratePackageOnBuild>
+    <IncludeSymbols>True</IncludeSymbols>
+    <IncludeSource>True</IncludeSource>
+    <PackageOutputPath>$(MSBuildThisFileDirectory)artifacts</PackageOutputPath>
+    <PackageOutputPath Condition=" '$(Build_ArtifactStagingDirectory)' != '' ">$(Build_ArtifactStagingDirectory)</PackageOutputPath>
+
+    <DebugType>full</DebugType>
+    <IsSampleProject>$(MSBuildProjectName.Contains('Sample'))</IsSampleProject>
+    <IsTestProject>$(MSBuildProjectName.Contains('Test'))</IsTestProject>
+  </PropertyGroup>
+</Project>

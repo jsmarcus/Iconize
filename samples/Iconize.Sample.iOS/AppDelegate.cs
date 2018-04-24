@@ -1,4 +1,5 @@
 ﻿
+using System.Linq;
 using Foundation;
 using UIKit;
 
@@ -20,6 +21,15 @@ namespace Iconize.Sample.iOS
         public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            foreach (var familyName in UIFont.FamilyNames.OrderBy(x => x))
+            {
+                System.Console.WriteLine($"Family: {familyName}");
+                foreach (var name in UIFont.FontNamesForFamilyName(familyName).OrderBy(y => y))
+                {
+                    System.Console.WriteLine(name);
+                }
+            }
 
             LoadApplication(new App());
 

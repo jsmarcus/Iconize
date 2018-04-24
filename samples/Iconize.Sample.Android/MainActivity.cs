@@ -12,9 +12,10 @@ namespace Iconize.Sample.Droid
             base.OnCreate(savedInstanceState);
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.tabs);
+
             ToolbarResource = Resource.Layout.toolbar;
             TabLayoutResource = Resource.Layout.tabs;
+            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.tabs);
             LoadApplication(new App());
         }
     }
