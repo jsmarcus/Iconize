@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netstandard1.3;netstandard2.0;MonoAndroid80;Xamarin.iOS10;uap10.0.16299;</TargetFrameworks>
-  </PropertyGroup>
+
+  <PropertyGroup><!-- VS4Mac workaround --></PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="**/Platform/**/*.cs" />
