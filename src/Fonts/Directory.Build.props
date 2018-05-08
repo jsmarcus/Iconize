@@ -1,11 +1,11 @@
 <Project>
-  
+
   <Import Project="../Directory.Build.props" />
 
   <ItemGroup>
     <FontFiles Include="*.otf;*.ttf" />
   </ItemGroup>
-  
+
   <PropertyGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <GenerateLibraryLayout>true</GenerateLibraryLayout>
   </PropertyGroup>
@@ -13,5 +13,5 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin.Iconize\Plugin.Iconize.csproj" />
   </ItemGroup>
-  
+
 </Project>
