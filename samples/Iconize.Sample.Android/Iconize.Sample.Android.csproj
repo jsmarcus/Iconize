@@ -16,7 +16,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidSupportedAbis>armeabi,armeabi-v7a,x86</AndroidSupportedAbis>
     <AndroidStoreUncompressedFileExtensions />
@@ -25,6 +25,7 @@
     <JavaOptions />
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <CopyNuGetImplementations>true</CopyNuGetImplementations>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,6 +38,10 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EnableProguard>false</EnableProguard>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -82,79 +87,20 @@
     <AndroidResource Include="Resources\values-v21\style.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus.Android\Plugin.Iconize.EntypoPlus.Android.csproj">
-      <Project>{6507b5f9-82b7-4e24-9b1f-8bff65eb17c4}</Project>
-      <Name>Plugin.Iconize.EntypoPlus.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Entypo+\Plugin.Iconize.EntypoPlus\Plugin.Iconize.EntypoPlus.csproj">
-      <Project>{25bea73c-7936-45dd-9978-a3f2f4d3418b}</Project>
-      <Name>Plugin.Iconize.EntypoPlus</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome.Android\Plugin.Iconize.FontAwesome.Android.csproj">
-      <Project>{c610737e-e8b6-4cf4-834c-a5ebcf6f2219}</Project>
-      <Name>Plugin.Iconize.FontAwesome.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\FontAwesome\Plugin.Iconize.FontAwesome\Plugin.Iconize.FontAwesome.csproj">
-      <Project>{f9449ea4-29cc-4355-a732-52414ae68de2}</Project>
-      <Name>Plugin.Iconize.FontAwesome</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Ionicons\Plugin.Iconize.Ionicons.Android\Plugin.Iconize.Ionicons.Android.csproj">
-      <Project>{d158e046-bc30-4726-9f11-7a8fe09a0701}</Project>
-      <Name>Plugin.Iconize.Ionicons.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Ionicons\Plugin.Iconize.Ionicons\Plugin.Iconize.Ionicons.csproj">
-      <Project>{d0212abb-4e2c-4dd4-98d8-28c697840db4}</Project>
-      <Name>Plugin.Iconize.Ionicons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Material\Plugin.Iconize.Material.Android\Plugin.Iconize.Material.Android.csproj">
-      <Project>{bf31e501-7c92-4b90-bdc7-6323295cbc52}</Project>
-      <Name>Plugin.Iconize.Material.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Material\Plugin.Iconize.Material\Plugin.Iconize.Material.csproj">
-      <Project>{7fcf7a27-0250-4fec-bb62-119ec1327ec0}</Project>
-      <Name>Plugin.Iconize.Material</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Meteocons\Plugin.Iconize.Meteocons.Android\Plugin.Iconize.Meteocons.Android.csproj">
-      <Project>{8dd64822-57a3-4fe9-9bfb-45b35aeb6164}</Project>
-      <Name>Plugin.Iconize.Meteocons.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Meteocons\Plugin.Iconize.Meteocons\Plugin.Iconize.Meteocons.csproj">
-      <Project>{35ab5e4c-a0ca-492f-bc05-21463a4bc68d}</Project>
-      <Name>Plugin.Iconize.Meteocons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.Android\Plugin.Iconize.SimpleLineIcons.Android.csproj">
-      <Project>{5187aa08-61cb-4749-81d5-4b78dc81633f}</Project>
-      <Name>Plugin.Iconize.SimpleLineIcons.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\SimpleLineIcons\Plugin.Iconize.SimpleLineIcons\Plugin.Iconize.SimpleLineIcons.csproj">
-      <Project>{090df062-a94e-417c-a9d3-91b5d9d41e84}</Project>
-      <Name>Plugin.Iconize.SimpleLineIcons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Typicons\Plugin.Iconize.Typicons.Android\Plugin.Iconize.Typicons.Android.csproj">
-      <Project>{c8fe4f23-70b6-475d-9b87-bd655b8cd22d}</Project>
-      <Name>Plugin.Iconize.Typicons.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\Typicons\Plugin.Iconize.Typicons\Plugin.Iconize.Typicons.csproj">
-      <Project>{3ddfed7c-2fea-486b-b9aa-f05833def842}</Project>
-      <Name>Plugin.Iconize.Typicons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons.Android\Plugin.Iconize.WeatherIcons.Android.csproj">
-      <Project>{d19daa47-6696-40f4-8d7c-591a16d3991e}</Project>
-      <Name>Plugin.Iconize.WeatherIcons.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Fonts\WeatherIcons\Plugin.Iconize.WeatherIcons\Plugin.Iconize.WeatherIcons.csproj">
-      <Project>{1c36d7cf-59d1-4ad6-b031-a819b43dbc7b}</Project>
-      <Name>Plugin.Iconize.WeatherIcons</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Plugin.Iconize.Android\Plugin.Iconize.Android.csproj">
-      <Project>{318a7d0f-5e8f-4cfe-be13-7dca1235e0ae}</Project>
-      <Name>Plugin.Iconize.Android</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Plugin.Iconize\Plugin.Iconize.csproj">
-      <Project>{058418a2-c758-462f-9707-1a7d95d3f00e}</Project>
-      <Name>Plugin.Iconize</Name>
-    </ProjectReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>26.1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>26.1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>26.1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <Version>26.1.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Iconize.Sample\Iconize.Sample.csproj">
       <Project>{37b28d65-4d60-4aa7-abf3-6b644c6fad0e}</Project>
       <Name>Iconize.Sample</Name>

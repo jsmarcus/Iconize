@@ -4,59 +4,67 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
-var version = EnvironmentVariable("APPVEYOR_BUILD_VERSION") ?? Argument("version", "2.0.0.0-beta");
+var version = EnvironmentVariable("APPVEYOR_BUILD_VERSION") ?? Argument("version", "3.0.0.0-beta");
 
 //////////////////////////////////////////////////////////////////////
 // PREPARATION
 //////////////////////////////////////////////////////////////////////
 
 var solution = "./src/Iconize.sln";
-var nuspec = GetFiles("./**/*.nuspec");
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
 //////////////////////////////////////////////////////////////////////
 
-Task("Restore-NuGet-Packages")
-    .Does(() =>
+Task("Clean")
+	.Does(() =>
 {
-    NuGetRestore(solution);
+	CleanDirectories("./artifacts/");
+
+	CleanDirectories("./**/bin");
+	CleanDirectories("./**/obj");
+});
+
+Task("Restore")
+	.IsDependentOn("Clean")
+	.Does(() =>
+{
+	MSBuild(solution, settings => settings
+		.SetConfiguration(configuration)
+		.SetVerbosity(Verbosity.Minimal)
+		.UseToolVersion(MSBuildToolVersion.VS2017)
+		.SetMSBuildPlatform(MSBuildPlatform.x86)
+		.SetPlatformTarget(PlatformTarget.MSIL)
+		.SetMaxCpuCount(0)
+		.WithTarget("restore"));
 });
 
 Task("Build")
-    .IsDependentOn("Restore-NuGet-Packages")
-    .Does(() =>
+	.IsDependentOn("Restore")
+	.Does(() =>
 {
-    if(IsRunningOnWindows())
-    {
-        // Use MSBuild
-        MSBuild(solution, settings => {
-            settings.SetConfiguration(configuration);
-            settings.MSBuildPlatform = Cake.Common.Tools.MSBuild.MSBuildPlatform.x86;
-        });
-    }
-    else
-    {
-        // Use DotNetBuild
-        DotNetBuild(solution, settings =>
-            settings.SetConfiguration(configuration));
-    }
+	MSBuild(solution, settings => settings
+		.SetConfiguration(configuration)
+		.SetVerbosity(Verbosity.Minimal)
+		.UseToolVersion(MSBuildToolVersion.VS2017)
+		.SetMSBuildPlatform(MSBuildPlatform.x86)
+		.SetPlatformTarget(PlatformTarget.MSIL)
+		.SetMaxCpuCount(0)
+		.WithTarget("build"));
 });
 
-Task("NuGet")
-    .IsDependentOn("Build")
-    .Does (() =>
+Task("Pack")
+	.IsDependentOn("Build")
+	.Does(() =>
 {
-    if(!DirectoryExists("./build/nuget/"))
-        CreateDirectory("./build/nuget");
-        
-    NuGetPack(nuspec, new NuGetPackSettings {
-        ArgumentCustomization = args=>args.Append("-Properties configuration=" + configuration),
-        BasePath = "./",
-        OutputDirectory = "./build/nuget/",
-        Verbosity = NuGetVerbosity.Detailed,
-        Version = version
-    });	
+	MSBuild(solution, settings => settings
+		.SetConfiguration(configuration)
+		.SetVerbosity(Verbosity.Minimal)
+		.UseToolVersion(MSBuildToolVersion.VS2017)
+		.SetMSBuildPlatform(MSBuildPlatform.x86)
+		.SetPlatformTarget(PlatformTarget.MSIL)
+		.SetMaxCpuCount(0)
+		.WithTarget("pack"));
 });
 
 //////////////////////////////////////////////////////////////////////
@@ -64,17 +72,7 @@ Task("NuGet")
 //////////////////////////////////////////////////////////////////////
 
 Task("Default")
-    .IsDependentOn("NuGet");
-
-Task("Clean")
-    .Does(() =>
-{
-    CleanDirectory("./tools/");
-    CleanDirectories("./build/");
-
-    CleanDirectories("./**/bin");
-    CleanDirectories("./**/obj");
-});
+	.IsDependentOn("Pack");
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION

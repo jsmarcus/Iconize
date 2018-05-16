@@ -66,8 +66,6 @@ namespace Plugin.Iconize
     /// <seealso cref="Plugin.Iconize.IIconModule" />
     public abstract class IconModule : IIconModule
     {
-        #region Properties
-
         /// <summary>
         /// The characters in the font.
         /// </summary>
@@ -113,8 +111,6 @@ namespace Plugin.Iconize
         /// </value>
         public ICollection<String> Keys => Icons.Keys;
 
-        #endregion Properties
-
         /// <summary>
         /// Initializes a new instance of the <see cref="IconModule" /> class.
         /// </summary>
@@ -137,9 +133,9 @@ namespace Plugin.Iconize
         /// <summary>
         /// Gets the icon.
         /// </summary>
-        /// <param name="key">The key.</param>
+        /// <param name="iconKey">The key.</param>
         /// <returns></returns>
-        public IIcon GetIcon(String key) => Icons.ContainsKey(key) ? Icons[key] : null;
+        public IIcon GetIcon(String iconKey) => Icons.ContainsKey(iconKey) ? Icons[iconKey] : null;
 
         /// <summary>
         /// Determines whether the specified icon is in the set.

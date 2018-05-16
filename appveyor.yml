@@ -1,13 +1,17 @@
-version: 2.0.0.{build}-beta
+version: 3.0.0.{build}
 image: Visual Studio 2017
-assembly_info:
+dotnet_csproj:
   patch: true
-  file: '**\AssemblyInfo.*'
+  file: '**\*.csproj;**\*.props'
+  version: '{version}'
+  package_version: '{version}'
   assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+nuget:
+  project_feed: true
 build_script:
-- ps: .\bootbuild.ps1
+- ps: ./bootbuild.ps1
 artifacts:
-- path: ./build/nuget/*.nupkg
+- path: ./artifacts/*.nupkg
   name: NuGet

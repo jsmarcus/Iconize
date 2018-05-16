@@ -26,19 +26,15 @@ namespace Plugin.Iconize
     /// <seealso cref="Plugin.Iconize.IIcon" />
     public class Icon : IIcon
     {
-        #region Properties
-
         /// <summary>
         /// The character matching the key in the font, for example '\u4354'
         /// </summary>
-        public Char Character { get; private set; }
+        public Char Character { get; }
 
         /// <summary>
         /// The key of icon, for example 'fa-ok'
         /// </summary>
-        public String Key { get; private set; }
-
-        #endregion Properties
+        public String Key { get; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Icon" /> class.

@@ -46,15 +46,15 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>iconize-entypoplus.ttf</string>
+    <string>iconize-fontawesome-regular.otf</string>
+    <string>iconize-fontawesome-solid.otf</string>
+    <string>iconize-fontawesome-brands.otf</string>
 		<string>iconize-ionicons.ttf</string>
 		<string>iconize-material.ttf</string>
 		<string>iconize-meteocons.ttf</string>
 		<string>iconize-simplelineicons.ttf</string>
 		<string>iconize-typicons.ttf</string>
 		<string>iconize-weathericons.ttf</string>
-		<string>iconize-fontawesome-regular.otf</string>
-		<string>iconize-fontawesome-solid.otf</string>
-		<string>iconize-fontawesome-brands.otf</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string></string>

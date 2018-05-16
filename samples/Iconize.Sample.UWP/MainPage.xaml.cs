@@ -1,8 +1,5 @@
 ﻿// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Navigation;
-
 namespace Iconize.Sample.UWP
 {
     /// <summary>
@@ -14,7 +11,7 @@ namespace Iconize.Sample.UWP
         {
             this.InitializeComponent();
                         
-            LoadApplication(new Sample.Application());
+            LoadApplication(new Sample.App());
         }
     }
 }

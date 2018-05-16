@@ -28,20 +28,18 @@ namespace Plugin.Iconize
 
             if (page is MasterDetailPage masterDetailPage)
             {
-                if (masterDetailPage.IsPresented)
+                if (masterDetailPage.IsPresented && masterDetailPage.Master != null)
                 {
-                    if (masterDetailPage.Master != null)
-                        list.AddRange(masterDetailPage.Master.GetToolbarItems());
+                    list.AddRange(masterDetailPage.Master.GetToolbarItems());
                 }
                 else if (masterDetailPage.Detail != null)
                 {
                     list.AddRange(masterDetailPage.Detail.GetToolbarItems());
                 }
             }
-            else if (page is IPageContainer<Page> pageContainer)
+            else if (page is IPageContainer<Page> pageContainer && pageContainer.CurrentPage != null)
             {
-                if (pageContainer.CurrentPage != null)
-                    list.AddRange(pageContainer.CurrentPage.GetToolbarItems());
+                list.AddRange(pageContainer.CurrentPage.GetToolbarItems());
             }
 
             return list;
