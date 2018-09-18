@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
     <!-- VS4Mac workaround -->
@@ -14,17 +14,19 @@
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
-    <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
+    <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" PackageCopyToOutput="true" />
+    <Folder Include="Resources\" />
+    <BundleResource Include="@(FontFiles)" Link="Resources\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
-    <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
+    <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" PackageCopyToOutput="true" />
+    <Folder Include="Resources\" />
+    <BundleResource Include="@(FontFiles)" Link="Resources\%(Filename)%(Extension)" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <Content Include="@(FontFiles)" />
   </ItemGroup>
-
-  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
 </Project>

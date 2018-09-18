@@ -68,7 +68,7 @@ namespace Plugin.Iconize
         /// <param name="toolbarItem">The toolbar item.</param>
         /// <param name="context">The context.</param>
         /// <returns></returns>
-        private static Drawable GetToolbarItemDrawable(this ToolbarItem toolbarItem, Context context)
+        internal static Drawable GetToolbarItemDrawable(this ToolbarItem toolbarItem, Context context)
         {
             if (String.IsNullOrWhiteSpace(toolbarItem.Icon))
                 return null;

@@ -41,7 +41,11 @@ namespace Plugin.Iconize
         /// <value>
         /// The color of the icon.
         /// </value>
-        public Color IconColor { get => (Color)GetValue(IconColorProperty); set => SetValue(IconColorProperty, value); }
+        public Color IconColor
+        {
+            get => (Color)GetValue(IconColorProperty);
+            set => SetValue(IconColorProperty, value);
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether this toolbar item is visible.
@@ -49,7 +53,11 @@ namespace Plugin.Iconize
         /// <value>
         /// <c>true</c> if this toolbar item is visible; otherwise, <c>false</c>.
         /// </value>
-        public Boolean IsVisible { get => (Boolean)GetValue(IsVisibleProperty); set => SetValue(IsVisibleProperty, value); }
+        public Boolean IsVisible
+        {
+            get => (Boolean)GetValue(IsVisibleProperty);
+            set => SetValue(IsVisibleProperty, value);
+        }
 
         #endregion Properties
 

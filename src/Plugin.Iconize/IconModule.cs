@@ -135,13 +135,19 @@ namespace Plugin.Iconize
         /// </summary>
         /// <param name="iconKey">The key.</param>
         /// <returns></returns>
-        public IIcon GetIcon(String iconKey) => Icons.ContainsKey(iconKey) ? Icons[iconKey] : null;
+        public IIcon GetIcon(String iconKey)
+        {
+            return Icons.ContainsKey(iconKey) ? Icons[iconKey] : null;
+        }
 
         /// <summary>
         /// Determines whether the specified icon is in the set.
         /// </summary>
         /// <param name="icon">The icon.</param>
         /// <returns></returns>
-        public Boolean HasIcon(IIcon icon) => Icons.ContainsValue(icon);
+        public Boolean HasIcon(IIcon icon)
+        {
+            return Icons.ContainsValue(icon);
+        }
     }
 }

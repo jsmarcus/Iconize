@@ -3,7 +3,7 @@
   <Import Project="../Directory.Build.props" />
 
   <ItemGroup>
-    <FontFiles Include="*.otf;*.ttf" />
+    <FontFiles Include="*.ttf" />
   </ItemGroup>
 
   <PropertyGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
