@@ -79,6 +79,9 @@ namespace Plugin.Iconize
         /// <param name="sender">The sender.</param>
         private async void OnUpdateToolbarItems(Object sender)
         {
+            if (Element == null)
+                return;
+
             // a workaround for MasterDetailPage
             if (Element.Parent is MasterDetailPage)
             {
