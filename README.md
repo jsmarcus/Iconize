@@ -17,7 +17,7 @@ Use icon fonts in your Xamarin.Forms application!
   * pictograms by Daniel Bruce
   * Version: 5/3, 2015
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-  * Version: 5.0.9
+  * Version: 5.3.1
 * [Ionicons](http://ionicons.com/)
   * Version: 2.0.1
 * [Material design icons](http://google.github.io/material-design-icons/)
