@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Iconize.Typicons", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Iconize.WeatherIcons", "Fonts\Plugin.Iconize.WeatherIcons\Plugin.Iconize.WeatherIcons.csproj", "{743C414F-01C4-4635-92A2-B22C77D74D58}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin.Iconize.FontAwesomePro", "Fonts\Plugin.Iconize.FontAwesomePro\Plugin.Iconize.FontAwesomePro.csproj", "{68FA85B0-21F2-40A0-AC0F-465C388BBDDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{743C414F-01C4-4635-92A2-B22C77D74D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{743C414F-01C4-4635-92A2-B22C77D74D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{743C414F-01C4-4635-92A2-B22C77D74D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68FA85B0-21F2-40A0-AC0F-465C388BBDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68FA85B0-21F2-40A0-AC0F-465C388BBDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68FA85B0-21F2-40A0-AC0F-465C388BBDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68FA85B0-21F2-40A0-AC0F-465C388BBDDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
