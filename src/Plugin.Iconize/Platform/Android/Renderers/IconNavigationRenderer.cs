@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Android.Content;
 using Android.Views;
 using Plugin.Iconize;
@@ -24,10 +25,26 @@ namespace Plugin.Iconize
             // Intentionally left blank
         }
 
+        /// <inheritdoc />
+        protected override void OnToolbarItemPropertyChanged(System.Object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == IconToolbarItem.IsVisibleProperty.PropertyName)
+            {
+                base.OnToolbarItemPropertyChanged(sender, new PropertyChangedEventArgs(nameof(MenuItem.IsEnabled)));
+            }
+            else
+            {
+                base.OnToolbarItemPropertyChanged(sender, e);
+            }
+        }
+
+        /// <inheritdoc />
         protected override void UpdateMenuItemIcon(Context context, IMenuItem menuItem, ToolbarItem toolBarItem)
         {
             if (toolBarItem is IconToolbarItem iconToolbarItem)
             {
+                menuItem.SetVisible(iconToolbarItem.IsVisible);
+
                 var icon = iconToolbarItem.GetToolbarItemDrawable(context);
                 if (icon != null)
                 {

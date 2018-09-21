@@ -1,17 +1,18 @@
 using Android.Content;
 using Android.Support.Design.Widget;
+using Android.Support.V4.Graphics.Drawable;
 using Plugin.Iconize;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
 [assembly: ExportRenderer(typeof(IconTabbedPage), typeof(IconTabbedPageRenderer))]
+
 namespace Plugin.Iconize
 {
     /// <summary>
     /// Defines the <see cref="IconTabbedPage" /> renderer.
     /// </summary>
-    /// <seealso cref="Xamarin.Forms.Platform.Android.AppCompat.TabbedPageRenderer" />
+    /// <seealso cref="TabbedPageRenderer" />
     public class IconTabbedPageRenderer : TabbedPageRenderer
     {
         /// <summary>
@@ -30,7 +31,9 @@ namespace Plugin.Iconize
             var iconize = Iconize.FindIconForKey(icon.File);
             if (iconize != null)
             {
-                tab.SetIcon(new IconDrawable(Context, icon).Color(Color.White.ToAndroid()).SizeDp(20));
+                var drawable = new IconDrawable(Context, icon).SizeDp(20);
+                DrawableCompat.SetTintList(drawable, GetItemIconTintColorState());
+                tab.SetIcon(drawable);
                 return;
             }
 
