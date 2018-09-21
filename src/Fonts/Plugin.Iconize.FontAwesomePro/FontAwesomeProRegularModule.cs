@@ -10,7 +10,7 @@
         /// Initializes a new instance of the <see cref="FontAwesomeProRegularModule" /> class.
         /// </summary>
         public FontAwesomeProRegularModule()
-            : base("Font Awesome 5 Pro Regular", "FontAwesome5ProRegular", "iconize-fontawesome-pro-regular.otf", FontAwesomeProCollection.RegularIcons)
+            : base("Font Awesome 5 Pro Regular", "FontAwesome5ProRegular", "iconize-fontawesome-pro-regular.ttf", FontAwesomeProCollection.RegularIcons)
         {
             // Intentionally left blank
         }
