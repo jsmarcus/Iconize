@@ -17,7 +17,9 @@ Use icon fonts in your Xamarin.Forms application!
   * pictograms by Daniel Bruce
   * Version: 5/3, 2015
 * [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-  * Version: 5.0.9
+  * Version: 5.3.1
+* [Font Awesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro/)
+  * Version: 5.3.1
 * [Ionicons](http://ionicons.com/)
   * Version: 2.0.1
 * [Material design icons](http://google.github.io/material-design-icons/)
@@ -146,6 +148,10 @@ Entypo+ is licensed under the [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 **Font Awesome**  
 Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
+
+**Font Awesome Pro**  
+Font Awesome Pro is commercial software that requires a paid license. [Full Font Awesome Pro license](https://fontawesome.com/license).
+As a consequence the font files are not bundled with the plugin and need to be added manually.
 
 **Ionicons**  
 Ionicons is licensed under the [MIT License](http://opensource.org/licenses/MIT).

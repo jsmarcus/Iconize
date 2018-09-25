@@ -46,7 +46,10 @@ namespace Plugin.Iconize
         /// </summary>
         /// <param name="module">The Icon Module holding the ttf file reference and its mappings.</param>
         /// <returns>An initializer instance for chain calls.</returns>
-        public static IconizeInitializer With(IIconModule module) => new IconizeInitializer(module);
+        public static IconizeInitializer With(IIconModule module)
+        {
+            return new IconizeInitializer(module);
+        }
 
         /// <summary>
         /// Adds the icon module.

@@ -4,7 +4,7 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
-var version = EnvironmentVariable("APPVEYOR_BUILD_VERSION") ?? Argument("version", "3.0.0.0-beta");
+var version = EnvironmentVariable("APPVEYOR_BUILD_VERSION") ?? Argument("version", "3.2.0.0-beta");
 
 //////////////////////////////////////////////////////////////////////
 // PREPARATION
