@@ -58,7 +58,7 @@ namespace Plugin.Iconize
         /// </para>
         /// </remarks>
         /// <since version="Added in API level 1" />
-        public override Int32 IntrinsicHeight => _size;
+		public override Int32 IntrinsicHeight => Bounds.Width();
 
         /// <summary>
         /// Return the intrinsic width of the underlying drawable object.
@@ -77,7 +77,7 @@ namespace Plugin.Iconize
         /// </para>
         /// </remarks>
         /// <since version="Added in API level 1" />
-        public override Int32 IntrinsicWidth => _size;
+		public override Int32 IntrinsicWidth => Bounds.Height();
 
         /// <summary>
         /// Indicates whether this view will change its appearance based on state.
@@ -219,7 +219,13 @@ namespace Plugin.Iconize
         public IconDrawable SizePx(Int32 size)
         {
             _size = size;
-            SetBounds(0, 0, size, size);
+
+            _paint.TextSize = _size;
+            var textBounds = new Rect();
+            var textValue = _icon.Character.ToString();
+            _paint.GetTextBounds(textValue, 0, 1, textBounds);
+
+            SetBounds(0, 0, textBounds.Width(), textBounds.Height());
             InvalidateSelf();
             return this;
         }
