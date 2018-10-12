@@ -58,7 +58,7 @@ namespace Plugin.Iconize
         /// </para>
         /// </remarks>
         /// <since version="Added in API level 1" />
-		public override Int32 IntrinsicHeight => Bounds.Width();
+		public override Int32 IntrinsicHeight => Bounds.Height();
 
         /// <summary>
         /// Return the intrinsic width of the underlying drawable object.
@@ -77,7 +77,7 @@ namespace Plugin.Iconize
         /// </para>
         /// </remarks>
         /// <since version="Added in API level 1" />
-		public override Int32 IntrinsicWidth => Bounds.Height();
+		public override Int32 IntrinsicWidth => Bounds.Width();
 
         /// <summary>
         /// Indicates whether this view will change its appearance based on state.
