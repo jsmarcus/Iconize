@@ -290,7 +290,7 @@ namespace Plugin.Iconize
         {
             var bounds = Bounds;
             var height = bounds.Height();
-            _paint.TextSize = height;
+            _paint.TextSize = _size;
             var textBounds = new Rect();
             var textValue = _icon.Character.ToString();
             _paint.GetTextBounds(textValue, 0, 1, textBounds);
