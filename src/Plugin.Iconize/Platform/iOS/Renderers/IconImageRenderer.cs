@@ -28,7 +28,7 @@ namespace Plugin.Iconize
         {
             base.OnElementChanged(e);
 
-            if (Control == null || Element == null)
+            if (Control is null || Element is null)
                 return;
 
             UpdateImage(true);
@@ -43,7 +43,7 @@ namespace Plugin.Iconize
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (Control == null || Element == null)
+            if (Control is null || Element is null)
                 return;
 
             switch (e.PropertyName)
@@ -70,7 +70,7 @@ namespace Plugin.Iconize
                 Control.ContentMode = (Image.IconSize == IconImage.AutoSize ? UIViewContentMode.ScaleAspectFit : UIViewContentMode.Center);
 
                 var icon = Iconize.FindIconForKey(Image.Icon);
-                if (icon == null)
+                if (icon is null)
                 {
                     Control.Image = null;
                     return;

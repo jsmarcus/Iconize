@@ -75,7 +75,7 @@ namespace Plugin.Iconize
                 return context.GetDrawable(toolbarItem.Icon);
 
             var drawable = new IconDrawable(context, iconItem.Icon);
-            if (drawable == null)
+            if (drawable is null)
                 return null;
 
             if (iconItem.IconColor != Xamarin.Forms.Color.Default)

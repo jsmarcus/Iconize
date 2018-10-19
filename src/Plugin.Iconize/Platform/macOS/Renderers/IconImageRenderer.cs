@@ -22,7 +22,7 @@ namespace Plugin.Iconize
         {
             base.OnElementChanged(e);
 
-            if (Control == null || Element == null)
+            if (Control is null || Element is null)
                 return;
 
             UpdateImage();
@@ -37,7 +37,7 @@ namespace Plugin.Iconize
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (Control == null || Element == null)
+            if (Control is null || Element is null)
                 return;
 
             switch (e.PropertyName)
@@ -58,7 +58,7 @@ namespace Plugin.Iconize
             var iconImage = Element as IconImage;
 
             var icon = Iconize.FindIconForKey(iconImage.Icon);
-            if (icon == null)
+            if (icon is null)
             {
                 Control.Layer.Contents = null;
                 return;

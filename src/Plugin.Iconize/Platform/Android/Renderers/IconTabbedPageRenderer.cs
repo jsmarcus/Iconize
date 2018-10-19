@@ -29,7 +29,7 @@ namespace Plugin.Iconize
         protected override void SetTabIcon(TabLayout.Tab tab, FileImageSource icon)
         {
             var iconize = Iconize.FindIconForKey(icon.File);
-            if (iconize != null)
+            if (!(iconize is null))
             {
                 var drawable = new IconDrawable(Context, icon).SizeDp(20);
                 DrawableCompat.SetTintList(drawable, GetItemIconTintColorState());

@@ -57,14 +57,14 @@ namespace Plugin.Iconize
         {
             try
             {
-                if (page == null || controller == null)
+                if (page is null || controller is null)
                     return;
 
                 if (controller.IsBeingDismissed)
                     return;
 
                 var navController = controller.VisibleViewController;
-                if (navController == null)
+                if (navController is null)
                     return;
 
                 if (navController.NavigationItem?.RightBarButtonItems != null)
@@ -80,7 +80,7 @@ namespace Plugin.Iconize
                 }
 
                 var toolbarItems = page.GetToolbarItems();
-                if (toolbarItems == null)
+                if (toolbarItems is null)
                     return;
 
                 List<UIBarButtonItem> primaries = null;
@@ -95,7 +95,7 @@ namespace Plugin.Iconize
                             continue;
 
                         var icon = Iconize.FindIconForKey(iconItem.Icon);
-                        if (icon != null)
+                        if (!(icon is null))
                         {
                             using (var image = icon.ToUIImage(22f))
                             {
@@ -114,8 +114,8 @@ namespace Plugin.Iconize
 
                 primaries?.Reverse();
 
-                navController.NavigationItem.SetRightBarButtonItems(primaries == null ? new UIBarButtonItem[0] : primaries.ToArray(), false);
-                navController.ToolbarItems = (secondaries == null ? new UIBarButtonItem[0] : secondaries.ToArray());
+                navController.NavigationItem.SetRightBarButtonItems(primaries is null ? new UIBarButtonItem[0] : primaries.ToArray(), false);
+                navController.ToolbarItems = (secondaries is null ? new UIBarButtonItem[0] : secondaries.ToArray());
             }
             catch (Exception ex)
             {

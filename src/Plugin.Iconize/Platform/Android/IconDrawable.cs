@@ -146,7 +146,7 @@ namespace Plugin.Iconize
         {
             var icon = Iconize.FindIconForKey(iconKey);
 
-            if (icon == null)
+            if (icon is null)
                 throw new ArgumentException($"No icon with the key: {iconKey}");
 
             Init(context, icon);
@@ -174,7 +174,7 @@ namespace Plugin.Iconize
         {
             var module = Iconize.FindModuleOf(icon);
 
-            if (module == null)
+            if (module is null)
                 throw new Java.Lang.IllegalStateException($"Unable to find the module associated with icon {icon.Key}, have you registered the module you are trying to use with Iconize.With(...) in your Application?");
 
             _context = context;

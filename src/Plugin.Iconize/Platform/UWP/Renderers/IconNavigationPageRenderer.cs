@@ -79,7 +79,7 @@ namespace Plugin.Iconize
         /// <param name="sender">The sender.</param>
         private async void OnUpdateToolbarItems(Object sender)
         {
-            if (Element == null)
+            if (Element is null)
                 return;
 
             // a workaround for MasterDetailPage
