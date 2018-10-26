@@ -62,6 +62,9 @@ namespace Plugin.Iconize
         /// </summary>
         private async void UpdateToolbarItems()
         {
+            if (Element == null)
+                return;
+
             var platform = Element.Platform;
             FieldInfo fInfo = typeof(Platform).GetField("_container", BindingFlags.NonPublic | BindingFlags.Instance);
             Canvas canvas = fInfo.GetValue(platform) as Canvas;
