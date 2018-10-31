@@ -46,7 +46,7 @@ namespace Plugin.Iconize
                 menuItem.SetVisible(iconToolbarItem.IsVisible);
 
                 var icon = iconToolbarItem.GetToolbarItemDrawable(context);
-                if (icon != null)
+                if (!(icon is null))
                 {
                     menuItem.SetIcon(icon);
                     return;

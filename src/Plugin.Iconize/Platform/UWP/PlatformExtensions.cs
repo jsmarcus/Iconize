@@ -103,7 +103,7 @@ namespace Plugin.Iconize
             if (button?.DataContext is IconToolbarItem item)
             {
                 var icon = Iconize.FindIconForKey(item.Icon);
-                if (icon != null)
+                if (!(icon is null))
                 {
                     button.ClearValue(AppBarButton.IconProperty);
                     button.Icon = new FontIcon
@@ -126,7 +126,7 @@ namespace Plugin.Iconize
         /// <param name="bar">The bar.</param>
         public static void UpdateToolbarItems(this CommandBar bar)
         {
-            if (bar == null)
+            if (bar is null)
                 return;
 
             foreach (var button in bar.PrimaryCommands)

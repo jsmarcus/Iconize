@@ -28,7 +28,7 @@ namespace Plugin.Iconize
         {
             base.OnElementChanged(e);
 
-            if (Control == null || Image == null)
+            if (Control is null || Image is null)
                 return;
 
             await UpdateImageAsync();
@@ -43,7 +43,7 @@ namespace Plugin.Iconize
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (Control == null || Image == null)
+            if (Control is null || Image is null)
                 return;
 
             switch (e.PropertyName)
@@ -62,7 +62,7 @@ namespace Plugin.Iconize
         private async Task UpdateImageAsync()
         {
             var icon = Iconize.FindIconForKey(Image.Icon);
-            if (icon != null)
+            if (!(icon is null))
             {
                 var iconSize = (Image.IconSize == IconImage.AutoSize ? Math.Max(Element.WidthRequest, Element.HeightRequest) : Image.IconSize);
 
