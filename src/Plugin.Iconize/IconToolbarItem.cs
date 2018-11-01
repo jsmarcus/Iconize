@@ -10,16 +10,10 @@ namespace Plugin.Iconize
     /// <seealso cref="Xamarin.Forms.ToolbarItem" />
     public class IconToolbarItem : ToolbarItem
     {
-        #region Constants
-
         /// <summary>
         /// The update toolbar items message
         /// </summary>
         public const String UpdateToolbarItemsMessage = "Iconize.UpdateToolbarItems";
-
-        #endregion Constants
-
-        #region Bindables
 
         /// <summary>
         /// Backing store for the <see cref="IconColor" /> property.
@@ -31,17 +25,17 @@ namespace Plugin.Iconize
         /// </summary>
         public static BindableProperty IsVisibleProperty = BindableProperty.Create(nameof(IsVisible), typeof(Boolean), typeof(IconToolbarItem), true);
 
-        #endregion Bindables
-
-        #region Properties
-
         /// <summary>
         /// Gets or sets the color of the icon.
         /// </summary>
         /// <value>
         /// The color of the icon.
         /// </value>
-        public Color IconColor { get => (Color)GetValue(IconColorProperty); set => SetValue(IconColorProperty, value); }
+        public Color IconColor
+        {
+            get => (Color)GetValue(IconColorProperty);
+            set => SetValue(IconColorProperty, value);
+        }
 
         /// <summary>
         /// Gets or sets a value indicating whether this toolbar item is visible.
@@ -49,9 +43,11 @@ namespace Plugin.Iconize
         /// <value>
         /// <c>true</c> if this toolbar item is visible; otherwise, <c>false</c>.
         /// </value>
-        public Boolean IsVisible { get => (Boolean)GetValue(IsVisibleProperty); set => SetValue(IsVisibleProperty, value); }
-
-        #endregion Properties
+        public Boolean IsVisible
+        {
+            get => (Boolean)GetValue(IsVisibleProperty);
+            set => SetValue(IsVisibleProperty, value);
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IconToolbarItem" /> class.

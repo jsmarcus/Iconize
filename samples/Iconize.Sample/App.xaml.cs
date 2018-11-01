@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Plugin.Iconize;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace Iconize.Sample
@@ -32,6 +33,8 @@ namespace Iconize.Sample
 
             // The root page of your application
             var tabbedPage = new IconTabbedPage { Title = "Iconize" };
+            tabbedPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetBarItemColor(Xamarin.Forms.Color.Green);
+            tabbedPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetBarSelectedItemColor(Xamarin.Forms.Color.Black);
 
             foreach (var module in Plugin.Iconize.Iconize.Modules)
             {

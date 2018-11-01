@@ -45,7 +45,7 @@ namespace Plugin.Iconize
             for (int i = 0; i < TabView.Items.Length; i++)
             {
                 var icon = Iconize.FindIconForKey(_icons?[i]);
-                if (icon == null)
+                if (icon is null)
                     continue;
 
                 using (var image = icon.ToNSImage(18))

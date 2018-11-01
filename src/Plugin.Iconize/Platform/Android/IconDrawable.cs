@@ -58,7 +58,7 @@ namespace Plugin.Iconize
         /// </para>
         /// </remarks>
         /// <since version="Added in API level 1" />
-        public override Int32 IntrinsicHeight => _size;
+		public override Int32 IntrinsicHeight => Bounds.Height();
 
         /// <summary>
         /// Return the intrinsic width of the underlying drawable object.
@@ -77,7 +77,7 @@ namespace Plugin.Iconize
         /// </para>
         /// </remarks>
         /// <since version="Added in API level 1" />
-        public override Int32 IntrinsicWidth => _size;
+		public override Int32 IntrinsicWidth => Bounds.Width();
 
         /// <summary>
         /// Indicates whether this view will change its appearance based on state.
@@ -146,7 +146,7 @@ namespace Plugin.Iconize
         {
             var icon = Iconize.FindIconForKey(iconKey);
 
-            if (icon == null)
+            if (icon is null)
                 throw new ArgumentException($"No icon with the key: {iconKey}");
 
             Init(context, icon);
@@ -174,7 +174,7 @@ namespace Plugin.Iconize
         {
             var module = Iconize.FindModuleOf(icon);
 
-            if (module == null)
+            if (module is null)
                 throw new Java.Lang.IllegalStateException($"Unable to find the module associated with icon {icon.Key}, have you registered the module you are trying to use with Iconize.With(...) in your Application?");
 
             _context = context;
@@ -219,7 +219,13 @@ namespace Plugin.Iconize
         public IconDrawable SizePx(Int32 size)
         {
             _size = size;
-            SetBounds(0, 0, size, size);
+
+            _paint.TextSize = _size;
+            var textBounds = new Rect();
+            var textValue = _icon.Character.ToString();
+            _paint.GetTextBounds(textValue, 0, 1, textBounds);
+
+            SetBounds(0, 0, textBounds.Width(), textBounds.Height());
             InvalidateSelf();
             return this;
         }
@@ -284,7 +290,7 @@ namespace Plugin.Iconize
         {
             var bounds = Bounds;
             var height = bounds.Height();
-            _paint.TextSize = height;
+            _paint.TextSize = _size;
             var textBounds = new Rect();
             var textValue = _icon.Character.ToString();
             _paint.GetTextBounds(textValue, 0, 1, textBounds);

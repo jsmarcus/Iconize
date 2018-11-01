@@ -12,6 +12,7 @@ using ImageRenderer = Xamarin.Forms.Platform.Android.ImageRenderer;
 #endif
 
 [assembly: ExportRenderer(typeof(IconImage), typeof(IconImageRenderer))]
+
 namespace Plugin.Iconize
 {
     /// <summary>
@@ -47,7 +48,7 @@ namespace Plugin.Iconize
         {
             base.OnElementChanged(e);
 
-            if (e.NewElement == null)
+            if (e.NewElement is null)
                 return;
 
             Image = e.NewElement as IconImage;
@@ -60,7 +61,7 @@ namespace Plugin.Iconize
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (Image == null)
+            if (Image is null)
                 return;
 
             switch (e.PropertyName)
@@ -76,7 +77,7 @@ namespace Plugin.Iconize
         private void UpdateImage()
         {
             var icon = Iconize.FindIconForKey(Image.Icon);
-            if (icon == null)
+            if (icon is null)
             {
 #if USE_FASTRENDERERS
                 SetImageResource(Android.Resource.Color.Transparent);

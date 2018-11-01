@@ -1,28 +1,28 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
-
+  
   <PropertyGroup>
     <!-- VS4Mac workaround -->
   </PropertyGroup>
-
+  
   <ItemGroup>
     <None Remove="@(FontFiles)" />
   </ItemGroup>
-
+  
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Folder Include="Assets\" />
     <AndroidAsset Include="@(FontFiles)" Link="Assets\%(Filename)%(Extension)" />
   </ItemGroup>
-
+  
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
   </ItemGroup>
-
+  
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.Mac')) ">
     <TfmSpecificPackageFile Include="@(FontFiles)" BuildAction="BundleResource" PackagePath="contentFiles\any\$(TargetFramework)\Resources\" />
   </ItemGroup>
-
+  
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <Content Include="@(FontFiles)" />
   </ItemGroup>
-
+  
 </Project>

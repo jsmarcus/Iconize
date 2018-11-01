@@ -10,7 +10,7 @@
         /// Initializes a new instance of the <see cref="FontAwesomeSolidModule" /> class.
         /// </summary>
         public FontAwesomeSolidModule()
-            : base("Font Awesome 5 Free Solid", "FontAwesome5FreeSolid", "iconize-fontawesome-solid.otf", FontAwesomeCollection.SolidIcons)
+            : base("Font Awesome 5 Free Solid", "FontAwesome5FreeSolid", "iconize-fontawesome-solid.ttf", FontAwesomeCollection.SolidIcons)
         {
             // Intentionally left blank
         }
