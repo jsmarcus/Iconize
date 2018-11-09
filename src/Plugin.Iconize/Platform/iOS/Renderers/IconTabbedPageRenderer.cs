@@ -17,11 +17,14 @@ namespace Plugin.Iconize
         /// <inheritdoc />
         protected override Task<Tuple<UIImage, UIImage>> GetIcon(Page page)
         {
-            var icon = Iconize.FindIconForKey(page.Icon.File);
-
-            if (!(icon is null))
+            if (!(page.Icon is null) && !(page.Icon.File is null))
             {
-                return Task.FromResult(Tuple.Create(icon.ToUIImage(25f), (UIImage)null));
+                var icon = Iconize.FindIconForKey(page.Icon.File);
+
+                if (!(icon is null))
+                {
+                    return Task.FromResult(Tuple.Create(icon.ToUIImage(25f), (UIImage)null));
+                }
             }
 
             return base.GetIcon(page);
