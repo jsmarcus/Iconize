@@ -94,6 +94,36 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.EntypoPlus\iconize-entypoplus.ttf">
+      <Link>Resources\iconize-entypoplus.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.FontAwesome\iconize-fontawesome-brands.ttf">
+      <Link>Resources\iconize-fontawesome-brands.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.FontAwesome\iconize-fontawesome-regular.ttf">
+      <Link>Resources\iconize-fontawesome-regular.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.FontAwesome\iconize-fontawesome-solid.ttf">
+      <Link>Resources\iconize-fontawesome-solid.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.Ionicons\iconize-ionicons.ttf">
+      <Link>Resources\iconize-ionicons.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.Material\iconize-material.ttf">
+      <Link>Resources\iconize-material.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.Meteocons\iconize-meteocons.ttf">
+      <Link>Resources\iconize-meteocons.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.SimpleLineIcons\iconize-simplelineicons.ttf">
+      <Link>Resources\iconize-simplelineicons.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.Typicons\iconize-typicons.ttf">
+      <Link>Resources\iconize-typicons.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.WeatherIcons\iconize-weathericons.ttf">
+      <Link>Resources\iconize-weathericons.ttf</Link>
+    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
