@@ -1,6 +1,5 @@
 using Android.Content;
-using Android.Support.Design.Widget;
-using Android.Support.V4.Graphics.Drawable;
+using Android.Graphics.Drawables;
 using Plugin.Iconize;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android.AppCompat;
@@ -26,18 +25,16 @@ namespace Plugin.Iconize
         }
 
         /// <inheritdoc />
-        protected override void SetTabIcon(TabLayout.Tab tab, FileImageSource icon)
+        protected override Drawable GetIconDrawable(FileImageSource icon)
         {
             var iconize = Iconize.FindIconForKey(icon.File);
+
             if (!(iconize is null))
             {
-                var drawable = new IconDrawable(Context, icon).SizeDp(20);
-                DrawableCompat.SetTintList(drawable, GetItemIconTintColorState());
-                tab.SetIcon(drawable);
-                return;
+                return new IconDrawable(Context, icon).SizeDp(20);
             }
 
-            base.SetTabIcon(tab, icon);
+            return base.GetIconDrawable(icon);
         }
     }
 }
