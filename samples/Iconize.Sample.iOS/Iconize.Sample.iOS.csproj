@@ -124,6 +124,9 @@
     <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.WeatherIcons\iconize-weathericons.ttf">
       <Link>Resources\iconize-weathericons.ttf</Link>
     </BundleResource>
+    <BundleResource Include="..\..\src\Fonts\Plugin.Iconize.JamIcons\iconize-jam-icons.ttf">
+      <Link>Resources\iconize-jam-icons.ttf</Link>
+    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
