@@ -113,7 +113,9 @@ Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
 <key>UIAppFonts</key>
 <array>
     <string>iconize-entypoplus.ttf</string>
-    <string>iconize-fontawesome.ttf</string>
+    <string>iconize-fontawesome-regular.ttf</string>
+    <string>iconize-fontawesome-solid.ttf</string>
+    <string>iconize-fontawesome-brands.ttf</string>
     <string>iconize-ionicons.ttf</string>
     <string>iconize-material.ttf</string>
     <string>iconize-meteocons.ttf</string>
