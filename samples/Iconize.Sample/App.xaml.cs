@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Plugin.Iconize;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace Iconize.Sample
@@ -24,6 +26,7 @@ namespace Iconize.Sample
                 .With(new Plugin.Iconize.Fonts.FontAwesomeBrandsModule())
                 .With(new Plugin.Iconize.Fonts.FontAwesomeSolidModule())
                 .With(new Plugin.Iconize.Fonts.IoniconsModule())
+                .With(new Plugin.Iconize.Fonts.JamIconsModule())
                 .With(new Plugin.Iconize.Fonts.MaterialModule())
                 .With(new Plugin.Iconize.Fonts.MeteoconsModule())
                 .With(new Plugin.Iconize.Fonts.SimpleLineIconsModule())
@@ -32,9 +35,13 @@ namespace Iconize.Sample
 
             // The root page of your application
             var tabbedPage = new IconTabbedPage { Title = "Iconize" };
+            tabbedPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetBarItemColor(Xamarin.Forms.Color.Yellow);
+            tabbedPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetBarSelectedItemColor(Xamarin.Forms.Color.Black);
+            tabbedPage.On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
-            foreach (var module in Plugin.Iconize.Iconize.Modules)
+            for (int i = 0; i < Math.Min(Plugin.Iconize.Iconize.Modules.Count, 5); i++)
             {
+                var module = Plugin.Iconize.Iconize.Modules[i];
                 var bc = new ModuleWrapper(module);
                 var icon = module.Keys.FirstOrDefault();
                 tabbedPage.Children.Add(new Page1
@@ -43,6 +50,17 @@ namespace Iconize.Sample
                     Icon = icon
                 });
             }
+
+            //foreach (var module in Plugin.Iconize.Iconize.Modules)
+            //{
+            //    var bc = new ModuleWrapper(module);
+            //    var icon = module.Keys.FirstOrDefault();
+            //    tabbedPage.Children.Add(new Page1
+            //    {
+            //        BindingContext = bc,
+            //        Icon = icon
+            //    });
+            //}
 
             MainPage = new IconNavigationPage(tabbedPage);
         }

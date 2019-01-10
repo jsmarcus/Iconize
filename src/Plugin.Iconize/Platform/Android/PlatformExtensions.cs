@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using Android.Content;
 using Android.Graphics;
 using Android.Graphics.Drawables;
-using Android.Support.V7.Widget;
-using Android.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
@@ -68,7 +66,7 @@ namespace Plugin.Iconize
         /// <param name="toolbarItem">The toolbar item.</param>
         /// <param name="context">The context.</param>
         /// <returns></returns>
-        private static Drawable GetToolbarItemDrawable(this ToolbarItem toolbarItem, Context context)
+        internal static Drawable GetToolbarItemDrawable(this ToolbarItem toolbarItem, Context context)
         {
             if (String.IsNullOrWhiteSpace(toolbarItem.Icon))
                 return null;
@@ -77,47 +75,13 @@ namespace Plugin.Iconize
                 return context.GetDrawable(toolbarItem.Icon);
 
             var drawable = new IconDrawable(context, iconItem.Icon);
-            if (drawable == null)
+            if (drawable is null)
                 return null;
 
             if (iconItem.IconColor != Xamarin.Forms.Color.Default)
                 drawable = drawable.Color(iconItem.IconColor.ToAndroid());
 
             return drawable.ActionBarSize();
-        }
-
-        /// <summary>
-        /// Updates the toolbar items.
-        /// </summary>
-        /// <param name="page">The page.</param>
-        /// <param name="view">The view.</param>
-        public static void UpdateToolbarItems(this Page page, Android.Views.View view)
-        {
-            var toolbar = view.FindViewById<Toolbar>(Iconize.ToolbarId);
-            if (toolbar == null)
-                return;
-
-            toolbar.Menu.Clear();
-
-            var toolbarItems = page.GetToolbarItems();
-            if (toolbarItems == null)
-                return;
-
-            foreach (var toolbarItem in toolbarItems)
-            {
-                if (!((toolbarItem as IconToolbarItem)?.IsVisible ?? true))
-                    continue;
-
-                var menuItem = toolbar.Menu.Add(toolbarItem.Text);
-                menuItem.SetOnMenuItemClickListener(new MenuClickListener(toolbarItem.Activate));
-
-                var icon = toolbarItem.GetToolbarItemDrawable(toolbar.Context);
-                if (icon != null)
-                    menuItem.SetIcon(icon);
-
-                if (toolbarItem.Order != ToolbarItemOrder.Secondary)
-                    menuItem.SetShowAsAction(ShowAsAction.Always);
-            }
         }
     }
 }

@@ -1,12 +1,13 @@
 using System;
 using Android.Content;
+using Android.Content.Res;
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Support.V4.Content;
+using Android.Support.V4.Graphics.Drawable;
 using Android.Text;
 using Android.Util;
 using R = Android.Resource;
-using Plugin.Iconize;
 
 namespace Plugin.Iconize
 {
@@ -14,127 +15,33 @@ namespace Plugin.Iconize
     /// Defines the <see cref="IconDrawable" /> drawable.
     /// </summary>
     /// <seealso cref="Android.Graphics.Drawables.Drawable" />
-    public class IconDrawable : Drawable
+    public class IconDrawable : Drawable, ITintAwareDrawable
     {
-        #region Constants
-
         /// <summary>
         /// The android actionbar icon size dp
         /// </summary>
         public const Int32 ANDROID_ACTIONBAR_ICON_SIZE_DP = 24;
 
-        #endregion Constants
-
-        #region Members
+        private readonly Context _context;
+        private readonly IIcon _icon;
+        private readonly TextPaint _paint;
 
         private Int32 _alpha = 255;
-
-        private Context _context;
-
-        private IIcon _icon;
-
-        private TextPaint _paint;
-
+        private Color _color = Android.Graphics.Color.Black;
         private Int32 _size = -1;
+        private ColorStateList _tintList;
 
-        #endregion Members
+        /// <inheritdoc />
+        public override Int32 IntrinsicHeight => Bounds.Height();
 
-        #region Properties
+        /// <inheritdoc />
+        public override Int32 IntrinsicWidth => Bounds.Width();
 
-        /// <summary>
-        /// Return the intrinsic height of the underlying drawable object.
-        /// </summary>
-        /// <value>
-        /// To be added.
-        /// </value>
-        /// <remarks>
-        /// <para tool="javadoc-to-mdoc">Return the intrinsic height of the underlying drawable object. Returns
-        /// -1 if it has no intrinsic height, such as with a solid color.
-        /// </para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#getIntrinsicHeight()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para>
-        /// </remarks>
-        /// <since version="Added in API level 1" />
-        public override Int32 IntrinsicHeight => _size;
-
-        /// <summary>
-        /// Return the intrinsic width of the underlying drawable object.
-        /// </summary>
-        /// <value>
-        /// To be added.
-        /// </value>
-        /// <remarks>
-        /// <para tool="javadoc-to-mdoc">Return the intrinsic width of the underlying drawable object.  Returns
-        /// -1 if it has no intrinsic width, such as with a solid color.
-        /// </para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#getIntrinsicWidth()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para>
-        /// </remarks>
-        /// <since version="Added in API level 1" />
-        public override Int32 IntrinsicWidth => _size;
-
-        /// <summary>
-        /// Indicates whether this view will change its appearance based on state.
-        /// </summary>
-        /// <value>
-        /// To be added.
-        /// </value>
-        /// <remarks>
-        /// <para tool="javadoc-to-mdoc">Indicates whether this view will change its appearance based on state.
-        /// Clients can use this to determine whether it is necessary to calculate
-        /// their state and call setState.</para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#isStateful()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para>
-        /// </remarks>
-        /// <since version="Added in API level 1" />
-        /// <altmember cref="M:Android.Graphics.Drawables.Drawable.SetState(System.Int32[])" />
+        /// <inheritdoc />
         public override Boolean IsStateful => true;
 
-        /// <summary>
-        /// Return the opacity/transparency of this Drawable.
-        /// </summary>
-        /// <value>
-        /// To be added.
-        /// </value>
-        /// <remarks>
-        /// <para tool="javadoc-to-mdoc">Return the opacity/transparency of this Drawable.  The returned value is
-        /// one of the abstract format constants in
-        /// <c><see cref="T:Android.Graphics.PixelFormat" /></c>:
-        /// <c><see cref="F:Android.Graphics.Format.Unknown" /></c>,
-        /// <c><see cref="F:Android.Graphics.Format.Translucent" /></c>,
-        /// <c><see cref="F:Android.Graphics.Format.Transparent" /></c>, or
-        /// <c><see cref="F:Android.Graphics.Format.Opaque" /></c>.
-        /// </para>
-        /// <para tool="javadoc-to-mdoc">Generally a Drawable should be as conservative as possible with the
-        /// value it returns.  For example, if it contains multiple child drawables
-        /// and only shows one of them at a time, if only one of the children is
-        /// TRANSLUCENT and the others are OPAQUE then TRANSLUCENT should be
-        /// returned.  You can use the method <c><see cref="M:Android.Graphics.Drawables.Drawable.ResolveOpacity(System.Int32, System.Int32)" /></c> to perform a
-        /// standard reduction of two opacities to the appropriate single output.
-        /// </para>
-        /// <para tool="javadoc-to-mdoc">Note that the returned value does <i>not</i> take into account a
-        /// custom alpha or color filter that has been applied by the client through
-        /// the <c><see cref="M:Android.Graphics.Drawables.Drawable.SetAlpha(System.Int32)" /></c> or <c><see cref="M:Android.Graphics.Drawables.Drawable.SetColorFilter(Android.Graphics.ColorFilter)" /></c> methods.</para>
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#getOpacity()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para>
-        /// </remarks>
-        /// <since version="Added in API level 1" />
-        /// <altmember cref="T:Android.Graphics.PixelFormat" />
+        /// <inheritdoc />
         public override Int32 Opacity => _alpha;
-
-        #endregion Properties
 
         /// <summary>
         /// Create an <see cref="IconDrawable" />.
@@ -143,13 +50,9 @@ namespace Plugin.Iconize
         /// <param name="iconKey">The icon key you want this drawable to display.</param>
         /// <exception cref="ArgumentException">If the key doesn't match any icon.</exception>
         public IconDrawable(Context context, String iconKey)
+            : this(context, Iconize.FindIconForKey(iconKey))
         {
-            var icon = Iconize.FindIconForKey(iconKey);
-
-            if (icon == null)
-                throw new ArgumentException($"No icon with the key: {iconKey}");
-
-            Init(context, icon);
+            // Intentionally left blank
         }
 
         /// <summary>
@@ -159,22 +62,9 @@ namespace Plugin.Iconize
         /// <param name="icon">The icon you want this drawable to display.</param>
         public IconDrawable(Context context, IIcon icon)
         {
-            Init(context, icon);
-        }
-
-        /// <summary>
-        /// Initializes the specified context.
-        /// </summary>
-        /// <param name="context">The context.</param>
-        /// <param name="icon">The icon.</param>
-        /// <exception cref="Java.Lang.IllegalStateException">Unable to find the module associated  +
-        ///                         with icon  + icon.Key + , have you registered the module  +
-        ///                         you are trying to use with Iconize.With(...) in your Application?</exception>
-        private void Init(Context context, IIcon icon)
-        {
             var module = Iconize.FindModuleOf(icon);
 
-            if (module == null)
+            if (module is null)
                 throw new Java.Lang.IllegalStateException($"Unable to find the module associated with icon {icon.Key}, have you registered the module you are trying to use with Iconize.With(...) in your Application?");
 
             _context = context;
@@ -183,7 +73,6 @@ namespace Plugin.Iconize
             _paint = new TextPaint
             {
                 AntiAlias = true,
-                Color = Android.Graphics.Color.Black,
                 TextAlign = Paint.Align.Center,
                 UnderlineText = false
             };
@@ -195,21 +84,30 @@ namespace Plugin.Iconize
         /// Set the size of this icon to the standard Android ActionBar.
         /// </summary>
         /// <returns>The current IconDrawable for chaining.</returns>
-        public IconDrawable ActionBarSize() => SizeDp(ANDROID_ACTIONBAR_ICON_SIZE_DP);
+        public IconDrawable ActionBarSize()
+        {
+            return SizeDp(ANDROID_ACTIONBAR_ICON_SIZE_DP);
+        }
 
         /// <summary>
         /// Set the size of the drawable.
         /// </summary>
         /// <param name="dimenRes">The dimension resource.</param>
         /// <returns>The current IconDrawable for chaining.</returns>
-        public IconDrawable SizeRes(Int32 dimenRes) => SizePx(_context.Resources.GetDimensionPixelSize(dimenRes));
+        public IconDrawable SizeRes(Int32 dimenRes)
+        {
+            return SizePx(_context.Resources.GetDimensionPixelSize(dimenRes));
+        }
 
         /// <summary>
         /// Set the size of the drawable.
         /// </summary>
         /// <param name="size">The size in density-independent pixels (dp).</param>
         /// <returns>The current IconDrawable for chaining.</returns>
-        public IconDrawable SizeDp(Int32 size) => SizePx(ConvertDpToPx(_context, size));
+        public IconDrawable SizeDp(Int32 size)
+        {
+            return SizePx(ConvertDpToPx(_context, size));
+        }
 
         /// <summary>
         /// Set the size of the drawable.
@@ -219,7 +117,13 @@ namespace Plugin.Iconize
         public IconDrawable SizePx(Int32 size)
         {
             _size = size;
-            SetBounds(0, 0, size, size);
+
+            _paint.TextSize = _size;
+            var textBounds = new Rect();
+            var textValue = _icon.Character.ToString();
+            _paint.GetTextBounds(textValue, 0, 1, textBounds);
+
+            SetBounds(0, 0, textBounds.Width(), textBounds.Height());
             InvalidateSelf();
             return this;
         }
@@ -231,7 +135,7 @@ namespace Plugin.Iconize
         /// <returns>The current IconDrawable for chaining.</returns>
         public IconDrawable Color(Int32 color)
         {
-            _paint.Color = new Color(color);
+            _color = new Color(color);
             InvalidateSelf();
             return this;
         }
@@ -243,9 +147,7 @@ namespace Plugin.Iconize
         /// <returns>The current IconDrawable for chaining.</returns>
         public IconDrawable ColorRes(Int32 colorRes)
         {
-            _paint.Color = new Color(ContextCompat.GetColor(_context, colorRes));
-            InvalidateSelf();
-            return this;
+            return Color(ContextCompat.GetColor(_context, colorRes));
         }
 
         /// <summary>
@@ -260,31 +162,34 @@ namespace Plugin.Iconize
             return this;
         }
 
-        /// <summary>
-        /// </summary>
-        /// <remarks>
-        /// <para tool="javadoc-to-mdoc" />
-        /// <para tool="javadoc-to-mdoc">
-        ///   <format type="text/html">
-        ///     <a href="http://developer.android.com/reference/android/graphics/drawable/Drawable.html#clearColorFilter()" target="_blank">[Android Documentation]</a>
-        ///   </format>
-        /// </para>
-        /// </remarks>
-        /// <since version="Added in API level 1" />
+        /// <inheritdoc />
         public override void ClearColorFilter()
         {
             _paint.SetColorFilter(null);
         }
 
-        /// <summary>
-        /// Draws the specified canvas.
-        /// </summary>
-        /// <param name="canvas">The canvas.</param>
+        /// <inheritdoc />
         public override void Draw(Canvas canvas)
         {
+            var state = GetState();
+
+            // Set color
+            if (!(_tintList is null))
+            {
+                var color = _tintList.GetColorForState(state, _paint.Color);
+                _paint.Color = new Color(color);
+            }
+            else
+            {
+                _paint.Color = _color;
+            }
+
+            // Set alpha
+            _paint.Alpha = IsEnabled(state) ? _alpha : (_alpha / 2);
+
             var bounds = Bounds;
             var height = bounds.Height();
-            _paint.TextSize = height;
+            _paint.TextSize = _size;
             var textBounds = new Rect();
             var textValue = _icon.Character.ToString();
             _paint.GetTextBounds(textValue, 0, 1, textBounds);
@@ -293,36 +198,36 @@ namespace Plugin.Iconize
             canvas.DrawText(textValue, bounds.ExactCenterX(), textBottom, _paint);
         }
 
-        /// <summary>
-        /// Sets the state.
-        /// </summary>
-        /// <param name="stateSet">The state set.</param>
-        /// <returns></returns>
+        /// <inheritdoc />
         public override Boolean SetState(Int32[] stateSet)
         {
-            var oldValue = _paint.Alpha;
-            var newValue = IsEnabled(stateSet) ? _alpha : _alpha / 2;
-            _paint.Alpha = newValue;
-            return oldValue != newValue;
+            _paint.Alpha = IsEnabled(stateSet) ? _alpha : _alpha / 2;
+            return base.SetState(stateSet);
         }
 
-        /// <summary>
-        /// Sets the alpha.
-        /// </summary>
-        /// <param name="alpha">The alpha.</param>
+        /// <inheritdoc />
         public override void SetAlpha(Int32 alpha)
         {
             _alpha = alpha;
             _paint.Alpha = alpha;
         }
 
-        /// <summary>
-        /// Sets the color filter.
-        /// </summary>
-        /// <param name="colorFilter">The color filter.</param>
+        /// <inheritdoc />
         public override void SetColorFilter(ColorFilter colorFilter)
         {
             _paint.SetColorFilter(colorFilter);
+        }
+
+        /// <inheritdoc />
+        public override void SetTint(Int32 tintColor)
+        {
+            _color = new Color(tintColor);
+        }
+
+        /// <inheritdoc />
+        public override void SetTintList(ColorStateList tint)
+        {
+            _tintList = tint;
         }
 
         /// <summary>
@@ -331,7 +236,10 @@ namespace Plugin.Iconize
         /// <param name="context">The context.</param>
         /// <param name="dp">The dp.</param>
         /// <returns></returns>
-        private Int32 ConvertDpToPx(Context context, Single dp) => (Int32)TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, context.Resources.DisplayMetrics);
+        private Int32 ConvertDpToPx(Context context, Single dp)
+        {
+            return (Int32)TypedValue.ApplyDimension(ComplexUnitType.Dip, dp, context.Resources.DisplayMetrics);
+        }
 
         /// <summary>
         /// Sets paint style.

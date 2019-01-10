@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
     <!-- VS4Mac workaround -->
@@ -28,7 +28,5 @@
     <None Remove="**/Platform/UWP/**/*.cs" />
     <Compile Include="**/Platform/UWP/**/*.cs" />
   </ItemGroup>
-
-  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
 </Project>

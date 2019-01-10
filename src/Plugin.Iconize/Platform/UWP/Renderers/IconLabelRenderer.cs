@@ -22,7 +22,7 @@ namespace Plugin.Iconize
         {
             base.OnElementChanged(e);
 
-            if (Control == null || Element == null)
+            if (Control is null || Element is null)
                 return;
 
             UpdateText();
@@ -37,7 +37,7 @@ namespace Plugin.Iconize
         {
             base.OnElementPropertyChanged(sender, e);
 
-            if (Control == null || Element == null)
+            if (Control is null || Element is null)
                 return;
 
             switch (e.PropertyName)
@@ -56,7 +56,7 @@ namespace Plugin.Iconize
         private void UpdateText()
         {
             var icon = Iconize.FindIconForKey(Element.Text);
-            if (icon != null)
+            if (!(icon is null))
             {
                 Control.Text = $"{icon.Character}";
                 Control.FontFamily = Iconize.FindModuleOf(icon).ToFontFamily();

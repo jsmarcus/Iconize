@@ -22,6 +22,8 @@ Use icon fonts in your Xamarin.Forms application!
   * Version: 5.3.1
 * [Ionicons](http://ionicons.com/)
   * Version: 2.0.1
+* [Jam Icons](https://jam-icons.com/)
+  * Version: 2.0.0
 * [Material design icons](http://google.github.io/material-design-icons/)
   * Version: 3.0.1
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
@@ -65,6 +67,7 @@ All packages are provided via NuGet.
 * [Xam.Plugin.Iconize.EntypoPlus](https://www.nuget.org/packages/Xam.Plugin.Iconize.EntypoPlus)
 * [Xam.Plugin.Iconize.FontAwesome](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesome)
 * [Xam.Plugin.Iconize.Ionicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Ionicons)
+* [Xam.Plugin.Iconize.JamIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.JamIcons)
 * [Xam.Plugin.Iconize.Material](https://www.nuget.org/packages/Xam.Plugin.Iconize.Material)
 * [Xam.Plugin.Iconize.Meteocons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Meteocons)
 * [Xam.Plugin.Iconize.SimpleLineIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.SimpleLineIcons)
@@ -98,7 +101,7 @@ protected override void OnCreate(Bundle savedInstanceState)
 {
     Xamarin.Forms.Forms.Init(this, savedInstanceState);
     ...
-    Plugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabs);
+    Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
     ...
     LoadApplication(new App());
 }
@@ -110,7 +113,9 @@ Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
 <key>UIAppFonts</key>
 <array>
     <string>iconize-entypoplus.ttf</string>
-    <string>iconize-fontawesome.ttf</string>
+    <string>iconize-fontawesome-regular.ttf</string>
+    <string>iconize-fontawesome-solid.ttf</string>
+    <string>iconize-fontawesome-brands.ttf</string>
     <string>iconize-ionicons.ttf</string>
     <string>iconize-material.ttf</string>
     <string>iconize-meteocons.ttf</string>
@@ -155,6 +160,9 @@ As a consequence the font files are not bundled with the plugin and need to be a
 
 **Ionicons**  
 Ionicons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
+
+**Jam Icons**  
+Jam Icons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 **Material design icons**  
 Material design icons are licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).

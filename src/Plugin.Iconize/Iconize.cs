@@ -46,7 +46,10 @@ namespace Plugin.Iconize
         /// </summary>
         /// <param name="module">The Icon Module holding the ttf file reference and its mappings.</param>
         /// <returns>An initializer instance for chain calls.</returns>
-        public static IconizeInitializer With(IIconModule module) => new IconizeInitializer(module);
+        public static IconizeInitializer With(IIconModule module)
+        {
+            return new IconizeInitializer(module);
+        }
 
         /// <summary>
         /// Adds the icon module.
@@ -122,10 +125,13 @@ namespace Plugin.Iconize
         /// <returns>The icon, or null if no icon matches the key</returns>
         public static IIcon FindIconForKey(String iconKey)
         {
-            if (String.IsNullOrWhiteSpace(iconKey))
-                return null;
+            if (iconKey is null)
+                throw new ArgumentNullException(nameof(iconKey));
 
-            return Modules.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey);
+            if (String.IsNullOrWhiteSpace(iconKey))
+                throw new ArgumentException($"{nameof(iconKey)} cannot be empty", nameof(iconKey));
+
+            return Modules?.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey) ?? throw new NullReferenceException($"No icon with the key: {iconKey}");
         }
     }
 }
