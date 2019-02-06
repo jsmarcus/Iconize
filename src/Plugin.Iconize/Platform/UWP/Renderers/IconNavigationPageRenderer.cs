@@ -65,10 +65,7 @@ namespace Plugin.Iconize
             if (Element == null)
                 return;
 
-            var platform = Element.Platform;
-            FieldInfo fInfo = typeof(Platform).GetField("_container", BindingFlags.NonPublic | BindingFlags.Instance);
-            Canvas canvas = fInfo.GetValue(platform) as Canvas;
-            if (canvas?.Children?[0] is MasterDetailControl masterDetailControl)
+            if (ContainerElement is MasterDetailControl masterDetailControl)
             {
                 var mInfo = typeof(MasterDetailControl).GetTypeInfo().GetDeclaredMethod("Xamarin.Forms.Platform.UWP.IToolbarProvider.GetCommandBarAsync");
                 var commandBar = await (mInfo.Invoke(masterDetailControl, new Object[] { }) as Task<CommandBar>);
