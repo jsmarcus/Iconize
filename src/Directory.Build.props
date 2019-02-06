@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
-    <PackageReference Include="SkiaSharp" Version="1.60.3" />
+    <PackageReference Include="SkiaSharp" Version="1.68.0" />
     <SDKReference Include="WindowsMobile, Version=10.0.16299.0">
       <Name>Windows Mobile Extensions for the UWP</Name>
     </SDKReference>
