@@ -1180,7 +1180,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-cc-diners-club", '\uf24c');
             BrandIcons.Add("fab-cc-discover", '\uf1f2');
             BrandIcons.Add("fab-cc-jcb", '\uf24b');
-            BrandIcons.Add("fab-cc-mastercard", '\uf1f1
+            BrandIcons.Add("fab-cc-mastercard", '\uf1f1');
             BrandIcons.Add("fab-cc-paypal", '\uf1f4');
             BrandIcons.Add("fab-cc-stripe", '\uf1f5');
             BrandIcons.Add("fab-cc-visa", '\uf1f0');
