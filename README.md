@@ -20,12 +20,14 @@ Use icon fonts in your Xamarin.Forms application!
   * Version: 5.3.1
 * [Font Awesome Pro](https://github.com/FortAwesome/Font-Awesome-Pro/)
   * Version: 5.3.1
+* [Google Material Icons](http://google.github.io/material-design-icons/)
+  * Version: 3.0.1
 * [Ionicons](http://ionicons.com/)
   * Version: 2.0.1
 * [Jam Icons](https://jam-icons.com/)
   * Version: 2.0.0
-* [Material design icons](http://google.github.io/material-design-icons/)
-  * Version: 3.0.1
+* [Material Design Icons](https://materialdesignicons.com/)
+  * Version: 3.4.93
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
   * Version: 1.0
 * [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
@@ -134,16 +136,6 @@ protected override NavigationPage CreateApplicationPage()
 }
 ```
 
-## Contributions
-
-* Jeremy Marcus [@jsmarcus](https://github.com/jsmarcus)
-* Riccardo Marraghini [@marra85](https://github.com/marra85)
-* Kevin Petit [@kvpt](https://github.com/kvpt)
-* Aaron [@veeprox](https://github.com/veeprox)
-* Matthias Bruzek [@bruzkovsky](https://github.com/bruzkovsky)
-* Philipp Sumi [@hardcodet](https://github.com/hardcodet)
-* [@andooown](https://github.com/andooown)
-* Julien Binet [@lanarchyste](https://github.com/lanarchyste)
 
 ## License
 This work is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
@@ -158,14 +150,17 @@ Font Awesome is licensed under the [SIL Open Font License 1.1](http://scripts.si
 Font Awesome Pro is commercial software that requires a paid license. [Full Font Awesome Pro license](https://fontawesome.com/license).
 As a consequence the font files are not bundled with the plugin and need to be added manually.
 
+**Google Material Icons**  
+Google Material Icons are licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
 **Ionicons**  
 Ionicons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
 **Jam Icons**  
 Jam Icons is licensed under the [MIT License](http://opensource.org/licenses/MIT).
 
-**Material design icons**  
-Material design icons are licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+**Material Design Icons**  
+Material Design Icons are licensed under the [SIL Open Font License 1.1](http://scripts.sil.org/OFL).
 
 **Meteocons**  
 Meteocons are provided as free icons by the creator, [Alessio Atzeni](http://www.alessioatzeni.com/).
