@@ -85,9 +85,12 @@ public App()
 {
     ...
     Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.EntypoPlusModule())
-                          .With(new Plugin.Iconize.Fonts.FontAwesomeModule())
+                          .With(new Plugin.Iconize.Fonts.FontAwesomeRegularModule())
+                          .With(new Plugin.Iconize.Fonts.FontAwesomeBrandsModule())
+                          .With(new Plugin.Iconize.Fonts.FontAwesomeSolidModule());
                           .With(new Plugin.Iconize.Fonts.IoniconsModule())
                           .With(new Plugin.Iconize.Fonts.MaterialModule())
+                          .With(new Plugin.Iconize.Fonts.MaterialDesignIconsModule())
                           .With(new Plugin.Iconize.Fonts.MeteoconsModule())
                           .With(new Plugin.Iconize.Fonts.SimpleLineIconsModule())
                           .With(new Plugin.Iconize.Fonts.TypiconsModule())
