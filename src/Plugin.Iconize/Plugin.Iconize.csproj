@@ -1,7 +1,9 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <!-- VS4Mac workaround -->
+  <PropertyGroup><!-- VS4Mac workaround -->
+  
+    <Version>3.5.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,4 +31,24 @@
     <Compile Include="**/Platform/UWP/**/*.cs" />
   </ItemGroup>
 
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
+    <None Remove="**/Platform/WPF/**/*.cs" />
+    <Compile Include="**/Platform/WPF/**/*.cs" />
+
+    <PackageReference Include="Xamarin.Forms.Platform.WPF">
+      <Version>3.5.0.169047</Version>
+    </PackageReference>
+    
+    <Reference Include="PresentationCore">
+      <HintPath>$(ProgramFiles)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationCore.dll</HintPath>
+    </Reference>
+
+    <Reference Include="PresentationFramework">
+      <HintPath>$(ProgramFiles)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\PresentationFramework.dll</HintPath>
+    </Reference>
+
+    <Reference Include="WindowsBase">
+      <HintPath>$(ProgramFiles)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\WindowsBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>
