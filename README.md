@@ -1,13 +1,13 @@
 # Iconize Plugin for Xamarin Forms
-A .NET for Xamarin port of the [android-iconify](https://github.com/JoanZapata/android-iconify) project.
+
 Use icon fonts in your Xamarin.Forms application!
 
-### Updated to NetStandard 2.0, FontAwesome 5
+**NuGet**
 
-**NuGet** 
-* Available on NuGet: http://www.nuget.org/packages/Xam.Plugin.Iconize [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Iconize.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
+* Available on NuGet: [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Iconize.svg?label=NuGet)](https://www.nuget.org/packages/Xam.Plugin.Iconize/)
 
-**Build Status** 
+**Build Status**
+
 * [![Build status](https://ci.appveyor.com/api/projects/status/8ibyfk1rxn3mun3a?svg=true)](https://ci.appveyor.com/project/JeremyMarcus/iconize)
 * CI NuGet Feed: https://ci.appveyor.com/nuget/iconize
 
@@ -49,7 +49,8 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 
 ## Controls
 
-**Xamarin.Forms** 
+### Xamarin.Forms
+
 * IconButton (Button)
 * IconImage (Image)
 * IconLabel (Label)
@@ -57,10 +58,7 @@ FYI, if there is a conflict, the first module declared with Iconize.With() has p
 * IconToolbarItem (ToolbarItem)
   * Requires IconNavigationPage
 
-
 ## Setup
-
-### Install
 
 **Nuget**  
 All packages are provided via NuGet.
@@ -68,18 +66,21 @@ All packages are provided via NuGet.
 * [Xam.Plugin.Iconize](https://www.nuget.org/packages/Xam.Plugin.Iconize)
 * [Xam.Plugin.Iconize.EntypoPlus](https://www.nuget.org/packages/Xam.Plugin.Iconize.EntypoPlus)
 * [Xam.Plugin.Iconize.FontAwesome](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesome)
+* [Xam.Plugin.Iconize.FontAwesomePro](https://www.nuget.org/packages/Xam.Plugin.Iconize.FontAwesomePro)
 * [Xam.Plugin.Iconize.Ionicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Ionicons)
 * [Xam.Plugin.Iconize.JamIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.JamIcons)
 * [Xam.Plugin.Iconize.Material](https://www.nuget.org/packages/Xam.Plugin.Iconize.Material)
+* [Xam.Plugin.Iconize.MaterialDesignIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.MaterialDesignIcons)
 * [Xam.Plugin.Iconize.Meteocons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Meteocons)
 * [Xam.Plugin.Iconize.SimpleLineIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.SimpleLineIcons)
 * [Xam.Plugin.Iconize.Typicons](https://www.nuget.org/packages/Xam.Plugin.Iconize.Typicons)
 * [Xam.Plugin.Iconize.WeatherIcons](https://www.nuget.org/packages/Xam.Plugin.Iconize.WeatherIcons)
 
-### Configure
+## Configure
 
-**PCL Project**  
+**Core Project**  
 Initialize any number of modules in App.cs constructor.
+
 ```csharp
 public App()
 {
@@ -101,6 +102,7 @@ public App()
 
 **Xamarin.Android (AppCompat)**  
 Initialize the IconControls.
+
 ```csharp
 protected override void OnCreate(Bundle savedInstanceState)
 {
@@ -114,6 +116,7 @@ protected override void OnCreate(Bundle savedInstanceState)
 
 **Xamarin.iOS (Unified)**  
 Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
+
 ```xml
 <key>UIAppFonts</key>
 <array>
@@ -132,6 +135,7 @@ Add the UIAppFonts key to Info.plist with the specific fonts you have chosen.
 
 **Xamarin.Forms with Caliburn Micro**  
 Add the following to App.cs
+
 ```csharp
 protected override NavigationPage CreateApplicationPage()
 {
@@ -139,8 +143,8 @@ protected override NavigationPage CreateApplicationPage()
 }
 ```
 
-
 ## License
+
 This work is licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 **Entypo+**  
