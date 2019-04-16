@@ -31,7 +31,7 @@ namespace Plugin.Iconize
             var moduleType = module.GetType();
             if (!FontCache.ContainsKey(moduleType))
             {
-				FontCache.Add(moduleType, new FontFamily($"ms-appx:///{moduleType.GetTypeInfo().Assembly.GetName().Name}/{module.FontPath}#{module.FontFamily.Replace(" Regular","")}"));
+				FontCache.Add(moduleType, new FontFamily($"ms-appx:///{moduleType.GetTypeInfo().Assembly.GetName().Name}/{module.FontPath}#{module.FontFamily.Replace(" Regular","").Replace(" Solid","")}"));
             }
             return FontCache[moduleType];
         }
