@@ -59,16 +59,21 @@ namespace Plugin.Iconize
         /// </summary>
         private void UpdateText()
         {
-            var icon = Iconize.FindIconForKey(Element.Text);
-            if (!(icon is null))
+            var icons = Element.Text.Split("|");
+            var controlText = string.Empty;
+            foreach (var iconText in icons)
             {
-                var font = Iconize.FindModuleOf(icon)?.ToUIFont((nfloat)Element.FontSize);
-                if (!(font is null))
+                var icon = Iconize.FindIconForKey(iconText);
+                if (!(icon is null))
                 {
-                    Control.Text = $"{icon.Character}";
-                    Control.Font = font;
+                    var font = Iconize.FindModuleOf(icon)?.ToUIFont((nfloat)Element.FontSize);
+                    if (!(font is null))
+                    {
+                        Control.Text += $"{controlText}";
+                        Control.Font = font;
+                    }
                 }
-            }
+            }            
         }
     }
 }
