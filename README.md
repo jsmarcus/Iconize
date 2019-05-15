@@ -23,7 +23,7 @@ Use icon fonts in your Xamarin.Forms application!
 * [Google Material Icons](http://google.github.io/material-design-icons/)
   * Version: 3.0.1
 * [Ionicons](http://ionicons.com/)
-  * Version: 2.0.1
+  * Version: 4.5.6
 * [Jam Icons](https://jam-icons.com/)
   * Version: 2.0.0
 * [Material Design Icons](https://materialdesignicons.com/)
