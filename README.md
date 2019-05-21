@@ -27,7 +27,7 @@ Use icon fonts in your Xamarin.Forms application!
 * [Jam Icons](https://jam-icons.com/)
   * Version: 2.0.0
 * [Material Design Icons](https://materialdesignicons.com/)
-  * Version: 3.4.93
+  * Version: 3.6.95
 * [Meteocons](http://www.alessioatzeni.com/meteocons/)
   * Version: 1.0
 * [Simple Line Icons](https://github.com/thesabbir/simple-line-icons)
