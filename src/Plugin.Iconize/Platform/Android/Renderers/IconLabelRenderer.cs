@@ -110,24 +110,34 @@ namespace Plugin.Iconize
 #if USE_FASTRENDERERS
             TextChanged -= OnTextChanged;
 
-            var icon = Iconize.FindIconForKey(Label.Text);
-            if (!(icon is null))
+            var icons = Element.Text.Split("|");
+            var controlText = string.Empty;
+            foreach (var iconText in icons)
             {
-                Text = $"{icon.Character}";
-                Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+                var icon = Iconize.FindIconForKey(iconText);
+                if (!(icon is null))
+                {                        
+                    Text += $"{icon.Character}";
+                    Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+                }
             }
-
+            
             TextChanged += OnTextChanged;
 #else
             if (!(Control is null))
             {
                 Control.TextChanged -= OnTextChanged;
 
-                var icon = Iconize.FindIconForKey(Label.Text);
-                if (!(icon is null))
+                var icons = Element.Text.Split("|");                
+                var controlText = string.Empty;
+                foreach (var iconText in icons)
                 {
-                    Control.Text = $"{icon.Character}";
-                    Control.Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+                    var icon = Iconize.FindIconForKey(iconText);
+                    if (!(icon is null))
+                    {
+                        Control.Text += $"{icon.Character}";
+                        Control.Typeface = Iconize.FindModuleOf(icon).ToTypeface(Context);
+                    }
                 }
 
                 Control.TextChanged += OnTextChanged;
