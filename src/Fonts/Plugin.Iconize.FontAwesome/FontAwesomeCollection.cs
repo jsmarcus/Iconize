@@ -86,6 +86,8 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-backward", '\uf04a');
             SolidIcons.Add("fas-bacon", '\uf7e5');
             SolidIcons.Add("fas-balance-scale", '\uf24e');
+            SolidIcons.Add("fas-balance-scale-left", '\uf515');
+            SolidIcons.Add("fas-balance-scale-right", '\uf516');
             SolidIcons.Add("fas-ban", '\uf05e');
             SolidIcons.Add("fas-band-aid", '\uf462');
             SolidIcons.Add("fas-barcode", '\uf02a');
@@ -105,6 +107,7 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-bezier-curve", '\uf55b');
             SolidIcons.Add("fas-bible", '\uf647');
             SolidIcons.Add("fas-bicycle", '\uf206');
+            SolidIcons.Add("fas-biking", '\uf84a');
             SolidIcons.Add("fas-binoculars", '\uf1e5');
             SolidIcons.Add("fas-biohazard", '\uf780');
             SolidIcons.Add("fas-birthday-cake", '\uf1fd');
@@ -123,6 +126,9 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-book-medical", '\uf7e6');
             SolidIcons.Add("fas-book-open", '\uf518');
             SolidIcons.Add("fas-book-reader", '\uf5da');
+            SolidIcons.Add("fas-border-all", '\uf84c');
+            SolidIcons.Add("fas-border-none", '\uf850');
+            SolidIcons.Add("fas-border-style", '\uf853');
             SolidIcons.Add("fas-bowling-ball", '\uf436');
             SolidIcons.Add("fas-box", '\uf466');
             SolidIcons.Add("fas-boxes", '\uf468');
@@ -329,6 +335,7 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-eye", '\uf06e');
             SolidIcons.Add("fas-eye-dropper", '\uf1fb');
             SolidIcons.Add("fas-eye-slash", '\uf070');
+            SolidIcons.Add("fas-fan", '\uf863');
             SolidIcons.Add("fas-fast-backward", '\uf049');
             SolidIcons.Add("fas-fast-forward", '\uf050');
             SolidIcons.Add("fas-fax", '\uf1ac');
@@ -454,6 +461,8 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-hanukiah", '\uf6e6');
             SolidIcons.Add("fas-hard-hat", '\uf807');
             SolidIcons.Add("fas-hashtag", '\uf292');
+            SolidIcons.Add("fas-hat-cowboy", '\uf8c0');
+            SolidIcons.Add("fas-hat-cowboy-side", '\uf8c1');
             SolidIcons.Add("fas-hat-wizard", '\uf6e8');
             SolidIcons.Add("fas-haykal", '\uf666');
             SolidIcons.Add("fas-hdd", '\uf0a0');
@@ -489,6 +498,7 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-h-square", '\uf0fd');
             SolidIcons.Add("fas-ice-cream", '\uf810');
             SolidIcons.Add("fas-icicles", '\uf7ad');
+            SolidIcons.Add("fas-icons", '\uf86d');
             SolidIcons.Add("fas-i-cursor", '\uf246');
             SolidIcons.Add("fas-id-badge", '\uf2c1');
             SolidIcons.Add("fas-id-card", '\uf2c2');
@@ -598,6 +608,7 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-mosque", '\uf678');
             SolidIcons.Add("fas-motorcycle", '\uf21c');
             SolidIcons.Add("fas-mountain", '\uf6fc');
+            SolidIcons.Add("fas-mouse", '\uf8cc');
             SolidIcons.Add("fas-mouse-pointer", '\uf245');
             SolidIcons.Add("fas-mug-hot", '\uf7b6');
             SolidIcons.Add("fas-music", '\uf001');
@@ -642,9 +653,12 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-percentage", '\uf541');
             SolidIcons.Add("fas-person-booth", '\uf756');
             SolidIcons.Add("fas-phone", '\uf095');
+            SolidIcons.Add("fas-phone-alt", '\uf879');
             SolidIcons.Add("fas-phone-slash", '\uf3dd');
             SolidIcons.Add("fas-phone-square", '\uf098');
+            SolidIcons.Add("fas-phone-square-alt", '\uf87b');
             SolidIcons.Add("fas-phone-volume", '\uf2a0');
+            SolidIcons.Add("fas-photo-video", '\uf87c');
             SolidIcons.Add("fas-piggy-bank", '\uf4d3');
             SolidIcons.Add("fas-pills", '\uf484');
             SolidIcons.Add("fas-pizza-slice", '\uf818');
@@ -688,10 +702,12 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-rainbow", '\uf75b');
             SolidIcons.Add("fas-random", '\uf074');
             SolidIcons.Add("fas-receipt", '\uf543');
+            SolidIcons.Add("fas-record-vinyl", '\uf8d9');
             SolidIcons.Add("fas-recycle", '\uf1b8');
             SolidIcons.Add("fas-redo", '\uf01e');
             SolidIcons.Add("fas-redo-alt", '\uf2f9');
             SolidIcons.Add("fas-registered", '\uf25d');
+            SolidIcons.Add("fas-remove-format", '\uf87d');
             SolidIcons.Add("fas-reply", '\uf3e5');
             SolidIcons.Add("fas-reply-all", '\uf122');
             SolidIcons.Add("fas-republican", '\uf75e');
@@ -774,15 +790,22 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-solar-panel", '\uf5ba');
             SolidIcons.Add("fas-sort", '\uf0dc');
             SolidIcons.Add("fas-sort-alpha-down", '\uf15d');
+            SolidIcons.Add("fas-sort-alpha-down-alt", '\uf881');
             SolidIcons.Add("fas-sort-alpha-up", '\uf15e');
+            SolidIcons.Add("fas-sort-alpha-up-alt", '\uf882');
             SolidIcons.Add("fas-sort-amount-down", '\uf160');
+            SolidIcons.Add("fas-sort-amount-down-alt", '\uf884');
             SolidIcons.Add("fas-sort-amount-up", '\uf161');
+            SolidIcons.Add("fas-sort-amount-up-alt", '\uf885');
             SolidIcons.Add("fas-sort-down", '\uf0dd');
             SolidIcons.Add("fas-sort-numeric-down", '\uf162');
+            SolidIcons.Add("fas-sort-numeric-down-alt", '\uf886');
             SolidIcons.Add("fas-sort-numeric-up", '\uf163');
+            SolidIcons.Add("fas-sort-numeric-up-alt", '\uf887');
             SolidIcons.Add("fas-sort-up", '\uf0de');
             SolidIcons.Add("fas-spa", '\uf5bb');
             SolidIcons.Add("fas-space-shuttle", '\uf197');
+            SolidIcons.Add("fas-spell-check", '\uf891');
             SolidIcons.Add("fas-spider", '\uf717');
             SolidIcons.Add("fas-spinner", '\uf110');
             SolidIcons.Add("fas-splotch", '\uf5bc');
@@ -940,6 +963,7 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-video", '\uf03d');
             SolidIcons.Add("fas-video-slash", '\uf4e2');
             SolidIcons.Add("fas-vihara", '\uf6a7');
+            SolidIcons.Add("fas-voicemail", '\uf897');
             SolidIcons.Add("fas-volleyball-ball", '\uf45f');
             SolidIcons.Add("fas-volume-down", '\uf027');
             SolidIcons.Add("fas-volume-mute", '\uf6a9');
@@ -971,6 +995,7 @@ namespace Plugin.Iconize.Fonts
             SolidIcons.Add("fas-yin-yang", '\uf6ad');
 
             #endregion
+
 
             #region Regular
 
@@ -1129,7 +1154,8 @@ namespace Plugin.Iconize.Fonts
 
             #endregion
 
-            #region Brands
+
+            #region Brand
 
             BrandIcons.Add("fab-500px", '\uf26e');
             BrandIcons.Add("fab-accessible-icon", '\uf368');
@@ -1180,6 +1206,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-btc", '\uf15a');
             BrandIcons.Add("fab-buffer", '\uf837');
             BrandIcons.Add("fab-buromobelexperte", '\uf37f');
+            BrandIcons.Add("fab-buy-n-large", '\uf8a6');
             BrandIcons.Add("fab-buysellads", '\uf20d');
             BrandIcons.Add("fab-canadian-maple-leaf", '\uf785');
             BrandIcons.Add("fab-cc-amazon-pay", '\uf42d');
@@ -1204,6 +1231,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-confluence", '\uf78d');
             BrandIcons.Add("fab-connectdevelop", '\uf20e');
             BrandIcons.Add("fab-contao", '\uf26d');
+            BrandIcons.Add("fab-cotton-bureau", '\uf89e');
             BrandIcons.Add("fab-cpanel", '\uf388');
             BrandIcons.Add("fab-creative-commons", '\uf25e');
             BrandIcons.Add("fab-creative-commons-by", '\uf4e7');
@@ -1292,6 +1320,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-gg", '\uf260');
             BrandIcons.Add("fab-gg-circle", '\uf261');
             BrandIcons.Add("fab-git", '\uf1d3');
+            BrandIcons.Add("fab-git-alt", '\uf841');
             BrandIcons.Add("fab-github", '\uf09b');
             BrandIcons.Add("fab-github-alt", '\uf113');
             BrandIcons.Add("fab-github-square", '\uf092');
@@ -1368,6 +1397,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-markdown", '\uf60f');
             BrandIcons.Add("fab-mastodon", '\uf4f6');
             BrandIcons.Add("fab-maxcdn", '\uf136');
+            BrandIcons.Add("fab-mdb", '\uf8ca');
             BrandIcons.Add("fab-medapps", '\uf3c6');
             BrandIcons.Add("fab-medium", '\uf23a');
             BrandIcons.Add("fab-medium-m", '\uf3c7');
@@ -1384,7 +1414,6 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-napster", '\uf3d2');
             BrandIcons.Add("fab-neos", '\uf612');
             BrandIcons.Add("fab-nimblr", '\uf5a8');
-            BrandIcons.Add("fab-nintendo-switch", '\uf418');
             BrandIcons.Add("fab-node", '\uf419');
             BrandIcons.Add("fab-node-js", '\uf3d3');
             BrandIcons.Add("fab-npm", '\uf3d4');
@@ -1397,6 +1426,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-openid", '\uf19b');
             BrandIcons.Add("fab-opera", '\uf26a');
             BrandIcons.Add("fab-optin-monster", '\uf23c');
+            BrandIcons.Add("fab-orcid", '\uf8d2');
             BrandIcons.Add("fab-osi", '\uf41a');
             BrandIcons.Add("fab-page4", '\uf3d7');
             BrandIcons.Add("fab-pagelines", '\uf18c');
@@ -1473,6 +1503,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-squarespace", '\uf5be');
             BrandIcons.Add("fab-stack-exchange", '\uf18d');
             BrandIcons.Add("fab-stack-overflow", '\uf16c');
+            BrandIcons.Add("fab-stackpath", '\uf842');
             BrandIcons.Add("fab-staylinked", '\uf3f5');
             BrandIcons.Add("fab-steam", '\uf1b6');
             BrandIcons.Add("fab-steam-square", '\uf1b7');
@@ -1487,6 +1518,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-superpowers", '\uf2dd');
             BrandIcons.Add("fab-supple", '\uf3f9');
             BrandIcons.Add("fab-suse", '\uf7d6');
+            BrandIcons.Add("fab-swift", '\uf8e1');
             BrandIcons.Add("fab-symfony", '\uf83d');
             BrandIcons.Add("fab-teamspeak", '\uf4f9');
             BrandIcons.Add("fab-telegram", '\uf2c6');
@@ -1508,6 +1540,7 @@ namespace Plugin.Iconize.Fonts
             BrandIcons.Add("fab-uber", '\uf402');
             BrandIcons.Add("fab-ubuntu", '\uf7df');
             BrandIcons.Add("fab-uikit", '\uf403');
+            BrandIcons.Add("fab-umbraco", '\uf8e8');
             BrandIcons.Add("fab-uniregistry", '\uf404');
             BrandIcons.Add("fab-untappd", '\uf405');
             BrandIcons.Add("fab-ups", '\uf7e0');
