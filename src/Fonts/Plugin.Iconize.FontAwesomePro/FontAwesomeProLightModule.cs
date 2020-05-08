@@ -10,7 +10,7 @@
         /// Initializes a new instance of the <see cref="FontAwesomeProLightModule" /> class.
         /// </summary>
         public FontAwesomeProLightModule()
-            : base("Font Awesome 5 Pro Light", "FontAwesome5ProLight", "iconize-fontawesome-pro-light.ttf", FontAwesomeProCollection.LightIcons)
+            : base("Font Awesome 5 Pro Light", "FontAwesome5Pro-Light", "iconize-fontawesome-pro-light.ttf", FontAwesomeProCollection.LightIcons)
         {
             // Intentionally left blank
         }

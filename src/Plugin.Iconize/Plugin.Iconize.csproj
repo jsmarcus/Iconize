@@ -1,7 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras">
 
-  <PropertyGroup>
-    <!-- VS4Mac workaround -->
+  <PropertyGroup><!-- VS4Mac workaround -->
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,4 +28,8 @@
     <Compile Include="**/Platform/UWP/**/*.cs" />
   </ItemGroup>
 
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
+    <None Remove="**/Platform/WPF/**/*.cs" />
+    <Compile Include="**/Platform/WPF/**/*.cs" />
+  </ItemGroup>
 </Project>

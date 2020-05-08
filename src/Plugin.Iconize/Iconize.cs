@@ -125,13 +125,10 @@ namespace Plugin.Iconize
         /// <returns>The icon, or null if no icon matches the key</returns>
         public static IIcon FindIconForKey(String iconKey)
         {
-            if (iconKey is null)
-                throw new ArgumentNullException(nameof(iconKey));
-
             if (String.IsNullOrWhiteSpace(iconKey))
-                throw new ArgumentException($"{nameof(iconKey)} cannot be empty", nameof(iconKey));
+                return null;
 
-            return Modules?.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey) ?? throw new NullReferenceException($"No icon with the key: {iconKey}");
+            return Modules?.FirstOrDefault(x => x.Keys.Contains(iconKey))?.GetIcon(iconKey);
         }
     }
 }
